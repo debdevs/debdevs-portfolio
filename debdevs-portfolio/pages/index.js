@@ -11,15 +11,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.home_header}>
-        <header_info_box className={styles.header_info_box}>
-          <h1 className={styles.h1}>Hello There,</h1>
-          <h2 className={styles.h2}>
-            I'm <span className={styles.span}>Deborah</span>
-          </h2>
-          <p className={styles.p}>
-            A frontend developer with a passion for visuals
-          </p>
-        </header_info_box>
+        <content_box className={styles.content_box}>
+          <left_items className={styles.left_items}>
+            <header_info_box className={styles.header_info_box}>
+              <h1 className={styles.h1}>Hello There,</h1>
+              <h2 className={styles.h2}>
+                I'm <span className={styles.span}>Deborah</span>
+              </h2>
+              <p className={styles.p}>
+                A frontend developer with a passion for visuals
+              </p>
+            </header_info_box>
+          </left_items>
+          <right_items className={styles.right_items}></right_items>
+        </content_box>
       </section>
       <ButtonRow />
     </div>
