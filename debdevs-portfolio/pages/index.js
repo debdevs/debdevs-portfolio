@@ -21,12 +21,30 @@ export default function Home() {
               <p className={styles.p}>
                 A frontend developer with a passion for visuals
               </p>
+              <line_div className={styles.line_div}></line_div>
+              <button_array className={styles.button_array}>
+                <button className={styles.blue_button}>About</button>
+                <button className={styles.white_button}>About</button>
+              </button_array>
             </header_info_box>
           </left_items>
           <right_items className={styles.right_items}></right_items>
         </content_box>
       </section>
-      <ButtonRow />
+      <section className={styles.subheading_container}>
+        <subheading_left className={styles.subheading_left}>
+          <subheading_left_bg
+            className={styles.subheading_left_bg}
+          ></subheading_left_bg>
+        </subheading_left>
+        <subheading_right className={styles.subheading_right}>
+          <subheading_right_bg className={styles.box_border_gradient}>
+            <subheading_right_bg_overlay
+              className={styles.subheading_right_bg_overlay}
+            ></subheading_right_bg_overlay>
+          </subheading_right_bg>
+        </subheading_right>
+      </section>
     </div>
   );
 }
