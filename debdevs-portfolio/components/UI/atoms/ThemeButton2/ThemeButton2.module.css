@@ -1,0 +1,25 @@
+.theme_button_2_bg {
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 93px;
+height: 33px;
+
+background: linear-gradient(180deg, #0094FF 0%, #11A0FF 85.42%, #7CD0FF 88.02%);
+border-radius: 5px;
+
+color:white;
+border:0px;
+font-family: 'Libre Baskerville';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}

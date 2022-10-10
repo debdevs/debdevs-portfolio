@@ -10,8 +10,10 @@
   font-display: swap;
   src: local('Libre Baskerville'), url(/fonts/LibreBaskerville-Regular.ttf) format('ttf');
 }
+
+
 .tabs {
-  margin-top:75px;
+  margin-top:35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-width: 160.59px;
+width: var( --max-button-width);
 transition: all 1s ease-out;
   height: 26px;
   
@@ -37,7 +39,7 @@ transition: all 1s ease-out;
   position: absolute;
  background: rgba(0, 178, 255, 0.25);
       height: 23px;
-  width: 160.58px;
+  width: var( --max-button-width);
    padding: 2px; 
   padding-left: 1.15px; 
   padding-right: 1.15px;  
@@ -50,7 +52,7 @@ transition: all 1s ease-out;
   position: absolute;
  background: white;
       height: 30px;
-  width: 160.58px;
+  width: var( --max-button-width);
    padding: 2px; 
   padding-left: 1.15px; 
   padding-right: 1.15px;  
@@ -98,7 +100,13 @@ transition: all .4s ease;
   font-family: serif;
   transition: all .4s ease;
   font-family: 'Libre Baskerville', serif;
-  font-weight: 200;
+  font-weight: 500;
+
+
+
+  
+
+  
 }
     
 
@@ -107,7 +115,7 @@ transition: all .4s ease;
   display: block;
   align-items:center;
       height: 26px;
-  width: 167.58px;
+  width: var( --button-width);
   cursor: pointer;
 box-shadow: 2 2 30px #fff;
 }
@@ -117,7 +125,7 @@ box-shadow: 2 2 30px #fff;
   display: block;
   align-items:center;
       height: 26px;
-  width: 167.58px;
+  width: var( --button-width);
   cursor: pointer;
 box-shadow: 0px 4px 4px 0px #00B2FF40;
   border-radius: 5px;

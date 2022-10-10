@@ -73,3 +73,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+:root {
+  --max-button-width: 93px;
+  --button-width: 97.0480104615px;
+}

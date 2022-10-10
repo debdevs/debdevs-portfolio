@@ -1,0 +1,24 @@
+.theme_button_1_bg {
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 93px;
+height: 33px;
+
+background: #000000;
+border-radius: 5px;
+color:white;
+
+font-family: 'Libre Baskerville';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}
