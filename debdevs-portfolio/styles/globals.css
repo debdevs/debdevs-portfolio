@@ -77,4 +77,8 @@ table {
 :root {
   --max-button-width: 93px;
   --button-width: 97.0480104615px;
+
+  --projects-tab-width: 179.44px;
+ --projects-tab-height: 35.33px;
+
 }

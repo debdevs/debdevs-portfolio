@@ -1,0 +1,37 @@
+.nav_bar {
+    height:60px;
+    width:35%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+  }
+  
+  .nav_content {
+    height:60px;
+    width:75%;
+    display:flex;
+    
+  }
+  
+  .nav_content h1 {
+   font-family: 'Luxurious Script';
+   width: 420px;
+  height: 58px;
+  
+  font-family: 'Luxurious Script';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  position:absolute;
+  margin-top:35px;
+  
+  /* identical to box height */
+  
+  
+  background: linear-gradient(180deg, #0997FF 0%, rgba(9, 255, 240, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; 
+  }

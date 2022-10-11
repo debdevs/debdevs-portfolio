@@ -1,0 +1,139 @@
+.projects_hero {
+    width:100%;
+    height:560px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_content {
+    width:80%;
+    height:560px;
+ 
+    display:flex;
+}
+
+.left_items {
+    width:65%;
+    height:350px;
+    display:flex;
+}
+
+.right_items {
+    width:100%;
+    height:350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.text_layout{
+    margin-top:35px;
+}
+.text_layout h1 {
+
+width: 486.9px;
+height: 60.28px;
+
+font-family: 'Libre Baskerville';
+font-style: normal;
+font-weight: 400;
+font-size: 41.7345px;
+line-height: 52px;
+
+color: #000000;
+    
+}
+
+.line_div {
+    background:black;
+    height:1.1px;
+    width:55%;
+}
+.text_layout h2 {
+    width: 405px;
+    height: 40px;
+    
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27.823px;
+    line-height: 35px;
+    
+    color: #000000;
+    
+}
+
+.text_layout h2 span{
+
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27.823px;
+    line-height: 35px;
+    
+    background: linear-gradient(232.56deg, #16ABFF 44.11%, #16C7FF 54.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
+}
+
+.text_layout p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 387.2px;
+    height: 51px;
+    
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.9115px;
+    line-height: 17px;
+    
+    color: #000000;
+    height:85px;
+    
+    
+}
+.text_layout h3{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 387.2px;
+    height: 35px;
+    
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13.9115px;
+    line-height: 12px;
+    /* identical to box height, or 83% */
+    
+    
+    color: #000000;
+     
+    
+    
+}
+.text_layout h4{
+    width: 387.2px;
+    height: 12px;
+    
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.9115px;
+    line-height: 12px;
+    /* identical to box height, or 83% */
+    
+    
+    color: #000000;
+     
+    
+    
+}
+
+
