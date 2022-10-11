@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ProjectsHero.module.css';
 import { ButtonRowLanding } from '../../atoms/ButtonRowLanding/ButtonRowLanding';
+import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 const ProjectsHero = () => {
   return (
     <div>
@@ -26,7 +27,9 @@ const ProjectsHero = () => {
             </text_layout>
           </right_items>
         </hero_content>
+       
       </section>
+      <LandingTabs />
     </div>
   );
 };
