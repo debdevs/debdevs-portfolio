@@ -19,10 +19,12 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width:850px;
+  width: 100%;
+  max-width:850px;
   width: 190%;
   
   gap:15px;
+  flex-wrap:wrap;
 
 }
 .max_container {

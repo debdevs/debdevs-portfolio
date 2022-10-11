@@ -492,3 +492,28 @@ border-radius: 0px 8px 8px 0px;
   display:flex;
   gap:12px;
 }
+
+@media only screen and (max-width: 1024px){
+
+  .container{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+  }
+  .right_items{
+    display:none;
+  }
+  .subheading_right{
+    display:none;
+  }
+
+  .subheading_left{
+    width:100%;
+  }
+  .subheading_container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+}

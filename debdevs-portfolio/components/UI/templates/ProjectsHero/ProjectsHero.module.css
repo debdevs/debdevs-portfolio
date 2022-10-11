@@ -10,16 +10,18 @@
 .hero_content {
     width:80%;
     height:560px;
-   
+   margin-right:2%;
     display:flex;
     justify-content: center;
     align-items: center;
+    gap:5%;
 }
 
 .left_items {
     width:65%;
     height:350px;
     display:flex;
+    justify-content: flex-end;
 }
 
 
@@ -27,11 +29,13 @@
 .left_items_image_container {
 display:flex;
 overflow:hidden;
+
 max-width:376px;
 box-shadow: -21.4449px 21.4449px 50.038px 7.14829px rgba(82, 138, 221, 0.15);
 border-radius: 11.4373px;
 
 height: 421.75px;
+
 
 
 }

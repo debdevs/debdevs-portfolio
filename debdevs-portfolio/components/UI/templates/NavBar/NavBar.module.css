@@ -16,7 +16,8 @@
   
   .nav_content h1 {
    font-family: 'Luxurious Script';
-   width: 420px;
+   width:100%;
+   max-width: 420px;
   height: 58px;
   
   font-family: 'Luxurious Script';

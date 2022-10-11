@@ -1,0 +1,37 @@
+
+
+
+.subheading_parent {
+    height:650px;
+    width:100%;
+}
+
+.paragraph_text{
+    width: 653px;
+height: 350px;
+}
+
+.left_items {
+    width:45%;
+    height:350px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+
+
+.right_items{
+    width:50%;
+}
+
+.subheading_content{
+    position:absolute;
+    width:95%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:75px;
+    gap:55px;
+    margin-right:875px;
+}

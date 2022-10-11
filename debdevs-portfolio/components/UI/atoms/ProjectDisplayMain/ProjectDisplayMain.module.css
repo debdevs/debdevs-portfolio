@@ -1,0 +1,19 @@
+
+.left_items_image_container {
+display:flex;
+overflow:hidden;
+
+max-width:376px;
+box-shadow: -21.4449px 21.4449px 50.038px 7.14829px rgba(82, 138, 221, 0.15);
+border-radius: 11.4373px;
+
+height: 421.75px;
+
+
+
+}
+
+.left_items_image_container img {
+    object-fit:cover;
+    width:100%;
+}

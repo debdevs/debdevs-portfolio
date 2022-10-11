@@ -1,0 +1,38 @@
+.text_layout_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    max-width: 653px;
+    height: 350px;
+    gap:35px;
+
+}
+
+.text_layout_box h1{
+
+    width:100%;
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    text-align:left;
+    color: #000000;   
+}
+
+.text_layout_box h2{
+    width:100%;
+    
+    text-align:left;
+    font-family: 'Literata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    
+    color: #4B4B4B; 
+}
