@@ -10,8 +10,10 @@
 .hero_content {
     width:80%;
     height:560px;
- 
+   
     display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left_items {
@@ -19,6 +21,29 @@
     height:350px;
     display:flex;
 }
+
+
+
+.left_items_image_container {
+display:flex;
+overflow:hidden;
+max-width:376px;
+box-shadow: -21.4449px 21.4449px 50.038px 7.14829px rgba(82, 138, 221, 0.15);
+border-radius: 11.4373px;
+
+height: 421.75px;
+
+
+}
+
+.left_items_image_container img {
+    object-fit:cover;
+    width:100%;
+}
+
+
+
+
 
 .right_items {
     width:100%;
@@ -91,7 +116,7 @@ color: #000000;
     font-style: normal;
     font-weight: 400;
     font-size: 13.9115px;
-    line-height: 17px;
+    line-height: 20px;
     
     color: #000000;
     height:85px;

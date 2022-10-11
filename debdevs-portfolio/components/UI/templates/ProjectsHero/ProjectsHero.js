@@ -1,13 +1,18 @@
 import React from 'react';
 import styles from './ProjectsHero.module.css';
-import { ButtonRowLanding } from '../../atoms/ButtonRowLanding/ButtonRowLanding';
 import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 const ProjectsHero = () => {
   return (
     <div>
       <section className={styles.projects_hero}>
         <hero_content className={styles.hero_content}>
-          <left_items className={styles.left_items}></left_items>
+          <left_items className={styles.left_items}>
+            <left_items_image_container
+              className={styles.left_items_image_container}
+            >
+              <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
+            </left_items_image_container>
+          </left_items>
           <right_items className={styles.right_items}>
             <text_layout className={styles.text_layout}>
               <h1>Showman Video</h1>
@@ -23,13 +28,11 @@ const ProjectsHero = () => {
               <h3>Tech Stack:</h3>
               <h4>React • Django • AWS • Blender</h4>
               <tech_array></tech_array>
-              <ButtonRowLanding />
+              <LandingTabs />
             </text_layout>
           </right_items>
         </hero_content>
-       
       </section>
-      <LandingTabs />
     </div>
   );
 };
