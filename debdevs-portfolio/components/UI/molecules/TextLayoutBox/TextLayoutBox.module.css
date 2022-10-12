@@ -1,3 +1,18 @@
+
+.text_layout_box_container{
+    max-height:798px;
+    overflow-Y:scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    max-width: 653px;
+    height: 100%;
+    gap:35px;
+
+}
+
 .text_layout_box {
     display: flex;
     justify-content: center;
@@ -5,7 +20,7 @@
     flex-direction: column;
     width:100%;
     max-width: 653px;
-    height: 350px;
+    height: 100%;
     gap:35px;
 
 }
@@ -33,6 +48,6 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    
+    white-space: pre-line;
     color: #4B4B4B; 
 }

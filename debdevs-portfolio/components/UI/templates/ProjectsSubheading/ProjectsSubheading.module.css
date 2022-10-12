@@ -16,6 +16,7 @@ height: 350px;
     height:350px;
     display:flex;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 
 
@@ -23,10 +24,12 @@ height: 350px;
 
 .right_items{
     width:50%;
+    display:flex;
+    justify-content: flex-start;   
 }
 
 .subheading_content{
-    position:absolute;
+   
     width:95%;
     display:flex;
     justify-content:center;

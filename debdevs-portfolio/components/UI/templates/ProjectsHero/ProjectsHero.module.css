@@ -10,7 +10,7 @@
 .hero_content {
     width:80%;
     height:560px;
-   margin-right:2%;
+   margin-left:8%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +18,14 @@
 }
 
 .left_items {
-    width:65%;
+    width:45%;
     height:350px;
     display:flex;
     justify-content: flex-end;
+
+
+    max-width:850px;
+
 }
 
 
