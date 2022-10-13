@@ -17,10 +17,16 @@ padding:0px;
 
 background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
 linear-gradient(102.8deg, #0038FF 12.54%, rgba(53, 219, 255, 0.792564) 22.03%, rgba(255, 255, 255, 0) 59.26%);
+
+background: linear-gradient(102.8deg, var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ 200%;
+
+
+
 display:flex;
 justify-content:center;
 align-items: center;
 cursor:pointer;
+transition:all .4s ease-in-out;
 }
 
 .grad_bg{
@@ -89,5 +95,19 @@ font-size: 14px;
 line-height: 21px;
 
 color: #67778E;
+
+}
+
+
+.gradient_container:hover{
+
+box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
+
+
+padding:0px;
+
+
+
+--x: 50%; 
 
 }
