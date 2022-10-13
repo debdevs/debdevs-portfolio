@@ -13,7 +13,7 @@ const ProjectsSubheading = () => {
         <right_items className={styles.right_items}>
           <TextLayoutBox
             header_text="Intro"
-            paragraph_text={project_data.products[0].description}
+            paragraph_text={project_data.products[0].story}
             second_header_text={project_data.products[0].second_heading}
             second_paragraph_text={project_data.products[0].second_description}
           />

@@ -1,4 +1,5 @@
 .theme_button_1_bg {
+    transition:all .4s ease;
     cursor:pointer;
     display:flex;
     align-items:center;
@@ -21,4 +22,9 @@ text-align: center;
 
 color: #FFFFFF;
 
+}
+
+.theme_button_1_bg:hover{
+    background:grey;
+    border:1px solid grey;
 }

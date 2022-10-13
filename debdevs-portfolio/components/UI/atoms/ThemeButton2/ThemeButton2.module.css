@@ -23,3 +23,7 @@ text-align: center;
 color: #FFFFFF;
 
 }
+
+.theme_button_2_bg:hover{
+    background:grey;
+}
