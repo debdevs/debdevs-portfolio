@@ -15,10 +15,11 @@ border-radius: 13.8402px;
 padding:0px;
 
 --x:0;
+--percent:100%;
 background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
 linear-gradient(102.8deg, #0038FF 12.54%, rgba(53, 219, 255, 0.792564) 22.03%, rgba(255, 255, 255, 0) 59.26%);
 
-background: linear-gradient(102.8deg, var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ 200%;
+background: linear-gradient(102.8deg, var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ 100%;
 
 
 
@@ -109,5 +110,5 @@ padding:0px;
 
 
 --x: 100%; 
-background: linear-gradient(102.8deg, var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ 100%;
+background: linear-gradient(102.8deg, var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ 200%;
 }
