@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { ButtonRowFront } from '../components/UI/atoms/ButtonRowFront/ButtonRowFront';
-import { ProjectCard } from '../components/UI/atoms/ProjectCard/ProjectCard';
-import { ThemeButton1 } from '../components/UI/atoms/ThemeButton1/ThemeButton1';
-import { ThemeButton2 } from '../components/UI/atoms/ThemeButton2/ThemeButton2';
+
 import NavBar from '../components/UI/templates/NavBar/NavBar';
+import HomeHero from '../components/UI/templates/HomeHero/HomeHero';
+import HomeSubheading from '../components/UI/templates/HomeSubheading/HomeSubheading';
 import Link from 'next/link';
 export default function Home() {
   return (
@@ -16,100 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <section className={styles.home_header}>
-        <content_box className={styles.content_box}>
-          <left_items className={styles.left_items}>
-            <header_info_box className={styles.header_info_box}>
-              <h1 className={styles.h1}>Hello There,</h1>
-              <h2 className={styles.h2}>
-                I'm <span className={styles.span}>Deborah</span>
-              </h2>
-              <p className={styles.p}>
-                A frontend developer with a passion for visuals
-              </p>
-              <line_div className={styles.line_div}></line_div>
-              <button_array className={styles.button_array}>
-                <button className={styles.blue_button}>About</button>
-                <button className={styles.white_button}>
-                  <div className={styles.white_inner_button}>My Work</div>
-                </button>
-              </button_array>
-            </header_info_box>
-          </left_items>
-          <right_items className={styles.right_items}>
-            <right_items_content className={styles.right_items_content}>
-              <h1>Featured Project:</h1>
-              <h2>Showman Video</h2>
-              <image_styling_container
-                className={styles.image_styling_container}
-              >
-                <right_items_main_image_container
-                  className={styles.right_items_main_image_container}
-                >
-                  <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
-                </right_items_main_image_container>
-                <right_items_accent_image_container
-                  className={styles.right_items_accent_image_container}
-                >
-                  <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
-                </right_items_accent_image_container>
-              </image_styling_container>
-            </right_items_content>
-          </right_items>
-        </content_box>
-      </section>
-      <section className={styles.subheading_container}>
-        <subheading_left className={styles.subheading_left}>
-          <subheading_left_bg className={styles.subheading_left_bg}>
-            <subheading_left_items className={styles.subheading_left_items}>
-              <h1 className={styles.subheading_left_items_header}>
-                Projects List
-              </h1>
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-            </subheading_left_items>
-          </subheading_left_bg>
-        </subheading_left>
-        <subheading_right className={styles.subheading_right}>
-          <subheading_right_bg className={styles.box_border_gradient}>
-            <subheading_right_bg_overlay
-              className={styles.subheading_right_bg_overlay}
-            >
-              <h1 className={styles.project_header}>Showman Video</h1>
-              <h2 className={styles.project_overview}>~My Magnum Opus</h2>
-              <image_fx_container className={styles.image_fx_container}>
-                <left_image_container className={styles.left_image_container}>
-                  <img
-                    src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg"
-                    className={styles.left_image}
-                  />
-                </left_image_container>
-                <right_image_container className={styles.right_image_container}>
-                  <img
-                    src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg"
-                    className={styles.right_image}
-                  />
-                </right_image_container>
-              </image_fx_container>
-              <ButtonRowFront />
-
-              <p className={styles.project_description}>
-                Showman video is a full-stack web application that Uses a unique
-                combination of technologies to deliver custom & on-demand videos
-                to individuals and businesses. <br></br>
-                <br></br>It uses React for the front-end, Django for user
-                authentication and page management, and the REST API to
-                communicate with AWS for user renders
-              </p>
-              <project_buttons className={styles.project_buttons}>
-                <ThemeButton1 />
-                <ThemeButton2 />
-              </project_buttons>
-            </subheading_right_bg_overlay>
-          </subheading_right_bg>
-        </subheading_right>
-      </section>
+      <HomeHero />
+      <HomeSubheading />
     </div>
   );
 }

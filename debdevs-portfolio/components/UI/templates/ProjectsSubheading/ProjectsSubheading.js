@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ProjectsSubheading.module.css';
 import TextLayoutBox from '../../molecules/TextLayoutBox/TextLayoutBox';
 import ProjectDisplayMain from '../../atoms/ProjectDisplayMain/ProjectDisplayMain';
-import project_data from './project_data';
+import project_data from '../../../../public/project_data';
 const ProjectsSubheading = () => {
   return (
     <div className={styles.subheading_parent}>
@@ -13,9 +13,9 @@ const ProjectsSubheading = () => {
         <right_items className={styles.right_items}>
           <TextLayoutBox
             header_text="Intro"
-            paragraph_text={project_data.products[0].story}
-            second_header_text={project_data.products[0].second_heading}
-            second_paragraph_text={project_data.products[0].second_description}
+            paragraph_text={project_data.projects[0].story}
+            second_header_text={project_data.projects[0].second_heading}
+            second_paragraph_text={project_data.projects[0].second_description}
           />
         </right_items>
       </subheading_content>
