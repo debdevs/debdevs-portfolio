@@ -13,7 +13,7 @@ height: 350px;
 
 .left_items {
     width:45%;
-    height:350px;
+    height:100%;
     display:flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -26,6 +26,7 @@ height: 350px;
     width:50%;
     display:flex;
     justify-content: flex-start;   
+    height:100%;
 }
 
 .subheading_content{
@@ -37,4 +38,5 @@ height: 350px;
     margin-top:75px;
     gap:55px;
     margin-right:875px;
+    height:100%;
 }

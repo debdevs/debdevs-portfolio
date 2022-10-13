@@ -14,6 +14,8 @@ const ProjectsSubheading = () => {
           <TextLayoutBox
             header_text="Intro"
             paragraph_text={project_data.products[0].description}
+            second_header_text={project_data.products[0].second_heading}
+            second_paragraph_text={project_data.products[0].second_description}
           />
         </right_items>
       </subheading_content>
