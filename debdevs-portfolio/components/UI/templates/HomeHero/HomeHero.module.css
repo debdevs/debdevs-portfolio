@@ -12,6 +12,7 @@
     display:flex;
     flex-direction: column;
     height:230px;
+    height: 80%;
     margin:0;
     align-items: flex-start;
     justify-content: flex-start;
@@ -73,6 +74,13 @@
     margin-top:0px;
     width:65%;
     display:flex;
+  }
+
+  .icon_array{
+    display:flex;
+    width:75%;
+
+    gap:15px;
   }
   .left_items {
     display:flex;
@@ -219,11 +227,12 @@
     font-family: 'Libre Baskerville';
   border-radius: 5px;
   background: linear-gradient(98.51deg, #A9FFCB -10.14%, rgba(179, 223, 210, 0.873494) -2.85%, rgba(255, 255, 255, 0) 47.48%);
-  padding:.6%;
+  padding:1.5px;
   border:0px;
   display:flex;
   justify-content:center;
   align-items:center;
+  cursor:pointer;
   }
   
   .white_inner_button{
@@ -249,6 +258,18 @@
     }
     .right_items{
       display:none;
+    }
+    .header_info_box{
+      
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .header_info_box * { 
+
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     .subheading_right{
       display:none;

@@ -141,6 +141,17 @@
     .subheading_left{
       width:100%;
     }
+
+    .subheading_left_bg{
+      justify-content: center;
+    }
+
+    .subheading_left_items{
+      margin-top:0px;
+    }
+    .subheading_left_items .subheading_left_items_header{
+      text-align: center;
+    }
     .subheading_container{
       display:flex;
       justify-content:center;

@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './HomeHero.module.css';
+import IconWithToolTip from '../../atoms/IconWithToolTip/IconWithToolTip';
+import skills from '../../../../public/data/skills.js';
+import { motion } from 'framer-motion';
 const HomeHero = () => {
   return (
     <section className={styles.home_header}>
@@ -20,6 +23,28 @@ const HomeHero = () => {
                 <div className={styles.white_inner_button}>My Work</div>
               </button>
             </button_array>
+            <icon_array className={styles.icon_array}>
+              {skills.map((skill, key) => (
+                <motion.div
+                  className="cat-card-motion"
+                  key={skill.id}
+                  initial={{ opacity: 0, traslateX: -50, translateY: -50 }}
+                  animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+                  transition={{ duration: 1, delay: 0.25 + key * 0.25 }}
+                >
+                  <IconWithToolTip
+                    className="icon-widget"
+                    title={skill.title}
+                    cover_image={skill.image}
+                    key={key}
+                    cardClick={() => {
+                      setClickedId(key);
+                      setActiveIndex(key);
+                    }}
+                  />
+                </motion.div>
+              ))}
+            </icon_array>
           </header_info_box>
         </left_items>
         <right_items className={styles.right_items}>
