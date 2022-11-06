@@ -200,6 +200,7 @@ color: #000000;
         text-align: center;
         justify-content: center;
         align-items: center;
+        gap:5px;
     
     }
     .text_layout h3{

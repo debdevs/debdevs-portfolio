@@ -119,6 +119,7 @@ table {
   --projects-tab-width: 179.44px;
  --projects-tab-height: 35.33px;
 
+ --max-portfolio-button-width:179.44px;
 
  --front-max-button-width: 93px;
  --front-button-width: 97.0480104615px;
@@ -130,6 +131,7 @@ table {
 @media only screen and (max-width: 1024px){
 :root{
   --projects-tab-width: 175px;
+  --max-portfolio-button-width:140.44px;
 
 }
 }
