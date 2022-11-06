@@ -221,3 +221,14 @@ color: rgba(191, 209, 217, 1);
             
             
           }
+
+          @media only screen and (max-width: 1024px){
+            .tabs {
+              width:75%;
+
+              justify-content: center;
+  
+            
+            }
+
+          }

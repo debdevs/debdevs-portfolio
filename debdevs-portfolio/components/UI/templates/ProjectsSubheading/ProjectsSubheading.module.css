@@ -4,6 +4,7 @@
 .subheading_parent {
     height:650px;
     width:100%;
+
 }
 
 .paragraph_text{
@@ -40,3 +41,29 @@ height: 350px;
     margin-right:875px;
     height:100%;
 }
+
+@media only screen and (max-width: 1024px){
+    .subheading_parent {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .subheading_content {
+        margin-right: 0px;
+    }
+    .subheading_content .left_items {
+        display:none;
+    }
+    
+    
+    .subheading_content .right_items {
+        width:100%;
+        justify-content: center;
+    }
+    .subheading_content .right_items *{
+        text-align: center;
+    }
+
+  }

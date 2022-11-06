@@ -1,7 +1,7 @@
 .projects_hero {
     width:100%;
     height:560px;
-
+    flex-direction: row;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -170,3 +170,41 @@ color: #000000;
 }
 
 
+@media only screen and (max-width: 1024px){
+    .projects_hero .hero_content{
+
+        flex-direction: column;
+        margin-left: 0%;
+
+    }
+    .left_items_image_container {
+        display:flex;
+        overflow:hidden;
+
+        
+        height: auto;
+        
+        
+        
+        }
+    .right_items >*{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .right_items *{
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .text_layout h3{
+        width:auto;
+        display:flex;
+        justify-content: center;
+    }
+}
