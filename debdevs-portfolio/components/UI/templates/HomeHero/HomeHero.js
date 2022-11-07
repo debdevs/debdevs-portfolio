@@ -23,6 +23,7 @@ const HomeHero = () => {
                 <div className={styles.white_inner_button}>My Work</div>
               </button>
             </button_array>
+            <h1 className={styles.skills_header}>My Skills:</h1>
             <icon_array className={styles.icon_array}>
               {skills.map((skill, key) => (
                 <motion.div

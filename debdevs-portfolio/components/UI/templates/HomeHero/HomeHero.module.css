@@ -75,11 +75,13 @@
     width:65%;
     display:flex;
   }
-
+.skills_header{
+  font-family: 'Libre Baskerville';
+}
   .icon_array{
     display:flex;
     width:75%;
-
+    margin-top: 15px;
     gap:15px;
   }
   .left_items {
