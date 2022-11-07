@@ -1,6 +1,15 @@
+.nav_parent{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+
+
 .nav_bar {
     height:60px;
-    width:35%;
+    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -11,12 +20,13 @@
     height:60px;
     width:75%;
     display:flex;
-    
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .nav_content h1 {
+  .nav_content .logo_letter {
    font-family: 'Luxurious Script';
-   width:75%;
+   width:100px;
    max-width: 420px;
   height: 58px;
   
@@ -24,7 +34,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 58px;
-  position:absolute;
+
   margin-top:35px;
   cursor:pointer;
   /* identical to box height */

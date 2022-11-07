@@ -1,0 +1,37 @@
+.main_button{
+    width: 93px;
+    height: 33px;
+    border:0px solid white;
+    border-radius: 6.08491px;
+    background: linear-gradient(98.51deg, #A9FFCB -10.14%, rgba(179, 223, 210, 0.873494) -2.85%, rgba(255, 255, 255, 0) 47.48%);
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:.5%;
+    padding:1.5px;
+    cursor:pointer;
+    transition: all .4s ease;
+}
+
+.main_button_overlay{
+    border-radius: 5px;
+    width:100%;
+    height:100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+}
+.main_button_text{
+
+font-family: 'Libre Baskerville';}
+
+.main_button:hover .main_button_overlay{
+    background:black;
+}
+
+.main_button:hover .main_button_text{
+    color:white;
+}

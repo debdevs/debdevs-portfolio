@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './ThemeButton2.module.css';
-export const ThemeButton2 = () => {
+export const ThemeButton2 = ({ button_text = 'Next' }) => {
   return (
     <div>
-      <button className={styles.theme_button_2_bg}>Next</button>
+      <button className={styles.theme_button_2_bg}>{button_text}</button>
     </div>
   );
 };

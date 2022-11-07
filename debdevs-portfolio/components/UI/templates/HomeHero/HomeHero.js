@@ -3,6 +3,8 @@ import styles from './HomeHero.module.css';
 import IconWithToolTip from '../../atoms/IconWithToolTip/IconWithToolTip';
 import skills from '../../../../public/data/skills.js';
 import { motion } from 'framer-motion';
+import ThemeButton3 from '../../atoms/ThemeButton3/ThemeButton3';
+import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
 const HomeHero = () => {
   return (
     <section className={styles.home_header}>
@@ -18,10 +20,8 @@ const HomeHero = () => {
             </p>
             <line_div className={styles.line_div}></line_div>
             <button_array className={styles.button_array}>
-              <button className={styles.blue_button}>About</button>
-              <button className={styles.white_button}>
-                <div className={styles.white_inner_button}>My Work</div>
-              </button>
+              <ThemeButton2 button_text="About" />
+              <ThemeButton3 button_link="/portfolio" />
             </button_array>
             <h1 className={styles.skills_header}>My Skills:</h1>
             <icon_array className={styles.icon_array}>
@@ -67,6 +67,11 @@ const HomeHero = () => {
           </right_items_content>
         </right_items>
       </content_box>
+      <selector_container className={styles.right_slider_selectors}>
+        <button></button>
+        <button></button>
+        <button></button>
+      </selector_container>
     </section>
   );
 };
