@@ -24,4 +24,16 @@ border-radius: 11.4373px;
 .portfolio_image_container > *{
     width:100%;
     height:auto;
+    transition: all .4s ease;
+    cursor: pointer;
 }
+.portfolio_card_container:hover .portfolio_image_container{
+    background: linear-gradient(180deg, rgba(0, 148, 255, 0.65) 0%, rgba(0, 14, 62, 0.35) 100%);
+}
+.portfolio_card_container:hover .portfolio_image_container > *{
+   opacity: .2;
+   transform: scale(1.02);
+   
+}
+
+

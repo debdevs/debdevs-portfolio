@@ -8,8 +8,11 @@ const PortfolioSubheading = () => {
   return (
     <div className={styles.portfolio_subheading_parent}>
       <div className={styles.portfolio_subheading_cards}>
-        {data.projects.map((name, key) => (
-          <PortfolioProjectDisplayCard key_value={key} />
+        {data.projects.map((project, key) => (
+          <PortfolioProjectDisplayCard
+            key_value={key}
+            button_text={project.name}
+          />
         ))}
       </div>
     </div>
