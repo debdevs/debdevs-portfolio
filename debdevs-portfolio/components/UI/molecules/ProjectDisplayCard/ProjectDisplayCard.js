@@ -4,7 +4,9 @@ import { ButtonRowFront } from '../../../../components/UI/atoms/ButtonRowFront/B
 import { ThemeButton1 } from '../../../../components/UI/atoms/ThemeButton1/ThemeButton1';
 import { ThemeButton2 } from '../../../../components/UI/atoms/ThemeButton2/ThemeButton2';
 import HomeTabs from '../HomeTabs/HomeTabs';
-const ProjectDisplayCard = () => {
+import data from '../../../../public/project_data.js';
+import { motion, AnimatePresence } from 'framer-motion';
+const ProjectDisplayCard = ({ index_value = 0, details_index_value = 0 }) => {
   return (
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>Showman Video</h1>
@@ -25,15 +27,27 @@ const ProjectDisplayCard = () => {
       </image_fx_container>
 
       <HomeTabs />
+      <AnimatePresence>
+        <motion.div
+          key={details_index_value}
+          initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+          animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+          transition={{ duration: 0.7, delay: 0 + details_index_value * 0.25 }}
+          className={styles.portfolio_card_container}
+        >
+          {details_index_value === 0 && (
+            <p className={styles.project_description}>
+              {data.projects[index_value].extra_info}
+            </p>
+          )}
+          {details_index_value === 1 && (
+            <p className={styles.project_description}>
+              {data.projects[index_value].challenges}
+            </p>
+          )}
+        </motion.div>
+      </AnimatePresence>
 
-      <p className={styles.project_description}>
-        Showman video is a full-stack web application that Uses a unique
-        combination of technologies to deliver custom & on-demand videos to
-        individuals and businesses. <br></br>
-        <br></br>It uses React for the front-end, Django for user authentication
-        and page management, and the REST API to communicate with AWS for user
-        renders
-      </p>
       <project_buttons className={styles.project_buttons}>
         <ThemeButton1 />
         <ThemeButton2 />
