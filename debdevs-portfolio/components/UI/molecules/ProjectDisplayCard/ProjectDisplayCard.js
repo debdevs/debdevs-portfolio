@@ -1,4 +1,7 @@
 import React from 'react';
+import { useContext } from 'react';
+import { Context } from 'react';
+import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
 import styles from './ProjectDisplayCard.module.css';
 import { ButtonRowFront } from '../../../../components/UI/atoms/ButtonRowFront/ButtonRowFront';
 import { ThemeButton1 } from '../../../../components/UI/atoms/ThemeButton1/ThemeButton1';
@@ -6,6 +9,7 @@ import { ThemeButton2 } from '../../../../components/UI/atoms/ThemeButton2/Theme
 import HomeTabs from '../HomeTabs/HomeTabs';
 import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
+
 const ProjectDisplayCard = ({ index_value = 0, details_index_value = 0 }) => {
   return (
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>

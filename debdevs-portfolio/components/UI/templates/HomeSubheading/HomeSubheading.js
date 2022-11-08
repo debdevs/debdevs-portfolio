@@ -1,11 +1,17 @@
 import React from 'react';
-
+import { useContext } from 'react';
+import { Context } from 'react';
 import { ProjectCard } from '../../../../components/UI/atoms/ProjectCard/ProjectCard';
-
+import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
 import ProjectDisplayCard from '../../molecules/ProjectDisplayCard/ProjectDisplayCard';
 import styles from './HomeSubheading.module.css';
 import data from '../../../../public/project_data';
+
+import { useState } from 'react';
 const HomeSubheading = () => {
+  const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
+
+  const { detailsIndex } = useContext(HomeProjectDetailsContext);
   return (
     <section className={styles.subheading_container}>
       <subheading_left className={styles.subheading_left}>
@@ -25,7 +31,10 @@ const HomeSubheading = () => {
       </subheading_left>
       <subheading_right className={styles.subheading_right}>
         <subheading_right_bg className={styles.box_border_gradient}>
-          <ProjectDisplayCard />
+          <ProjectDisplayCard
+            index_value={0}
+            details_index_value={detailsIndex}
+          />
         </subheading_right_bg>
       </subheading_right>
     </section>
