@@ -32,24 +32,34 @@ const ProjectDisplayCard = ({ index_value = 0, details_index_value = 0 }) => {
 
       <HomeTabs />
       <AnimatePresence>
-        <motion.div
-          key={details_index_value}
-          initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
-          animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
-          transition={{ duration: 0.7, delay: 0 + details_index_value * 0.25 }}
-          className={styles.portfolio_card_container}
-        >
-          {details_index_value === 0 && (
-            <p className={styles.project_description}>
-              {data.projects[index_value].extra_info}
-            </p>
-          )}
-          {details_index_value === 1 && (
-            <p className={styles.project_description}>
-              {data.projects[index_value].challenges}
-            </p>
-          )}
-        </motion.div>
+        <div className={styles.paragraph_container}>
+          <motion.div
+            key={details_index_value}
+            initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+            animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+            }}
+            exit={{
+              scaleX: 0.97,
+              opacity: 0,
+              transition: { type: 'spring', stiffness: 50 },
+            }}
+            className={styles.portfolio_card_container}
+          >
+            {details_index_value === 0 && (
+              <p className={styles.project_description}>
+                {data.projects[index_value].extra_info}
+              </p>
+            )}
+            {details_index_value === 1 && (
+              <p className={styles.project_description}>
+                {data.projects[index_value].challenges}
+              </p>
+            )}
+          </motion.div>{' '}
+        </div>
       </AnimatePresence>
 
       <project_buttons className={styles.project_buttons}>
