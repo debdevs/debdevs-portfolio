@@ -31,9 +31,7 @@ const data = {
     {
       name: 'Rocketeer',
       description: 'A Python video generation and workflow tool for Blender',
-      extra_info: `Showman video is a full-stack web application that Uses a unique combination of technologies to deliver custom & on-demand videos to individuals and businesses.
-
-        It uses React for the front-end, Django for user authentication and page management, and the REST API to communicate with AWS for user renders`,
+      extra_info: `A tool to generate graphics in Blender`,
       tagline: 'The Magnum Opus',
       story: `I’ve been selling my graphics to people online since I was a kid, and it’s always something I’ve been passionate about. 
 
@@ -58,8 +56,7 @@ const data = {
 
     {
       name: 'Lumiere Real Estate',
-      description:
-        'A fullstack web application for delivering on-demand custom videos',
+      description: 'A modern Real Estate Lnading Page',
       extra_info: `Showman video is a full-stack web application that Uses a unique combination of technologies to deliver custom & on-demand videos to individuals and businesses.
 
         It uses React for the front-end, Django for user authentication and page management, and the REST API to communicate with AWS for user renders`,

@@ -10,8 +10,15 @@ import data from '../../../../public/project_data';
 import { useState } from 'react';
 const HomeSubheading = () => {
   const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
+  const { projectListId, setProjectListId } = useContext(
+    HomeProjectDetailsContext
+  );
+  const { detailsIndex, setDetailsIndex } = useContext(
+    HomeProjectDetailsContext
+  );
 
-  const { detailsIndex } = useContext(HomeProjectDetailsContext);
+  const { clickedId, setClickedId } = useContext(HomeProjectDetailsContext);
+  const [selected, setSelected] = useState(0);
   return (
     <section className={styles.subheading_container}>
       <subheading_left className={styles.subheading_left}>
@@ -24,6 +31,14 @@ const HomeSubheading = () => {
               <ProjectCard
                 title={project.name}
                 description={project.description}
+                set_id={() => {
+                  setProjectListId(i);
+                  setDetailsIndex(0);
+                  setSelected(i);
+
+                  console.log(i);
+                }}
+                gradient_container_value={i === selected ? 1 : 0}
               />
             ))}
           </subheading_left_items>
@@ -32,7 +47,7 @@ const HomeSubheading = () => {
       <subheading_right className={styles.subheading_right}>
         <subheading_right_bg className={styles.box_border_gradient}>
           <ProjectDisplayCard
-            index_value={0}
+            index_value={projectListId}
             details_index_value={detailsIndex}
           />
         </subheading_right_bg>

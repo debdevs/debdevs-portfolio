@@ -1,8 +1,20 @@
 import React from 'react';
 import styles from './ProjectCard.module.css';
-export const ProjectCard = ({ title, description }) => {
+export const ProjectCard = ({
+  title,
+  description,
+  set_id,
+  gradient_container_value,
+}) => {
+  const gradient_container_values = [
+    styles.gradient_container,
+    styles.gradient_container_clicked,
+  ];
   return (
-    <div className={styles.gradient_container}>
+    <div
+      className={gradient_container_values[gradient_container_value]}
+      onClick={set_id}
+    >
       <grad_bg className={styles.grad_bg}>
         <grad_content_container className={styles.grad_content_container}>
           <image-container className={styles.image_container}>

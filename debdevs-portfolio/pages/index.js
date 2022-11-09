@@ -11,6 +11,8 @@ import { HomeProjectDetailsContext } from '../contexts/HomeProjectDetailsContext
 export default function Home() {
   const [projectId, setProjectId] = useState(0);
   const [detailsIndex, setDetailsIndex] = useState(0);
+  const [projectListId, setProjectListId] = useState(0);
+  const [heroProjectId, setHeroProjectId] = useState(0);
   return (
     <HomeProjectDetailsContext.Provider
       value={{
@@ -18,6 +20,10 @@ export default function Home() {
         setProjectId,
         detailsIndex,
         setDetailsIndex,
+        projectListId,
+        setProjectListId,
+        heroProjectId,
+        setHeroProjectId,
       }}
     >
       <div className={styles.container}>
