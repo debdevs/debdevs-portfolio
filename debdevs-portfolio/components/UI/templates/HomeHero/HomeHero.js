@@ -5,7 +5,15 @@ import skills from '../../../../public/data/skills.js';
 import { motion } from 'framer-motion';
 import ThemeButton3 from '../../atoms/ThemeButton3/ThemeButton3';
 import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
+import { useContext } from 'react';
+import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
+import data from '../../../../public/project_data';
+
+import { Context } from 'react';
 const HomeHero = () => {
+  const { heroProjectId, setHeroProjectId } = useContext(
+    HomeProjectDetailsContext
+  );
   return (
     <section className={styles.home_header}>
       <content_box className={styles.content_box}>
@@ -51,7 +59,7 @@ const HomeHero = () => {
         <right_items className={styles.right_items}>
           <right_items_content className={styles.right_items_content}>
             <h1>Featured Project:</h1>
-            <h2>Showman Video</h2>
+            <h2>{data.projects[heroProjectId].name}</h2>
             <image_styling_container className={styles.image_styling_container}>
               <right_items_main_image_container
                 className={styles.right_items_main_image_container}
@@ -68,9 +76,24 @@ const HomeHero = () => {
         </right_items>
       </content_box>
       <selector_container className={styles.right_slider_selectors}>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button
+          onClick={() => {
+            setHeroProjectId(0);
+            console.log(heroProjectId);
+          }}
+        ></button>
+        <button
+          onClick={() => {
+            setHeroProjectId(1);
+            console.log(heroProjectId);
+          }}
+        ></button>
+        <button
+          onClick={() => {
+            setHeroProjectId(2);
+            console.log(heroProjectId);
+          }}
+        ></button>
       </selector_container>
     </section>
   );

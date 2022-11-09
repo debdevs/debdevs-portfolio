@@ -99,6 +99,8 @@
       width:100%;
       height: 231px;
       overflow-y:hidden;
+
+
     }
   .project_description{
     margin-top:75px;
@@ -118,4 +120,56 @@
     margin-top:15px;
     display:flex;
     gap:12px;
+  }
+
+  .image_wrapper {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:75px;
+    flex-direction: column-reverse;
+
+    text-align: center;
+    width:100%;
+    height:100%;
+    transition: all .8s ease-in-out;
+    overflow:hidden;
+  }
+
+  .github_image{
+    width:120px;
+    height:auto;
+    transition: all .8s ease-in-out;
+  }
+
+  .image_button{
+    border: 2px solid transparent;
+    background:transparent;
+    border-radius:6px;
+    position:absolute;
+    color:transparent;
+    z-index: 2;
+    cursor:pointer;
+    transition: all .8s ease-in-out;
+    font-family: 'Libre Baskerville';
+    width: 15%;
+    height:35px;
+  }
+
+
+
+  .image_wrapper:hover  .github_image{
+
+    opacity: .2;
+
+  }
+
+  .image_wrapper:hover .image_button {
+    border: 2px solid black;
+    background:black;
+    border-radius:6px;
+    position:absolute;
+    cursor:pointer;
+    color: white;
+   
   }

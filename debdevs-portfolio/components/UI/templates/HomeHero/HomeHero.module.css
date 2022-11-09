@@ -232,6 +232,7 @@
   border-radius: 18.4848px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 padding:0px;
+cursor:pointer;
 }
 
 
@@ -269,5 +270,8 @@ padding:0px;
       justify-content:center;
       align-items: center;
     }
-  
+   
+    .right_slider_selectors{
+      display:none;
+      }
   }

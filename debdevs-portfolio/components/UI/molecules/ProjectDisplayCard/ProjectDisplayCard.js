@@ -9,7 +9,8 @@ import { ThemeButton2 } from '../../../../components/UI/atoms/ThemeButton2/Theme
 import HomeTabs from '../HomeTabs/HomeTabs';
 import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Image from 'next/image';
+import github_image from '../../../../public/company_icons/GitHub-Mark-120px-plus.png';
 const ProjectDisplayCard = ({
   index_value = 0,
   details_index_value = 0,
@@ -62,6 +63,12 @@ const ProjectDisplayCard = ({
               <p className={styles.project_description}>
                 {data.projects[index_value].challenges}
               </p>
+            )}
+            {details_index_value === 2 && (
+              <div className={styles.image_wrapper}>
+                <button className={styles.image_button}>Go</button>
+                <Image src={github_image} className={styles.github_image} />
+              </div>
             )}
           </motion.div>{' '}
         </AnimatePresence>
