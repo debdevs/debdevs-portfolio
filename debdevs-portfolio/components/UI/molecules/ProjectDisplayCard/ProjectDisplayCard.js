@@ -10,11 +10,16 @@ import HomeTabs from '../HomeTabs/HomeTabs';
 import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ProjectDisplayCard = ({ index_value = 0, details_index_value = 0 }) => {
+const ProjectDisplayCard = ({
+  index_value = 0,
+  details_index_value = 0,
+  title,
+  tagline,
+}) => {
   return (
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
-      <h1 className={styles.project_header}>Showman Video</h1>
-      <h2 className={styles.project_overview}>~My Magnum Opus</h2>
+      <h1 className={styles.project_header}>{title}</h1>
+      <h2 className={styles.project_overview}>{tagline}</h2>
       <image_fx_container className={styles.image_fx_container}>
         <left_image_container className={styles.left_image_container}>
           <img

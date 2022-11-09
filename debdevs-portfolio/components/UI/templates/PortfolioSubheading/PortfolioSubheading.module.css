@@ -14,4 +14,5 @@
     gap:35px;
     justify-content: center;
     align-items: flex-start;
+    overflow:scroll;
 }

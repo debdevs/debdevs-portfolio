@@ -13,6 +13,7 @@ export default function Home() {
   const [detailsIndex, setDetailsIndex] = useState(0);
   const [projectListId, setProjectListId] = useState(0);
   const [heroProjectId, setHeroProjectId] = useState(0);
+  const [clickedItemId, setClickedItemId] = useState(0);
   return (
     <HomeProjectDetailsContext.Provider
       value={{
@@ -24,6 +25,8 @@ export default function Home() {
         setProjectListId,
         heroProjectId,
         setHeroProjectId,
+        clickedItemId,
+        setClickedItemId,
       }}
     >
       <div className={styles.container}>

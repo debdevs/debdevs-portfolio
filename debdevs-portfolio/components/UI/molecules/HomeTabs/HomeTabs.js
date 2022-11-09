@@ -14,7 +14,9 @@ const HomeTabs = ({ tabClick }) => {
   const { detailsIndex, setDetailsIndex } = useContext(
     HomeProjectDetailsContext
   );
-
+  const { clickedItemId, setClickedItemId } = useContext(
+    HomeProjectDetailsContext
+  );
   return (
     <tabs className={styles.tabs}>
       {options.map((option, i) => (

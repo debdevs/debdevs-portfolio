@@ -8,6 +8,8 @@ import styles from './HomeSubheading.module.css';
 import data from '../../../../public/project_data';
 
 import { useState } from 'react';
+
+import { motion, AnimatePresence } from 'framer-motion';
 const HomeSubheading = () => {
   const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
   const { projectListId, setProjectListId } = useContext(
@@ -46,10 +48,31 @@ const HomeSubheading = () => {
       </subheading_left>
       <subheading_right className={styles.subheading_right}>
         <subheading_right_bg className={styles.box_border_gradient}>
-          <ProjectDisplayCard
-            index_value={projectListId}
-            details_index_value={detailsIndex}
-          />
+          <div className={styles.project_container}>
+            <AnimatePresence>
+              <motion.div
+                key={projectListId}
+                initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+                animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+                exit={{
+                  opacity: 0,
+                  translateY: 150,
+                  transition: { duration: 0.25, delay: 0 },
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                }}
+                className={styles.project_motion_div}
+              >
+                <ProjectDisplayCard
+                  index_value={projectListId}
+                  details_index_value={detailsIndex}
+                  title={data.projects[projectListId].name}
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </subheading_right_bg>
       </subheading_right>
     </section>
