@@ -27,6 +27,7 @@ const data = {
       link: '',
       image_source: '',
       challenges: `My main challenge? the backend. I learned nodejs just to make this project and now I can say that I'm at the very least comfortable with it.`,
+      category: 'Web-Development',
     },
     {
       name: 'Rocketeer',
@@ -52,6 +53,7 @@ const data = {
       link: '',
       image_source: '',
       challenges: ``,
+      category: 'Web-Development',
     },
 
     {
@@ -80,6 +82,7 @@ const data = {
       link: '',
       image_source: '',
       challenges: ``,
+      category: 'Web-Development',
     },
   ],
 };

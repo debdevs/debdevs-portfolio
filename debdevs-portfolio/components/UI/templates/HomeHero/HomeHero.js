@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './HomeHero.module.css';
 import IconWithToolTip from '../../atoms/IconWithToolTip/IconWithToolTip';
 import skills from '../../../../public/data/skills.js';
-import { motion } from 'framer-motion';
+
 import ThemeButton3 from '../../atoms/ThemeButton3/ThemeButton3';
 import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
 import { useContext } from 'react';
 import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
 import data from '../../../../public/project_data';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Context } from 'react';
 const HomeHero = () => {
   const { heroProjectId, setHeroProjectId } = useContext(
@@ -57,21 +57,40 @@ const HomeHero = () => {
           </header_info_box>
         </left_items>
         <right_items className={styles.right_items}>
-          <right_items_content className={styles.right_items_content}>
-            <h1>Featured Project:</h1>
-            <h2>{data.projects[heroProjectId].name}</h2>
-            <image_styling_container className={styles.image_styling_container}>
-              <right_items_main_image_container
-                className={styles.right_items_main_image_container}
+          <right_items_content className={styles.right_items_content_bg}>
+            <AnimatePresence>
+              <motion.div
+                key={heroProjectId}
+                initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+                animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className={styles.right_items_content}
+                exit={{
+                  opacity: 0,
+                  translateY: 150,
+                  transition: { duration: 0.25, delay: 0 },
+                }}
               >
-                <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
-              </right_items_main_image_container>
-              <right_items_accent_image_container
-                className={styles.right_items_accent_image_container}
-              >
-                <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
-              </right_items_accent_image_container>
-            </image_styling_container>
+                <div className={styles.texts_box}>
+                  <h1>Featured Project:</h1>
+                  <h2>{data.projects[heroProjectId].name}</h2>
+                </div>
+                <image_styling_container
+                  className={styles.image_styling_container}
+                >
+                  <right_items_main_image_container
+                    className={styles.right_items_main_image_container}
+                  >
+                    <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
+                  </right_items_main_image_container>
+                  <right_items_accent_image_container
+                    className={styles.right_items_accent_image_container}
+                  >
+                    <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
+                  </right_items_accent_image_container>
+                </image_styling_container>
+              </motion.div>
+            </AnimatePresence>
           </right_items_content>
         </right_items>
       </content_box>

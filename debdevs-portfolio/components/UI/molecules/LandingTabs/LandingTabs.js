@@ -19,6 +19,7 @@ const LandingTabs = () => {
         <max_container
           className={styles.max_container}
           onClick={() => setClickedId(i)}
+          key={i}
         >
           <blue_bg className={styles.blue_bg}></blue_bg>
           <white_bg className={styles.white_bg}></white_bg>

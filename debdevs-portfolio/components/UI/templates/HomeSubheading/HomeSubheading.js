@@ -31,6 +31,7 @@ const HomeSubheading = () => {
             </h1>
             {data.projects.map((project, i) => (
               <ProjectCard
+                key={i}
                 title={project.name}
                 description={project.description}
                 set_id={() => {
