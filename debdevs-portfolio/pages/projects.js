@@ -6,10 +6,10 @@ import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/Pr
 import { motion } from 'framer-motion';
 export const Projects = () => {
   const variants = {
-    hidden: { opacity: 0, x: 0, y: 35 },
+    hidden: { opacity: 0, x: 0, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: -100 },
-    duration: { opacity: 0, x: 0, y: -100 },
+    exit: { opacity: 0, x: 0, y: 0 },
+    duration: { opacity: 0, x: 0, y: 0 },
     transition: { ease: 'easeInOut', duration: 20 },
   };
   return (
