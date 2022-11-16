@@ -11,7 +11,7 @@ const portfolio = () => {
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: 0, y: 0 },
     duration: { opacity: 0, x: 0, y: 0 },
-    transition: { ease: 'easeInOut', duration: 20 },
+    transition: { ease: 'easeInOut', duration: 120 },
   };
   const [workId, setWorkId] = useState(0);
   return (

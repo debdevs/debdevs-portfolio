@@ -121,15 +121,16 @@
   }
   
   .right_items_content{
-    width:500px;
-   
-    height:100%;
-    display:flex;
+    width: 40vw;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-
-  
+    padding-right: 15%;
+    cursor:pointer;
+    transition: all .4s;
+    opacity:1;
   
   }
   .texts_box{
@@ -256,7 +257,9 @@
 padding:0px;
 cursor:pointer;
 }
-
+.right_items_content:hover{
+  opacity: .5;
+}
 
   @media only screen and (max-width: 1024px){
   
