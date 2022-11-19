@@ -98,7 +98,7 @@
     width:100%;
   
     margin-top: -75px;
-    margin-left: 75px;
+    /* margin-left: 75px; */
 
   }
   
@@ -127,7 +127,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding-right: 15%;
+
     cursor:pointer;
     transition: all .4s;
     opacity:1;
