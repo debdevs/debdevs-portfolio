@@ -9,13 +9,14 @@ import { ThemeButton2 } from '../../../../components/UI/atoms/ThemeButton2/Theme
 import HomeTabs from '../HomeTabs/HomeTabs';
 import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import github_image from '../../../../public/company_icons/GitHub-Mark-120px-plus.png';
 const ProjectDisplayCard = ({
   index_value = 0,
   details_index_value = 0,
   title,
   tagline,
+  image_source = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
 }) => {
   return (
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
@@ -23,16 +24,26 @@ const ProjectDisplayCard = ({
       <h2 className={styles.project_overview}>{tagline}</h2>
       <image_fx_container className={styles.image_fx_container}>
         <left_image_container className={styles.left_image_container}>
-          <img
-            src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg"
-            className={styles.left_image}
-          />
+        <Image
+      src={image_source[0]}
+      layout = "fill"
+    
+              className={styles.left_image}
+    />
         </left_image_container>
         <right_image_container className={styles.right_image_container}>
-          <img
-            src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg"
+          {/* <img
+            src={image_source}
             className={styles.right_image}
-          />
+          /> */}
+
+<Image
+      src={image_source[0]}
+      alt = {"Project Image"}
+      layout = "fill"
+    
+              className={styles.right_image}
+    />
         </right_image_container>
       </image_fx_container>
 

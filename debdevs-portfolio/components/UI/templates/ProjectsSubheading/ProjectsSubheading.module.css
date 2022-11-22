@@ -4,7 +4,7 @@
 .subheading_parent {
     height:650px;
     width:100%;
-
+    background:white;
 }
 
 .paragraph_text{
@@ -36,7 +36,7 @@ height: 350px;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-top:75px;
+    padding-top:75px;
     gap:55px;
     margin-right:875px;
     height:100%;

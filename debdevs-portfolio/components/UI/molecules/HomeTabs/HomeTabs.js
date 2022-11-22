@@ -21,6 +21,7 @@ const HomeTabs = ({ tabClick }) => {
     <tabs className={styles.tabs}>
       {options.map((option, i) => (
         <button
+        key = {i}
           className={styles.max_container}
           onClick={() => {
             setClickedId(i);

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HomeHero.module.css';
 import IconWithToolTip from '../../atoms/IconWithToolTip/IconWithToolTip';
 import skills from '../../../../public/data/skills.js';
-
+import Image from 'next/future/image';
 import ThemeButton3 from '../../atoms/ThemeButton3/ThemeButton3';
 import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
 import { useContext } from 'react';
@@ -10,7 +10,7 @@ import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetai
 import data from '../../../../public/project_data';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Context } from 'react';
-const HomeHero = () => {
+const HomeHero = ({image_source}) => {
   const { heroProjectId, setHeroProjectId } = useContext(
     HomeProjectDetailsContext
   );
@@ -81,12 +81,24 @@ const HomeHero = () => {
                   <right_items_main_image_container
                     className={styles.right_items_main_image_container}
                   >
-                    <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
+                    <Image
+      src={data.projects[heroProjectId].image_source[0]}
+      alt = {"Project Image"}
+      layout = "fill"
+    
+    />
+             
                   </right_items_main_image_container>
                   <right_items_accent_image_container
                     className={styles.right_items_accent_image_container}
                   >
-                    <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
+                    <Image
+      src={data.projects[heroProjectId].image_source[0]}
+      alt = {"Project Image"}
+      layout = "contain"
+    
+    />
+                    {/* <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" /> */}
                   </right_items_accent_image_container>
                 </image_styling_container>
               </motion.div>

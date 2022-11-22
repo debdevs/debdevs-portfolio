@@ -6,7 +6,7 @@ import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetai
 import ProjectDisplayCard from '../../molecules/ProjectDisplayCard/ProjectDisplayCard';
 import styles from './HomeSubheading.module.css';
 import data from '../../../../public/project_data';
-
+import Image from 'next/future/image';
 import { useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -41,7 +41,8 @@ const HomeSubheading = () => {
 
                   console.log(i);
                 }}
-                gradient_container_value={i === selected ? 1 : 0}
+                img_src = {project.image_source[0]}
+                
               />
             ))}
           </subheading_left_items>
@@ -70,6 +71,9 @@ const HomeSubheading = () => {
                   index_value={projectListId}
                   details_index_value={detailsIndex}
                   title={data.projects[projectListId].name}
+                  image_source={data.projects[projectListId].image_source}
+                  
+                  
                 />
               </motion.div>
             </AnimatePresence>
