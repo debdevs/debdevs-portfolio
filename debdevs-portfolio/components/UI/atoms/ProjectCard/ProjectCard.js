@@ -1,19 +1,28 @@
 import React from 'react';
 import styles from './ProjectCard.module.css';
 import Image from 'next/future/image';
+import { useContext } from 'react';
+import { Context } from 'react';
+
+import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
 export const ProjectCard = ({
   title,
   description,
   set_id,
   gradient_container_value,
-  img_src,
+  img_src = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
 }) => {
+
+  const { projectListId, setProjectListId } = useContext(
+    HomeProjectDetailsContext
+  );
   const gradient_container_values = [
     styles.gradient_container,
     styles.gradient_container_clicked,
   ];
   return (
     <div
+    
       className={gradient_container_values[gradient_container_value]}
       onClick={set_id}
     >

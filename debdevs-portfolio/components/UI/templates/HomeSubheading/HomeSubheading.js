@@ -42,7 +42,13 @@ const HomeSubheading = () => {
                   console.log(i);
                 }}
                 img_src = {project.image_source[0]}
-                
+
+               
+                gradient_container_value ={
+                  i === projectListId
+                  ? 1
+                  : 0
+                }
               />
             ))}
           </subheading_left_items>

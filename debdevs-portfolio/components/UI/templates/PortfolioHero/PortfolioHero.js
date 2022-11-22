@@ -9,6 +9,7 @@ const PortfolioHero = () => {
   return (
     <section className={styles.portfolio_header}>
       <content_box className={styles.content_box}>
+        
         <left_items className={styles.left_items}>
           <portfolio_header_info_box
             className={styles.portfolio_header_info_box}

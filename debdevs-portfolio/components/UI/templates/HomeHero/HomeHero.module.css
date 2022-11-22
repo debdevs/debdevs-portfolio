@@ -40,7 +40,7 @@
     font-family: 'Libre Baskerville';
     font-style: normal;
     font-weight: 400;
-    margin-top:20px;
+    margin-top:0px;
   
     line-height: 0px;
     height:32px;
@@ -57,7 +57,7 @@
   }
   
   .p {
-    margin-top:35px;
+    margin-top:15px;
     height:150px;
     width: 342px;
     height: 50px;
@@ -73,7 +73,13 @@
   .content_box {
     margin-top:0px;
     width:65%;
-    display:flex;
+  
+    max-width: 900px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
   }
 .skills_header{
   font-family: 'Libre Baskerville';
@@ -178,7 +184,7 @@
     text-align: center;
     
     color: #000000;
-    margin-bottom:225px;
+    margin-bottom:325px;
     
     
   
