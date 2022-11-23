@@ -118,10 +118,13 @@
   }
   .right_items_content_bg{
   
-    display:flex;
- 
-    justify-content: center;
-    align-items: center;
+   
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      /* flex: 1 1; */
+      flex-basis: unset;
+  
 
   
   }

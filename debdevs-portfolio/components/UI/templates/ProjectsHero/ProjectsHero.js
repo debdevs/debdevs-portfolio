@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './ProjectsHero.module.css';
 import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
+import Image from 'next/future/image';
+import data from '../../../../public/project_data.js';
 const ProjectsHero = () => {
   return (
     <div>
@@ -10,6 +12,13 @@ const ProjectsHero = () => {
             <left_items_image_container
               className={styles.left_items_image_container}
             >
+              <Image
+      src={data.projects[0].image_source[0]}
+      alt = {"Project Image"}
+      layout = "fill"
+    
+          
+    />
               <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" />
             </left_items_image_container>
           </left_items>

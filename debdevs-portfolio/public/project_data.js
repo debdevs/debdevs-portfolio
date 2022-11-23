@@ -3,6 +3,7 @@ import rocketeer_image from '../../debdevs-portfolio/public/images/rocketeer_ima
 const data = {
   projects: [
     {
+      id:1,
       name: 'Showman Video',
       description:
         'A fullstack web application for delivering on-demand custom videos',
@@ -32,6 +33,7 @@ const data = {
       category: 'Web-Development',
     },
     {
+      id:2,
       name: 'Rocketeer',
       description: 'A Python video generation and workflow tool for Blender',
       extra_info: `A tool to generate graphics in Blender`,
@@ -59,6 +61,7 @@ const data = {
     },
 
     {
+      id:3,
       name: 'Lumiere Real Estate',
       description: 'A modern Real Estate Lnading Page',
       extra_info: `Showman video is a full-stack web application that Uses a unique combination of technologies to deliver custom & on-demand videos to individuals and businesses.
