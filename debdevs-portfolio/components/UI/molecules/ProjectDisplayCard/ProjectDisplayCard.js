@@ -58,11 +58,11 @@ const ProjectDisplayCard = ({
         <AnimatePresence>
           <motion.div
             key={details_index_value}
-            initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+            initial={{ opacity: 0, traslateX: 0, translateY: 0 }}
             animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
             exit={{
               opacity: 0,
-              translateY: 150,
+              translateY: 0,
               transition: { duration: 0.25, delay: 0 },
             }}
             transition={{

@@ -60,15 +60,15 @@ const HomeSubheading = () => {
             <AnimatePresence>
               <motion.div
                 key={projectListId}
-                initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+                initial={{ opacity: 0, traslateX: 0, translateY: -50 }}
                 animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
                 exit={{
                   opacity: 0,
-                  translateY: 150,
+                  translateY: 50,
                   transition: { duration: 0.25, delay: 0 },
                 }}
                 transition={{
-                  duration: 0.5,
+                  duration: .75,
                   delay: 0.2,
                 }}
                 className={styles.project_motion_div}
