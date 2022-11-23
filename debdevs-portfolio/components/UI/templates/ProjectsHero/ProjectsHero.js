@@ -3,7 +3,7 @@ import styles from './ProjectsHero.module.css';
 import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
-const ProjectsHero = () => {
+const ProjectsHero = ({projectId}) => {
   return (
     <div>
       <section className={styles.projects_hero}>
