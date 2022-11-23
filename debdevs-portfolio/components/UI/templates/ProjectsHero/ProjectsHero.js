@@ -3,7 +3,7 @@ import styles from './ProjectsHero.module.css';
 import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
-const ProjectsHero = ({projectId}) => {
+const ProjectsHero = ({projectId = 0}) => {
   return (
     <div>
       <section className={styles.projects_hero}>
@@ -13,7 +13,7 @@ const ProjectsHero = ({projectId}) => {
               className={styles.left_items_image_container}
             >
               <Image
-      src={data.projects[0].image_source[0]}
+      src={data.projects[projectId].image_source[0]}
       alt = {"Project Image"}
       layout = "fill"
     
@@ -24,9 +24,10 @@ const ProjectsHero = ({projectId}) => {
           </left_items>
           <right_items className={styles.right_items}>
             <text_layout className={styles.text_layout}>
-              <h1>Showman Video</h1>
+              <h1>{data.projects[projectId].name}</h1>
               <h2>
-                The <span>Magnum Opus</span>
+              
+                The <span>{data.projects[projectId].tagline.split(" ").splice(-2).join(" ")}</span>
               </h2>
               <div className={styles.line_div} />
               <p>

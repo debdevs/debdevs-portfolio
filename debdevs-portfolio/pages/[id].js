@@ -50,7 +50,7 @@ export default ({ song }) => (
       className=""
     >
       <NavBar />
-      <ProjectsHero />
+      <ProjectsHero projectId={song.id-1}/>
       <ProjectsSubheading />
     </motion.main>
   </div>

@@ -78,6 +78,7 @@ const HomeSubheading = () => {
                   details_index_value={detailsIndex}
                   title={data.projects[projectListId].name}
                   image_source={data.projects[projectListId].image_source}
+                  click_prop = {projectListId}
                   
                   
                 />

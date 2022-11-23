@@ -37,7 +37,7 @@ const data = {
       name: 'Rocketeer',
       description: 'A Python video generation and workflow tool for Blender',
       extra_info: `A tool to generate graphics in Blender`,
-      tagline: 'The Magnum Opus',
+      tagline: 'The Copilot',
       story: `I’ve been selling my graphics to people online since I was a kid, and it’s always something I’ve been passionate about. 
 
         Showman is the culmination of all of my ideas since starting my journey into graphics. It is the most challenging, and rewarding project that I’ve worked on. Each time I ran into a problem, I found a solution. 
@@ -67,7 +67,7 @@ const data = {
       extra_info: `Showman video is a full-stack web application that Uses a unique combination of technologies to deliver custom & on-demand videos to individuals and businesses.
 
         It uses React for the front-end, Django for user authentication and page management, and the REST API to communicate with AWS for user renders`,
-      tagline: 'The Magnum Opus',
+      tagline: 'The Backbone',
       story: `I’ve been selling my graphics to people online since I was a kid, and it’s always something I’ve been passionate about. 
 
         Showman is the culmination of all of my ideas since starting my journey into graphics. It is the most challenging, and rewarding project that I’ve worked on. Each time I ran into a problem, I found a solution. 
