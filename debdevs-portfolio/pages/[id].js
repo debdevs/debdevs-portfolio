@@ -34,13 +34,7 @@ export const getStaticPaths = async () => {
 
 export default ({ song }) => (
   <div>
-    <h1 fontWeight='800'>{song.name}</h1>
 
-    <NextLink href='/' passHref>
-      <button>
-        Back
-      </button>
-    </NextLink>
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden

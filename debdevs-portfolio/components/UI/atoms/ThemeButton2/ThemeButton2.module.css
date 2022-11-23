@@ -1,12 +1,13 @@
 .theme_button_2_bg {
     cursor:pointer;
+    transition: all .4s ease;
     display:flex;
     align-items:center;
     justify-content:center;
     width: 93px;
 height: 33px;
 
-background: linear-gradient(180deg, #0094FF 0%, #11A0FF 85.42%, #7CD0FF 88.02%);
+background: linear-gradient(180deg, var(--button-color-1) 0%, var(--button-color-2) 85.42%, var(--button-color-3) 88.02%);
 border-radius: 5px;
 
 color:white;
@@ -25,5 +26,7 @@ color: #FFFFFF;
 }
 
 .theme_button_2_bg:hover{
-    background:grey;
+    transition: all .4s ease;
+    --button-color-1:grey;
+    --button-color-2:grey;
 }

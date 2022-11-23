@@ -127,6 +127,10 @@ table {
  --front-projects-tab-width: 179.44px;
  --front-projects-tab-height: 35.33px;
 
+ --button-color-1: #0094FF;
+ --button-color-2: #11A0FF;
+ --button-color-3: #7CD0FF;
+
 
 }
 @media only screen and (max-width: 1024px){

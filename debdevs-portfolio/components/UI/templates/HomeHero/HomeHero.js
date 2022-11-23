@@ -28,7 +28,7 @@ const HomeHero = ({image_source}) => {
             </p>
             <line_div className={styles.line_div}></line_div>
             <button_array className={styles.button_array}>
-              <ThemeButton2 button_text="About" />
+              <ThemeButton2 button_text="About" button_link='/about'/>
               <ThemeButton3 button_link="/portfolio" />
             </button_array>
             <h1 className={styles.skills_header}>My Skills:</h1>
