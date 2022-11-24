@@ -204,7 +204,7 @@
   
     width: 169px;
     height: 155px;
-  
+  border:2px solid red;
   position:relative;
   right:45%;
   top:120px;

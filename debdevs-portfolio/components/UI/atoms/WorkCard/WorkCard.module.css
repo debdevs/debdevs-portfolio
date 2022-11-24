@@ -1,0 +1,244 @@
+
+
+
+
+
+
+
+.gradient_container{
+    width: 100%;
+height: 155.01px;
+max-width: 412.44px;
+box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
+border-radius: 13.8402px;
+
+padding:0px;
+
+--x:0;
+--percent:100%;
+--rotation: 102.8deg; 
+background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+linear-gradient(102.8deg, #0038FF 12.54%, rgba(53, 219, 255, 0.792564) 22.03%, rgba(255, 255, 255, 0) 59.26%);
+
+background: linear-gradient(var(--rotation), var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ var(--percent);
+
+
+
+display:flex;
+justify-content:center;
+align-items: center;
+cursor:pointer;
+transition:all .8s ease;
+}
+
+.grad_bg{
+    height:98.9%;
+    width:98.9%;
+    background:white;
+    border-radius: 13.8402px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grad_content_container {
+    transition:all .8s ease;
+    width:100%;
+    max-width: 364.4px;
+height: 118.39px;
+
+background: #FFFFFF;
+
+border-radius: 13.8402px;
+display:flex;
+justify-content: center;
+align-items: center;
+color:black;
+gap:6%;
+
+
+}
+.work_image_container{
+   
+    transition:all .8s ease;
+    width: 96.08px;
+    height: 91.54px; 
+    border-radius: 78.4278px;   
+    object-fit: contain;
+}
+
+.image_item{
+    transition:all .8s ease;
+    width: 96.08px;
+    height: 91.54px; 
+    border-radius: 78.4278px;   
+    object-fit: cover;
+}
+.text_main{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+  
+}
+.text_color {
+    transition:all .8s ease;
+
+    font-family: 'Libre Baskerville';
+    color: #67778E;
+    font-style: normal;
+font-weight: 700;
+letter-spacing: .03rem;
+}
+
+
+.sub_text_color {
+    display:flex;
+    align-items: center;
+    transition:all .8s ease;
+    font-family: 'Libre Baskerville';
+    color: #67778E;
+    font-style: normal;
+font-weight: 700;
+
+width: 214.06px;
+
+
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+color: #67778E;
+
+}
+
+
+.gradient_container:hover{
+
+box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
+padding:0px;
+--x: 100%; 
+--percent:200%;
+
+scale: 99%;
+}
+
+
+
+.gradient_container:hover .grad_content_container {
+    width:100%;
+    max-width: 364.4px;
+height: 118.39px;
+
+background: black;
+box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
+
+
+}
+
+
+
+.gradient_container:hover .grad_content_container  .text_color {
+  
+
+    color: white;
+
+}
+.gradient_container:hover .grad_content_container .sub_text_color{
+    color:white;
+}
+
+.gradient_container:hover .image_item{
+scale:110%;
+}
+
+
+
+
+.gradient_container_clicked{
+
+    box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
+    padding:0px;
+    --x: 100%; 
+    --percent:200%;
+    
+    scale: 99%;
+    width: 100%;
+    height: 155.01px;
+    max-width: 412.44px;
+    box-shadow: -1px 2px 14px 0px rgb(24 130 255 / 47%);
+    border-radius: 13.8402px;
+    padding: 0px;
+    --x: 0;
+    --percent: 100%;
+    --rotation: 102.8deg;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(102.8deg, #0038FF 12.54%, rgba(53, 219, 255, 0.792564) 22.03%, rgba(255, 255, 255, 0) 59.26%);
+    background: linear-gradient(var(--rotation), var(--c1,#0038FF 12.54%), var(--c2, rgba(53, 219, 255, 0.792564)22.03%) 51%, var(--c1, rgba(255, 255, 255, 0)) 59.26%) var(--x, 0)/ var(--percent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .8s ease;
+}
+    
+    
+    
+    
+    .gradient_container_clicked .grad_content_container {
+        width:100%;
+        max-width: 364.4px;
+    height: 118.39px;
+    
+    background: black;
+    box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
+    
+    
+    }
+    
+    
+    
+    .gradient_container_clicked .grad_content_container  .text_color {
+      
+    
+        color: white;
+    
+    }
+    .gradient_container_clicked .grad_content_container .sub_text_color{
+        color:white;
+    }
+    
+    .gradient_container_clicked .image_item{
+    scale:110%;
+    }
+    
+
+
+    .gradient_container_clicked .grad_bg{
+        height:98.9%;
+        width:98.9%;
+        background:black;
+        border-radius: 13.8402px;
+        color:white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .gradient_container_clicked .grad_bg .grad_content_container .image_container{
+        transition:all .8s ease;
+        width: 96.08px;
+        height: 91.54px; 
+        border-radius: 78.4278px;   
+        object-fit: contain;
+    }
+    
+    .gradient_container_clicked .grad_bg .grad_content_container .image_container .image_item{
+        transition:all .8s ease;
+        width: 96.08px;
+        height: 91.54px; 
+        border-radius: 78.4278px;   
+        object-fit: cover;
+    }
