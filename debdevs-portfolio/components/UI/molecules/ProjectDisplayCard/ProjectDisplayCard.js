@@ -93,7 +93,7 @@ const ProjectDisplayCard = ({
 
       <project_buttons className={styles.project_buttons}>
         <ThemeButton1 button_link={ '/' + (index_value+1)}/>
-        <ThemeButton2 click_function={() => {
+        <ThemeButton2 button_link="javascript:void(0);" click_function={() => {
                   setProjectListId( click_prop+1 < data.projects.length? click_prop+1:0);
       
                   console.log(click_prop);
