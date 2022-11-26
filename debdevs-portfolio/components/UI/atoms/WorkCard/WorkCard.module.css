@@ -242,3 +242,29 @@ scale:110%;
         border-radius: 78.4278px;   
         object-fit: cover;
     }
+
+    @media only screen and (max-width: 900px){
+
+        .sub_text_color {
+            display:flex;
+            align-items: center;
+            transition:all .8s ease;
+            font-family: 'Libre Baskerville';
+            color: #67778E;
+            font-style: normal;
+            font-weight: 700;
+            
+            width: 85%;
+            
+            
+            font-family: 'Literata';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 21px;
+            
+            color: #67778E;
+        
+        }
+
+    }

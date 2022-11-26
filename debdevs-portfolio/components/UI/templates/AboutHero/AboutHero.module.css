@@ -85,7 +85,8 @@
    
         display: flex;
         margin-top: 0px;
-        width: 30%;
+        width: 70%;
+        max-width: 700px;
         font-family: 'Libre Baskerville';
         font-style: normal;
         font-weight: 400;
@@ -340,4 +341,64 @@
       align-items: center;
     }
   
+  }
+
+
+
+  @media only screen and (max-width: 900px){
+
+    .top_texts{
+      gap:0px;
+    }
+    .about_header_info_box  {
+
+    
+
+    }
+
+    .about_header_info_box .h1 {
+
+      font-size: 1.8rem;
+      height:42px;
+
+    }
+
+    .about_header_info_box .h2 {
+  
+ 
+     
+      font-size: 1.5rem;
+      line-height: 20px;
+      font-family: 'Libre Baskerville';
+      margin-top: 0px;
+
+    }
+    
+    .about_header_info_box .h2 .span {
+
+    }
+    
+    .about_header_info_box .p {
+     
+      width:85%;
+
+      font-size: .9rem;
+     
+    
+    }
+  
+  
+      
+    .about_header_info_box .p_header {
+     
+      width:80%;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+  
+
+  
+  
+  }
+
   }
