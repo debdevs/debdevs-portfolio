@@ -143,7 +143,8 @@ color: #000000;
     
     color: #000000;
     height:85px;
-    
+    margin-top: 15px;
+    margin-bottom: 15px;
     
 }
 .text_layout h3{
@@ -213,11 +214,15 @@ color: #000000;
 
 
 @media only screen and (max-width: 1024px){
+    .projects_hero{
+        height:600px;
+    }
     .projects_hero .hero_content{
 
         flex-direction: column;
         margin-left: 0%;
         padding-top: 75px;
+        gap:15%;
  
 
     }

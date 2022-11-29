@@ -36,6 +36,7 @@ const data = {
       challenges: `My main challenge? the backend. I learned nodejs just to make this project and now I can say that I'm at the very least comfortable with it.`,
       category: [categories[0],],
       tech_stack: [tech_stack_list[0],'CSS', 'JS', 'Figma', 'Blender'],
+      landing_paragraph_info: "My personal favorite project. A fullstack application to deliver videos to individuals and businesses. It uses custom technology from end to end.",
 
     },
     {
@@ -65,15 +66,14 @@ const data = {
       challenges: ``,
       category: [categories[4],],
       tech_stack: [tech_stack_list[0],'CSS', 'JS', 'Figma', 'Blender'],
+      landing_paragraph_info: "Everybody needs a right-hand man, and that's what Rocketeer is. It is a workflow tool that aids in the production and generation of professional quality graphics",
     },
 
     {
       id:3,
       name: 'Vision HTML Email',
       description: 'A modern Email design created in Figma and implemented using HTML',
-      extra_info: `Showman video is a full-stack web application that Uses a unique combination of technologies to deliver custom & on-demand videos to individuals and businesses.
-
-        It uses React for the front-end, Django for user authentication and page management, and the REST API to communicate with AWS for user renders`,
+      extra_info: `This is an HTML concept & implementation that's been taken from start to finish`,
       tagline: 'Modern Design',
       story: `I’ve been selling my graphics to people online since I was a kid, and it’s always something I’ve been passionate about. 
 
@@ -96,6 +96,7 @@ const data = {
       challenges: ``,
       category: [categories[3],],
       tech_stack: [tech_stack_list[0],'CSS', 'JS', 'Figma'],
+      landing_paragraph_info: "A simple HTML Email designed in figma and implemented using HTML.",
     },
   ],
 };

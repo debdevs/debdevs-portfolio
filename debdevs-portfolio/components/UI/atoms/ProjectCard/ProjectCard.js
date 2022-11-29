@@ -31,10 +31,11 @@ export const ProjectCard = ({
           <image-container className={styles.image_container}>
 
         <Image
-      src={img_src}
-      layout = "fill"
-    
-              className={styles.image_item}
+          src={img_src}
+          layout = "fill"
+          className={styles.image_item}
+          alt = "Image"
+          
     />
           </image-container>
           <text_items className={styles.text_main}>
