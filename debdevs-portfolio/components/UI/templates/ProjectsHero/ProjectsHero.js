@@ -4,6 +4,8 @@ import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
 const ProjectsHero = ({projectId = 0}) => {
+  const tagline = data.projects[projectId].tagline
+  const page_project = data.projects[projectId]
   return (
     <div>
       <section className={styles.projects_hero}>
@@ -25,18 +27,44 @@ const ProjectsHero = ({projectId = 0}) => {
           <right_items className={styles.right_items}>
             <text_layout className={styles.text_layout}>
               <h1>{data.projects[projectId].name}</h1>
-              <h2>
+           
+                
+              {tagline.split(" ").length > 2 ? 
+              <div className={styles.text_row}>
+                <h1>{tagline.split(" ")[0]}</h1>
+                <span>{tagline.split(" ").splice(-2).join(" ")}</span>
+                </div>
+              : 
+              <div className={styles.text_row}>
+              <h1>{tagline.split(" ")[0]}</h1>
+              <span>{tagline.split(" ").splice(-1).join(" ")}</span>
+              </div>
               
-                The <span>{data.projects[projectId].tagline.split(" ").splice(-2).join(" ")}</span>
-              </h2>
+              }
+       
+                {/* The <span>{tagline.split(" ").splice(-2).join(" ")}</span> */}
+         
               <div className={styles.line_div} />
               <p>
+                {page_project.id}
                 My personal favorite project. A fullstack application to deliver
                 videos to individuals and businesses. It uses custom technology
                 from end to end.
               </p>
               <h3>Tech Stack:</h3>
-              <h4>React • Django • AWS • Blender</h4>
+
+           <div className={styles.stack_row}>
+              {data.projects[projectId].tech_stack.map((stack, i) => (
+                <div className={styles.stack_row}>
+               <h4 className={styles.stack_text}>{stack}</h4>
+               {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
+              
+               
+               
+               </div>
+
+            ))}</div>
+              <h5>React • Django • AWS • Blender</h5>
               <tech_array></tech_array>
               <LandingTabs />
             </text_layout>
