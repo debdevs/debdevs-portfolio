@@ -45,7 +45,7 @@ export default ({ song }) => (
     >
       <NavBar />
       <ProjectsHero projectId={song.id-1}/>
-      <ProjectsSubheading />
+      <ProjectsSubheading projectId={song.id-1}/>
     </motion.main>
   </div>
 );

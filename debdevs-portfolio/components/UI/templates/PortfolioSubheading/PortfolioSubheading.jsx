@@ -32,6 +32,8 @@ const PortfolioSubheading = () => {
                 key={key}
                 key_value={key}
                 button_text={project.name}
+                project_image = {project.image_source}
+                
               />
             ))}
           </motion.div>

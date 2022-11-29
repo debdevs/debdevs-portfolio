@@ -5,7 +5,7 @@
     border-radius: 6.08491px;
     background: linear-gradient(98.51deg, #A9FFCB -10.14%, rgba(179, 223, 210, 0.873494) -2.85%, rgba(255, 255, 255, 0) 47.48%);
 
-
+    color:black;
     background: linear-gradient(2.6deg, #A9FFCB -53.55%, rgba(179, 223, 210, 0.873494) -33.89%, rgba(255, 255, 255, 0) 101.86%);
     
   
@@ -36,7 +36,9 @@ background: white;
 }
 .main_portfolio_button_text{
 
-font-family: 'Libre Baskerville';}
+font-family: 'Libre Baskerville';
+color:black;
+}
 
 .main_portfolio_button:hover .main_portfolio_button_overlay{
     background:black;

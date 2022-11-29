@@ -11,7 +11,7 @@
 .hero_content {
     width:80%;
     height:560px;
-   margin-left:8%;
+    margin-left:8%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -62,13 +62,26 @@ height: 421.75px;
     justify-content: center;
     align-items: center;
 }
+.text_row{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:1.5%;
+    margin-bottom: 10px;
+}
+
+.text_row>*{
+    font-size: 32px !important;
+    line-height: 125% !important;
+    height: 125% !important;
+}
 .text_layout{
     margin-top:35px;
 }
 .text_layout h1 {
 
-width: 486.9px;
-height: 60.28px;
+
+
 
 font-family: 'Libre Baskerville';
 font-style: normal;
@@ -99,7 +112,7 @@ color: #000000;
     
 }
 
-.text_layout h2 span{
+.text_row span{
 
     font-family: 'Libre Baskerville';
     font-style: normal;
@@ -153,8 +166,35 @@ color: #000000;
     
     
 }
+
+.stack_row{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  
+    gap:10px;
+    max-width: 500px;
+}
+
+.stack_text{
+
+    height: 12px;
+   
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.9115px;
+    line-height: 12px;
+    /* identical to box height, or 83% */
+    
+    
+    color: #000000;
+     
+    
+    
+}
 .text_layout h4{
-    width: 387.2px;
+    display: flex;
     height: 12px;
     
     font-family: 'Libre Baskerville';
@@ -177,6 +217,8 @@ color: #000000;
 
         flex-direction: column;
         margin-left: 0%;
+        padding-top: 75px;
+ 
 
     }
     .left_items_image_container {

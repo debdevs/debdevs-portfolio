@@ -15,7 +15,8 @@
 
 .portfolio_image_container{
     width: 360.24px;
-    height: 404.07px;
+    height:auto;
+    max-height: 404.07px;
     overflow: hidden;
     box-shadow: -21.4449px 21.4449px 50.038px 7.14829px rgba(82, 138, 221, 0.15);
 border-radius: 11.4373px;

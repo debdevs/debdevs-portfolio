@@ -61,6 +61,7 @@ height: 350px;
     .subheading_content .right_items {
         width:100%;
         justify-content: center;
+        margin-top: 50px;
     }
     .subheading_content .right_items *{
         text-align: center;

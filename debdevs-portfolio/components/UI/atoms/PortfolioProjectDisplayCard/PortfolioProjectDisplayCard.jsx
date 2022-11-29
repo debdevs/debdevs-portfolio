@@ -4,7 +4,7 @@ import Image from 'next/future/image';
 import skyway_web_image from '../../../../public/images/SkywayWebsite.png';
 import PortfolioProjectButton from '../PortfolioProjectButton/PortfolioProjectButton';
 import { motion, AnimatePresence } from 'framer-motion';
-const PortfolioProjectDisplayCard = ({ button_text, key_value = 0 }) => {
+const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image = skyway_web_image}) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -17,13 +17,13 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0 }) => {
         <div className={styles.portfolio_image_container}>
           <Image
             className={styles.image_display_base_image}
-            src={skyway_web_image}
+            src={project_image[0]}
             alt=""
             objectFit="cover"
             quality={100}
           />
         </div>
-        <PortfolioProjectButton button_text={button_text} />
+        <PortfolioProjectButton button_text={button_text} button_link={ '/' + (key_value+1)}/>
       </motion.div>
     </AnimatePresence>
   );

@@ -5,6 +5,7 @@ import PortfolioSubheading from '../components/UI/templates/PortfolioSubheading/
 import { PortfolioPageContext } from '../contexts/PortfolioPageContext';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+
 const portfolio = () => {
   const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
@@ -15,7 +16,7 @@ const portfolio = () => {
   };
   const [workId, setWorkId] = useState(0);
   return (
-    <div>
+    <div className='body'>
       <PortfolioPageContext.Provider
         value={{
           workId,
