@@ -7,10 +7,29 @@ import ProjectDisplayCard from '../../molecules/ProjectDisplayCard/ProjectDispla
 import styles from './HomeSubheading.module.css';
 import data from '../../../../public/project_data';
 import Image from 'next/future/image';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 const HomeSubheading = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  //choose the screen size 
+const handleResize = () => {
+  if (window.innerWidth < 1024) {
+      setIsMobile(true)
+  } else {
+      setIsMobile(false)
+  }
+}
+
+// create an event listener
+useEffect(() => {
+  window.addEventListener("resize", handleResize)
+})
+
+// finally you can render components conditionally if isMobile is True or False 
+
+
   const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
   const { projectListId, setProjectListId } = useContext(
     HomeProjectDetailsContext
@@ -21,6 +40,7 @@ const HomeSubheading = () => {
 
   const { clickedId, setClickedId } = useContext(HomeProjectDetailsContext);
   const [selected, setSelected] = useState(0);
+  
   return (
     <section className={styles.subheading_container}>
       <subheading_left className={styles.subheading_left}>
@@ -41,8 +61,9 @@ const HomeSubheading = () => {
 
                   console.log(i);
                 }}
+    
                 img_src = {project.image_source[0]}
-
+                link_project = {isMobile == false? "" : i+1}
                
                 gradient_container_value ={
                   i === projectListId
@@ -54,39 +75,58 @@ const HomeSubheading = () => {
           </subheading_left_items>
         </subheading_left_bg>
       </subheading_left>
+      {isMobile == false ? 
+      
       <subheading_right className={styles.subheading_right}>
-        <subheading_right_bg className={styles.box_border_gradient}>
-          <div className={styles.project_container}>
-            <AnimatePresence>
-              <motion.div
-                key={projectListId}
-                initial={{ opacity: 0, traslateX: 0, translateY: -50 }}
-                animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
-                exit={{
-                  opacity: 0,
-                  translateY: 50,
-                  transition: { duration: 0.25, delay: 0 },
-                }}
-                transition={{
-                  duration: .75,
-                  delay: 0.2,
-                }}
-                className={styles.project_motion_div}
-              >
-                <ProjectDisplayCard
-                  index_value={projectListId}
-                  details_index_value={detailsIndex}
-                  title={data.projects[projectListId].name}
-                  image_source={data.projects[projectListId].image_source}
-                  click_prop = {projectListId}
-                  
-                  
-                />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </subheading_right_bg>
-      </subheading_right>
+      <subheading_right_bg className={styles.box_border_gradient}>
+        <div className={styles.project_container}>
+          <AnimatePresence>
+            <motion.div
+              key={projectListId}
+              initial={{ opacity: 0, traslateX: 0, translateY: -50 }}
+              animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+              exit={{
+                opacity: 0,
+                translateY: 50,
+                transition: { duration: 0.25, delay: 0 },
+              }}
+              transition={{
+                duration: .75,
+                delay: 0.2,
+              }}
+              className={styles.project_motion_div}
+            >
+              <ProjectDisplayCard
+                index_value={projectListId}
+                details_index_value={detailsIndex}
+                title={data.projects[projectListId].name}
+                image_source={data.projects[projectListId].image_source}
+                click_prop = {projectListId}
+                
+                
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </subheading_right_bg>
+    </subheading_right>
+      
+      
+      
+      
+      : 
+
+      <div className={styles.mobile_modal_container}>
+
+
+      
+      
+
+      </div>
+      
+      
+      }
+    
     </section>
   );
 };

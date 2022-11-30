@@ -13,7 +13,9 @@
     height:100%;
     display:flex;
   }
-  
+  .mobile_modal_container{
+    position:absolute;
+  }
   
   .subheading_right {
     width:50%;
@@ -175,7 +177,7 @@
       display:none;
     }
     .subheading_right{
-      display: flex;
+      display: none;
       position: absolute;
       width: 105vw;
     }

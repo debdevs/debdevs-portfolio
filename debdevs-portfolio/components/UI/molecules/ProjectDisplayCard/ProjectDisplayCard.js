@@ -11,6 +11,7 @@ import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/future/image';
 import github_image from '../../../../public/company_icons/GitHub-Mark-120px-plus.png';
+import Link from 'next/link';
 const ProjectDisplayCard = ({
   index_value = 0,
   details_index_value = 0,
@@ -28,20 +29,19 @@ const ProjectDisplayCard = ({
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>{title}</h1>
       <h2 className={styles.project_overview}>{tagline}</h2>
+      <Link href={ '/' + (details_index_value+1)}>
       <image_fx_container className={styles.image_fx_container}>
         <left_image_container className={styles.left_image_container}>
         <Image
-      src={image_source[0]}
-      layout = "fill"
+          src={image_source[0]}
+          layout = "fill"
     
-              className={styles.left_image}
+          className={styles.left_image}
+          alt = ""
     />
         </left_image_container>
         <right_image_container className={styles.right_image_container}>
-          {/* <img
-            src={image_source}
-            className={styles.right_image}
-          /> */}
+
 
 <Image
       src={image_source[0]}
@@ -52,7 +52,7 @@ const ProjectDisplayCard = ({
     />
         </right_image_container>
       </image_fx_container>
-
+      </Link>
       <HomeTabs />
       <div className={styles.paragraph_container}>
         <AnimatePresence>

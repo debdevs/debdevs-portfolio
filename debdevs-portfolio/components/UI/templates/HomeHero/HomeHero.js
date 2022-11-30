@@ -10,6 +10,7 @@ import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetai
 import data from '../../../../public/project_data';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Context } from 'react';
+import Link from 'next/link';
 const HomeHero = ({image_source}) => {
   const { heroProjectId, setHeroProjectId } = useContext(
     HomeProjectDetailsContext
@@ -57,6 +58,7 @@ const HomeHero = ({image_source}) => {
           </header_info_box>
         </left_items>
         <right_items className={styles.right_items}>
+        <Link href={ '/' + (heroProjectId+1)}>
           <right_items_content className={styles.right_items_content_bg}>
             <AnimatePresence>
               <motion.div
@@ -104,6 +106,7 @@ const HomeHero = ({image_source}) => {
               </motion.div>
             </AnimatePresence>
           </right_items_content>
+          </Link>
         </right_items>
       </content_box>
       <selector_container className={styles.right_slider_selectors}>

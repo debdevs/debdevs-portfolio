@@ -5,10 +5,12 @@ import { useContext } from 'react';
 import { Context } from 'react';
 
 import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
+import Link from 'next/link';
 export const ProjectCard = ({
   title,
   description,
   set_id,
+  link_project,
   gradient_container_value,
   img_src = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
 }) => {
@@ -21,9 +23,11 @@ export const ProjectCard = ({
     styles.gradient_container_clicked,
   ];
   return (
+    <Link href={ '/' + (link_project)}>
     <div
     
       className={gradient_container_values[gradient_container_value]}
+
       onClick={set_id}
     >
       <grad_bg className={styles.grad_bg}>
@@ -45,5 +49,6 @@ export const ProjectCard = ({
         </grad_content_container>
       </grad_bg>
     </div>
+    </Link>
   );
 };
