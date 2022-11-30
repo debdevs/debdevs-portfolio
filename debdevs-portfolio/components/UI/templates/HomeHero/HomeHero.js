@@ -11,6 +11,8 @@ import data from '../../../../public/project_data';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Context } from 'react';
 import Link from 'next/link';
+import { FiExternalLink } from 'react-icons/fi';
+
 const HomeHero = ({image_source}) => {
   const { heroProjectId, setHeroProjectId } = useContext(
     HomeProjectDetailsContext
@@ -58,8 +60,11 @@ const HomeHero = ({image_source}) => {
           </header_info_box>
         </left_items>
         <right_items className={styles.right_items}>
+        
         <Link href={ '/' + (heroProjectId+1)}>
+          
           <right_items_content className={styles.right_items_content_bg}>
+      
             <AnimatePresence>
               <motion.div
                 key={heroProjectId}
@@ -84,29 +89,33 @@ const HomeHero = ({image_source}) => {
                     className={styles.right_items_main_image_container}
                   >
                     <Image
-      src={data.projects[heroProjectId].image_source[0]}
-      alt = {"Project Image"}
-      layout = "fill"
-    
-    />
-             
-                  </right_items_main_image_container>
-                  <right_items_accent_image_container
-                    className={styles.right_items_accent_image_container}
-                  >
-                    <Image
-      src={data.projects[heroProjectId].image_source[0]}
-      alt = {"Project Image"}
-      layout = "contain"
-    
-    />
-                    {/* <img src="https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg" /> */}
+                      src={data.projects[heroProjectId].image_source[0]}
+                      alt = {"Project Image"}
+                      layout = "fill"
+                    
+                    />
+                            
+                                  </right_items_main_image_container>
+                                  <right_items_accent_image_container
+                                    className={styles.right_items_accent_image_container}
+                                  >
+                                    <Image
+                      src={data.projects[heroProjectId].image_source[0]}
+                      alt = {"Project Image"}
+                      layout = "contain"
+                    
+                    />
+               <FiExternalLink className={styles.cover_icon} />
                   </right_items_accent_image_container>
+                
                 </image_styling_container>
+                <cover_item className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></cover_item>
               </motion.div>
             </AnimatePresence>
+           
           </right_items_content>
           </Link>
+        
         </right_items>
       </content_box>
       <selector_container className={styles.right_slider_selectors}>

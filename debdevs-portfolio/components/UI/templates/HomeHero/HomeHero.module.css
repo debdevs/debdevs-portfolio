@@ -6,6 +6,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 50% 50%;	
   }
   
   .header_info_box {
@@ -73,13 +74,12 @@
   .content_box {
     margin-top:0px;
     width:65%;
-  
-    max-width: 900px;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
+  max-width: 1400px;
+    
+    display:grid;
     justify-content: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;	
   }
 .skills_header{
   font-family: 'Libre Baskerville';
@@ -98,14 +98,16 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+ 
   }
   .right_items {
     display:flex;
     width:100%;
-  
-    margin-top: -75px;
+    height: 100%;
+    
+    justify-content: flex-end;
     /* margin-left: 75px; */
+    padding-bottom: 75px;
 
   }
   
@@ -119,24 +121,18 @@
   }
   .right_items_content_bg{
   
-   
-      /* display: flex; */
-      justify-content: center;
-      align-items: center;
-      /* flex: 1 1; */
-      flex-basis: unset;
   
 
   
   }
   
   .right_items_content{
-    width: 40vw;
+   
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    
 
     cursor:pointer;
     transition: all .4s;
@@ -228,7 +224,21 @@
     object-fit: cover;
     border-radius: 35px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     }
+
+    .right_items_accent_image_container .cover_icon{
+      opacity: 1;
+
+    }
+
+    .right_items_accent_image_container:hover .cover_icon{
+      opacity: 1;
+    }
+
     .right_items_accent_image_container img{
       object-fit: cover;
       width: 374px;
@@ -272,7 +282,34 @@ cursor:pointer;
 .right_items_content:hover{
   opacity: .5;
 }
+.cover_item{
+ 
 
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: absolute;
+  width:inherit;
+  height: inherit;
+  z-index: 120;
+  border-radius: 8px ;
+  opacity: 0;
+  cursor:pointer;
+  transition: all .4s ease;
+}
+
+.cover_item:hover{
+  opacity: .5;
+}
+
+.cover_icon{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 15;
+  color: #000000;
+}
   @media only screen and (max-width: 1024px){
   
     .container{
@@ -311,4 +348,53 @@ cursor:pointer;
     .right_slider_selectors{
       display:none;
       }
+
+
+  }
+
+
+  @media only screen and (max-width: 1433px){
+    .container{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+    }
+    .right_items{
+      display:none;
+    }
+    .header_info_box{
+      
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .header_info_box * { 
+
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .subheading_right{
+      display:none;
+    }
+  
+    .subheading_left{
+      width:100%;
+    }
+    .subheading_container{
+      display:flex;
+      justify-content:center;
+      align-items: center;
+    }
+   
+    .right_slider_selectors{
+      display:none;
+      }
+    .content_box {
+      display:grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 100%;
+    }
+
   }
