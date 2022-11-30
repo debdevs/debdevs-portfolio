@@ -63,7 +63,7 @@ useEffect(() => {
                 }}
     
                 img_src = {project.image_source[0]}
-                link_project = {isMobile == false? "" : i+1}
+                link_project = {isMobile == false? "javascript:void(0)": '/' + (i+1)}
                
                 gradient_container_value ={
                   i === projectListId

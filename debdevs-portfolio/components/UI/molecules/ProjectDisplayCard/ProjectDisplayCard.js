@@ -29,7 +29,7 @@ const ProjectDisplayCard = ({
     <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>{title}</h1>
       <h2 className={styles.project_overview}>{tagline}</h2>
-      <Link href={ '/' + (details_index_value+1)}>
+      <Link href={ '/' + (click_prop+1)}>
       <image_fx_container className={styles.image_fx_container}>
         <left_image_container className={styles.left_image_container}>
         <Image
@@ -58,15 +58,15 @@ const ProjectDisplayCard = ({
         <AnimatePresence>
           <motion.div
             key={details_index_value}
-            initial={{ opacity: 0, traslateX: 0, translateY: 0 }}
+            initial={{ opacity: 0, traslateX: 0, translateY: 150 }}
             animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
             exit={{
               opacity: 0,
-              translateY: 0,
+              translateY: -150,
               transition: { duration: 0.25, delay: 0 },
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               delay: 0,
             }}
             className={styles.portfolio_card_container}

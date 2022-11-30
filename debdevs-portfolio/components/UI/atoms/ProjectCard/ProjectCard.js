@@ -10,7 +10,7 @@ export const ProjectCard = ({
   title,
   description,
   set_id,
-  link_project,
+  link_project = "#",
   gradient_container_value,
   img_src = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
 }) => {
@@ -23,7 +23,7 @@ export const ProjectCard = ({
     styles.gradient_container_clicked,
   ];
   return (
-    <Link href={ '/' + (link_project)}>
+    <Link href={link_project}>
     <div
     
       className={gradient_container_values[gradient_container_value]}
