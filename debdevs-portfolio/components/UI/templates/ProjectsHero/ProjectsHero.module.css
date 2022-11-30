@@ -244,17 +244,28 @@ color: #000000;
         align-items: center;
     
     }
+    .text_layout {
+
+        gap:5px;
+    
+    }
     .right_items *{
 
         text-align: center;
         justify-content: center;
         align-items: center;
-        gap:5px;
+       
     
     }
     .text_layout h3{
         width:auto;
         display:flex;
         justify-content: center;
+    }
+
+    .text_row{
+
+        gap:5%;
+     
     }
 }

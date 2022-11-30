@@ -8,7 +8,7 @@ const AnimatedTextWord = ({text}) => {
     const container = {
         hidden: {opacity: 0, y:0},
         visible: (i = 1) => ({opacity:1,y:0,
-        transition:{staggerChildren: 0.04, staggerDirection: 1, delayChildren: 0.08 * i}})
+        transition:{staggerChildren: 0.04, staggerDirection: 1, delayChildren: 0.12 * i}})
     };
     const child = {
         visible:{
@@ -27,7 +27,7 @@ const AnimatedTextWord = ({text}) => {
 
         hidden:{
             opacity:0,
-            y:30,
+            y:10,
             x:-20,
             transition:{
                 type: "tween",
