@@ -3,30 +3,37 @@ import styles from './AnimatedTextWord.module.css'
 import { motion } from 'framer-motion'
 const AnimatedTextWord = ({text}) => {
     const words = text.split(" ")
-    const letters = text.split("")
+
+    const letters = Array.from(text);
     const container = {
-        hidden: {opacity: 0},
-        visible: (i = 1) => ({opacity:1,
-        transition:{staggerChildren: 0.12, delayChildren: 0.04 * i}})
+        hidden: {opacity: 0, y:0},
+        visible: (i = 1) => ({opacity:1,y:0,
+        transition:{staggerChildren: 0.04, staggerDirection: 1, delayChildren: 0.08 * i}})
     };
     const child = {
         visible:{
             opacity:1,
             y:0,
+            x:0,
+        
             transition:{
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
+                type: "tween",
+                damping: 35,
+                stiffness: 500,
+              
+        
             },
         },
 
         hidden:{
             opacity:0,
-            y:20,
+            y:30,
+            x:-20,
             transition:{
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
+                type: "tween",
+                damping: 35,
+                stiffness: 500,
+               
             },
         }
     }
@@ -34,15 +41,16 @@ const AnimatedTextWord = ({text}) => {
     <motion.div
     initial = "hidden"
     animate = "visible"
-    style = {{overflow: "hidden"}} 
+    className = {styles.container}
     variants = {container}>{letters.map((word, index) =>
     <motion.span
      variants = {child} 
-     style = {{}} 
+
      className = {styles.animated_text}
-     key = {index}
+     key = {word - index}
+
      >
-        {word}
+        {word === " " ? "\u00A0" : word}
     </motion.span>
     
     )}

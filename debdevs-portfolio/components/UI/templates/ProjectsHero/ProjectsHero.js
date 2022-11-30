@@ -26,20 +26,23 @@ const ProjectsHero = ({projectId = 0}) => {
             </left_items_image_container>
           </left_items>
           <right_items className={styles.right_items}>
+         
             <text_layout className={styles.text_layout}>
-            <AnimatedTextWord text={"HELLO!"}/>
+            
               <h1>{data.projects[projectId].name}</h1>
            
                 
               {tagline.split(" ").length > 2 ? 
               <div className={styles.text_row}>
                 <h1>{tagline.split(" ")[0]}</h1>
-                <span>{tagline.split(" ").splice(-2).join(" ")}</span>
+                <span><AnimatedTextWord text={tagline.split(" ").splice(-2).join(" ")}/></span>
+                
                 </div>
               : 
               <div className={styles.text_row}>
               <h1>{tagline.split(" ")[0]}</h1>
-              <span>{tagline.split(" ").splice(-1).join(" ")}</span>
+              <span><AnimatedTextWord text={tagline.split(" ").splice(-1).join(" ")}/></span>
+          
               </div>
               
               }

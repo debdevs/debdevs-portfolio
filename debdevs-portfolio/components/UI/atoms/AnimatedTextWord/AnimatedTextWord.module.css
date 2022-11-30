@@ -1,6 +1,12 @@
+.container{
+width:100%;
+display: flex;
+
+}
+
 .animated_text{
     color:black;
-    opacity:1;
+
 }
 
 .animated_text{
@@ -9,12 +15,19 @@
     font-style: normal;
     font-weight: 400;
     font-size: 27.823px;
-    line-height: 35px;
-    
+
     background: linear-gradient(232.56deg, #16ABFF 44.11%, #16C7FF 54.37%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    position: 'relative';
+    display: 'inline-flex';
+    width: 'auto';
     
+}
+.animated_text{
+    font-size: 32px !important;
+    line-height: 125% !important;
+    height: 125% !important;
 }
