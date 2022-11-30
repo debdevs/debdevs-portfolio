@@ -3,6 +3,7 @@ import styles from './AnimatedTextWord.module.css'
 import { motion } from 'framer-motion'
 const AnimatedTextWord = ({text}) => {
     const words = text.split(" ")
+    const letters = text.split("")
     const container = {
         hidden: {opacity: 0},
         visible: (i = 1) => ({opacity:1,
@@ -34,14 +35,12 @@ const AnimatedTextWord = ({text}) => {
     initial = "hidden"
     animate = "visible"
     style = {{overflow: "hidden"}} 
-    variants = {container}>{words.map((word, index) =>
+    variants = {container}>{letters.map((word, index) =>
     <motion.span
      variants = {child} 
-     style = {{marginRight: "5px"}} 
+     style = {{}} 
      className = {styles.animated_text}
      key = {index}
-
-     
      >
         {word}
     </motion.span>

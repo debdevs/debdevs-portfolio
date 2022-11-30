@@ -2,3 +2,19 @@
     color:black;
     opacity:1;
 }
+
+.animated_text{
+
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27.823px;
+    line-height: 35px;
+    
+    background: linear-gradient(232.56deg, #16ABFF 44.11%, #16C7FF 54.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
+}
