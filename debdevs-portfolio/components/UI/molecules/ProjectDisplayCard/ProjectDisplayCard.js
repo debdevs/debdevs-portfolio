@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/future/image';
 import github_image from '../../../../public/company_icons/GitHub-Mark-120px-plus.png';
 import Link from 'next/link';
+
 const ProjectDisplayCard = ({
   index_value = 0,
   details_index_value = 0,
@@ -51,6 +52,7 @@ const ProjectDisplayCard = ({
               className={styles.right_image}
     />
         </right_image_container>
+        <cover_item className={styles.cover_item}></cover_item>
       </image_fx_container>
       </Link>
       <HomeTabs />
