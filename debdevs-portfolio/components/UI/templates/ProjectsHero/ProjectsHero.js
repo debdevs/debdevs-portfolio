@@ -3,6 +3,7 @@ import styles from './ProjectsHero.module.css';
 import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
+import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 const ProjectsHero = ({projectId = 0}) => {
   const tagline = data.projects[projectId].tagline
   const page_project = data.projects[projectId]
@@ -26,6 +27,7 @@ const ProjectsHero = ({projectId = 0}) => {
           </left_items>
           <right_items className={styles.right_items}>
             <text_layout className={styles.text_layout}>
+            <AnimatedTextWord text={"HELLO!"}/>
               <h1>{data.projects[projectId].name}</h1>
            
                 

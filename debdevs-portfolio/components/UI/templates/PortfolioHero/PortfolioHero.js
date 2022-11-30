@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import PortfolioTabs from '../../molecules/PortfolioTabs/PortfolioTabs';
 import ThemeButton3 from '../../atoms/ThemeButton3/ThemeButton3';
 import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
+
+
 const PortfolioHero = () => {
   return (
     <section className={styles.portfolio_header}>
