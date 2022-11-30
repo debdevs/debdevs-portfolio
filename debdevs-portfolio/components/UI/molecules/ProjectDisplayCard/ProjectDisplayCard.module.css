@@ -81,13 +81,13 @@
   }
   .right_image_container {
     width: 292px;
-  height: 109px;
-  overflow:hidden;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  border-radius: 0px 8px 8px 0px;
-
+    height: 109px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 0px 8px 8px 0px;
+ 
   
   }
 
@@ -98,7 +98,23 @@
     height: auto;
     margin-top:125px;
   }
-  
+  .cover_item{
+    background: white;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 10;
+    border-radius: 8px ;
+    opacity: 0;
+    cursor:pointer;
+    transition: all .4s ease;
+  }
+
+  .cover_item:hover{
+    opacity: .5;
+  }
+
+
   .right_image{
     position: relative;
     object-fit:cover;
