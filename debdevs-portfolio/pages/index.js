@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { HomeProjectDetailsContext } from '../contexts/HomeProjectDetailsContext';
 import { motion } from 'framer-motion';
+import data from '../public/project_data'
+
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
