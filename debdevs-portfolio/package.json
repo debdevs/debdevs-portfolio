@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "framer-motion": "^7.6.2",
@@ -19,4 +20,5 @@
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
   }
+  
 }
