@@ -18,7 +18,7 @@ const PortfolioTabs = () => {
   return (
     <portfolio_tabs className={styles.portfolio_tabs}>
       {options.map((option, i) => (
-        <Link href={'/portfolio/?work-type=' + i}>
+        <Link key = {i} href={'/portfolio/?work-type=' + i}>
           <button
             className={styles.max_container}
             onClick={() => {

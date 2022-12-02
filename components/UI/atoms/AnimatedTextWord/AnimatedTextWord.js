@@ -39,13 +39,14 @@ const AnimatedTextWord = ({text}) => {
     }
   return (
     <motion.div
+    key = {1}
     initial = "hidden"
     animate = "visible"
     className = {styles.container}
     variants = {container}>{letters.map((word, index) =>
     <motion.span
      variants = {child} 
-
+        
      className = {styles.animated_text}
      key = {word - index}
 
