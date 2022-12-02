@@ -32,8 +32,8 @@ const ProjectDisplayCard = ({
       <h1 className={styles.project_header}>{title}</h1>
       <h2 className={styles.project_overview}>{tagline}</h2>
       <Link href={ '/' + (click_prop+1)}>
-      <image_fx_container className={styles.image_fx_container}>
-        <left_image_container className={styles.left_image_container}>
+      <div className={styles.image_fx_container}>
+        <left_image_container className={styles.left_image_container} class = "left_image_container">
         <Image
           src={image_source[0]}
           layout = "fill"
@@ -54,7 +54,7 @@ const ProjectDisplayCard = ({
     />
         </right_image_container>
         <cover_item className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></cover_item>
-      </image_fx_container>
+      </div>
       </Link>
       <HomeTabs />
       <div className={styles.paragraph_container}>

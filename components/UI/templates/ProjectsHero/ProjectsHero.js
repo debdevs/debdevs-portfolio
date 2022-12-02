@@ -10,9 +10,9 @@ const ProjectsHero = ({projectId = 0}) => {
   return (
     <div>
       <section className={styles.projects_hero}>
-        <hero_content className={styles.hero_content}>
-          <left_items className={styles.left_items}>
-            <left_items_image_container
+        <hero-content className={styles.hero_content}>
+          <left-items className={styles.left_items}>
+            <left-items-image-container
               className={styles.left_items_image_container}
             >
               <Image
@@ -23,8 +23,8 @@ const ProjectsHero = ({projectId = 0}) => {
           
     />
            
-            </left_items_image_container>
-          </left_items>
+            </left-items-image-container>
+          </left-items>
           <right_items className={styles.right_items}>
          
             <text_layout className={styles.text_layout}>
@@ -71,7 +71,7 @@ const ProjectsHero = ({projectId = 0}) => {
               <LandingTabs />
             </text_layout>
           </right_items>
-        </hero_content>
+        </hero-content>
       </section>
     </div>
   );
