@@ -1,5 +1,5 @@
 [build]
-
+  base = "debdevs-portfolio/"
   command = "npm run build"
 
 [[redirects]]
