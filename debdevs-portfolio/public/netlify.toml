@@ -1,6 +1,7 @@
 [build]
   base = "debdevs-portfolio/"
   command = "npm run build"
+  publish = "build" 
 
 [[redirects]]
   from = "/*"
