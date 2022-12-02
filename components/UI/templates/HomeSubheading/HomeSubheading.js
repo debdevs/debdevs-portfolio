@@ -44,7 +44,7 @@ useEffect(() => {
   return (
     <section className={styles.subheading_container}>
       <subheading_left className={styles.subheading_left}>
-        <subheading_left_bg className={styles.subheading_left_bg}>
+        <div className={styles.subheading_left_bg}>
           <subheading_left_items className={styles.subheading_left_items}>
             <h1 className={styles.subheading_left_items_header}>
               Projects List
@@ -73,7 +73,7 @@ useEffect(() => {
               />
             ))}
           </subheading_left_items>
-        </subheading_left_bg>
+        </div>
       </subheading_left>
       {isMobile == false ? 
       
