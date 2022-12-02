@@ -1,10 +1,10 @@
 [build]
- base = "/debdevs-portfolio/"
+ base = "debdevs-portfolio/"
   command = "npm run build"
   publish = ".next"
 [[redirects]]
   from = "/*"
-  to = "/debdevs-portfolio/index.html"
+  to = "/index.html"
   status = 200
 [[plugins]]
   package = "@netlify/plugin-nextjs"
