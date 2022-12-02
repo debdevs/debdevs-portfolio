@@ -39,7 +39,7 @@ const AnimatedTextWord = ({text}) => {
     }
   return (
     <motion.div
-    key = {1}
+  
     initial = "hidden"
     animate = "visible"
     className = {styles.container}

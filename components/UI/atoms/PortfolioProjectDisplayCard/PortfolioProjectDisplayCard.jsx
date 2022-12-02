@@ -21,7 +21,7 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image
             className={styles.image_display_base_image}
             src={project_image[0]}
             alt=""
-            objectfit="cover"
+    
             quality={100}
           />
         </div></Link>

@@ -16,7 +16,7 @@ const PortfolioTabs = () => {
   const [clickedId, setClickedId] = useState(-1);
   const { workId, setWorkId } = useContext(PortfolioPageContext);
   return (
-    <portfolio_tabs className={styles.portfolio_tabs}>
+    <div className={styles.portfolio_tabs}>
       {options.map((option, i) => (
         <Link key = {i} href={'/portfolio/?work-type=' + i}>
           <button
@@ -26,7 +26,7 @@ const PortfolioTabs = () => {
               setWorkId(i);
             }}
           >
-            <blue_bg className={styles.blue_bg}></blue_bg>
+            <div className={styles.blue_bg}></div>
             <white_bg className={styles.white_bg}></white_bg>
             <button_parent className={styles.button_parent}>
               <div
@@ -49,7 +49,7 @@ const PortfolioTabs = () => {
           </button>
         </Link>
       ))}
-    </portfolio_tabs>
+    </div>
   );
 };
 

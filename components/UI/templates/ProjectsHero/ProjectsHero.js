@@ -10,9 +10,9 @@ const ProjectsHero = ({projectId = 0}) => {
   return (
     <div>
       <section className={styles.projects_hero}>
-        <hero-content className={styles.hero_content}>
-          <left-items className={styles.left_items}>
-            <left-items-image-container
+        <div className={styles.hero_content}>
+          <div className={styles.left_items}>
+            <div
               className={styles.left_items_image_container}
             >
               <Image
@@ -23,9 +23,9 @@ const ProjectsHero = ({projectId = 0}) => {
           
     />
            
-            </left-items-image-container>
-          </left-items>
-          <right_items className={styles.right_items}>
+            </div>
+          </div>
+          <div className={styles.right_items}>
          
             <text_layout className={styles.text_layout}>
             
@@ -57,7 +57,7 @@ const ProjectsHero = ({projectId = 0}) => {
 
            <div className={styles.stack_row}>
               {data.projects[projectId].tech_stack.map((stack, i) => (
-                <div className={styles.stack_row}>
+                <div key = {0+i} className={styles.stack_row}>
                <h4 className={styles.stack_text}>{stack}</h4>
                {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
               
@@ -70,8 +70,8 @@ const ProjectsHero = ({projectId = 0}) => {
               <tech_array></tech_array>
               <LandingTabs />
             </text_layout>
-          </right_items>
-        </hero-content>
+          </div>
+        </div>
       </section>
     </div>
   );

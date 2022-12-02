@@ -11,10 +11,10 @@ import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
 const PortfolioHero = () => {
   return (
     <section className={styles.portfolio_header}>
-      <content_box className={styles.content_box}>
+      <div className={styles.content_box}>
         
-        <left_items className={styles.left_items}>
-          <portfolio_header_info_box
+        <div className={styles.left_items}>
+          <div
             className={styles.portfolio_header_info_box}
           >
             <h1 className={styles.h1}>Welcome</h1>
@@ -24,18 +24,18 @@ const PortfolioHero = () => {
             <p className={styles.p}>
               From web designs to visuals, I’ve got projects
             </p>
-            <line_div className={styles.line_div}></line_div>
-            <button_array className={styles.button_array}>
+            <div className={styles.line_div}></div>
+            <div className={styles.button_array}>
             <ThemeButton2 button_text='About Me' button_link='/about'/>
             <ThemeButton3 button_link='/about'/>
 
-            </button_array>
+            </div>
             <tabs_array className={styles.tabs_array}>
               <PortfolioTabs />
             </tabs_array>
-          </portfolio_header_info_box>
-        </left_items>
-      </content_box>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

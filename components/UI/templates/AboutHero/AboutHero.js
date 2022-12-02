@@ -25,7 +25,7 @@ const AboutHero = () => {
 
 
             </p>
-            <line_div className={styles.line_div}></line_div>
+            <div className={styles.line_div}></div>
             <p className={styles.p}>
               I'm passionate about creating engaging visual experiences, and translating designs into code. 
               <br></br> 

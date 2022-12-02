@@ -28,12 +28,12 @@ const ProjectDisplayCard = ({
     HomeProjectDetailsContext
   );
   return (
-    <subheading_right_bg_overlay className={styles.subheading_right_bg_overlay}>
+    <div className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>{title}</h1>
       <h2 className={styles.project_overview}>{tagline}</h2>
       <Link href={ '/' + (click_prop+1)}>
       <div className={styles.image_fx_container}>
-        <left_image_container className={styles.left_image_container} class = "left_image_container">
+        <div className={styles.left_image_container}>
         <Image
           src={image_source[0]}
           layout = "fill"
@@ -41,8 +41,8 @@ const ProjectDisplayCard = ({
           className={styles.left_image}
           alt = ""
     />
-        </left_image_container>
-        <right_image_container className={styles.right_image_container}>
+        </div>
+        <div className={styles.right_image_container}>
 
 
 <Image
@@ -52,8 +52,8 @@ const ProjectDisplayCard = ({
     
               className={styles.right_image}
     />
-        </right_image_container>
-        <cover_item className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></cover_item>
+        </div>
+        <div className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></div>
       </div>
       </Link>
       <HomeTabs />
@@ -94,15 +94,15 @@ const ProjectDisplayCard = ({
         </AnimatePresence>
       </div>
 
-      <project_buttons className={styles.project_buttons}>
+      <div className={styles.project_buttons}>
         <ThemeButton1 button_link={ '/' + (index_value+1)}/>
         <ThemeButton2 button_link="javascript:void(0);" click_function={() => {
                   setProjectListId( click_prop+1 < data.projects.length? click_prop+1:0);
       
                   console.log(click_prop);
                 }} />
-      </project_buttons>
-    </subheading_right_bg_overlay>
+      </div>
+    </div>
   );
 };
 

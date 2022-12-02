@@ -7,12 +7,12 @@ const NavBar = () => {
     <div className={styles.nav_parent}>
       {' '}
       <nav className={styles.nav_bar}>
-        <nav_content className={styles.nav_content}>
+        <div className={styles.nav_content}>
           <Link href="/">
             <h1 className={styles.logo_letter}>D</h1>
           </Link>
           <ThemeButton3 button_text="Resume" />
-        </nav_content>
+        </div>
       </nav>
     </div>
   );

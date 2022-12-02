@@ -29,7 +29,7 @@ const HomeTabs = ({ tabClick }) => {
             console.log(detailsIndex);
           }}
         >
-          <blue_bg className={styles.blue_bg}></blue_bg>
+          <div className={styles.blue_bg}></div>
           <white_bg className={styles.white_bg}></white_bg>
           <button_parent className={styles.button_parent}>
             <div

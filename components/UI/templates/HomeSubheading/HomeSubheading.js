@@ -77,8 +77,8 @@ useEffect(() => {
       </subheading_left>
       {isMobile == false ? 
       
-      <subheading_right className={styles.subheading_right}>
-      <subheading_right_bg className={styles.box_border_gradient}>
+      <div className={styles.subheading_right}>
+      <div className={styles.box_border_gradient}>
         <div className={styles.project_container}>
           <AnimatePresence>
             <motion.div
@@ -108,8 +108,8 @@ useEffect(() => {
             </motion.div>
           </AnimatePresence>
         </div>
-      </subheading_right_bg>
-    </subheading_right>
+      </div>
+    </div>
       
       
       

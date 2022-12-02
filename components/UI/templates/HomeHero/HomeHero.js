@@ -19,9 +19,9 @@ const HomeHero = ({image_source}) => {
   );
   return (
     <section className={styles.home_header}>
-      <content_box className={styles.content_box}>
-        <left_items className={styles.left_items}>
-          <header_info_box className={styles.header_info_box}>
+      <div className={styles.content_box}>
+        <div className={styles.left_items}>
+          <div className={styles.header_info_box}>
             <h1 className={styles.h1}>Hello There,</h1>
             <h2 className={styles.h2}>
               I'm <span className={styles.span}>Deborah</span>
@@ -29,13 +29,13 @@ const HomeHero = ({image_source}) => {
             <p className={styles.p}>
               A frontend developer with a passion for visuals
             </p>
-            <line_div className={styles.line_div}></line_div>
-            <button_array className={styles.button_array}>
+            <div className={styles.line_div}></div>
+            <div className={styles.button_array}>
               <ThemeButton2 button_text="About" button_link='/about'/>
               <ThemeButton3 button_link="/portfolio" />
-            </button_array>
+            </div>
             <h1 className={styles.skills_header}>My Skills:</h1>
-            <icon_array className={styles.icon_array}>
+            <div className={styles.icon_array}>
               {skills.map((skill, key) => (
                 <motion.div
                   className="cat-card-motion"
@@ -56,14 +56,14 @@ const HomeHero = ({image_source}) => {
                   />
                 </motion.div>
               ))}
-            </icon_array>
-          </header_info_box>
-        </left_items>
-        <right_items className={styles.right_items}>
+            </div>
+          </div>
+        </div>
+        <div className={styles.right_items}>
         
         <Link href={ '/' + (heroProjectId+1)}>
           
-          <right_items_content className={styles.right_items_content_bg}>
+          <div className={styles.right_items_content_bg}>
       
             <AnimatePresence>
               <motion.div
@@ -82,10 +82,10 @@ const HomeHero = ({image_source}) => {
                   <h1>Featured Project:</h1>
                   <h2>{data.projects[heroProjectId].name}</h2>
                 </div>
-                <image_styling_container
+                <div
                   className={styles.image_styling_container}
                 >
-                  <right_items_main_image_container
+                  <div
                     className={styles.right_items_main_image_container}
                   >
                     <Image
@@ -95,8 +95,8 @@ const HomeHero = ({image_source}) => {
                     
                     />
                             
-                                  </right_items_main_image_container>
-                                  <right_items_accent_image_container
+                                  </div>
+                                  <div
                                     className={styles.right_items_accent_image_container}
                                   >
                                     <Image
@@ -106,19 +106,19 @@ const HomeHero = ({image_source}) => {
                     
                     />
                <FiExternalLink className={styles.cover_icon} />
-                  </right_items_accent_image_container>
+                  </div>
                 
-                </image_styling_container>
-                <cover_item className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></cover_item>
+                </div>
+                <div className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></div>
               </motion.div>
             </AnimatePresence>
            
-          </right_items_content>
+          </div>
           </Link>
         
-        </right_items>
-      </content_box>
-      <selector_container className={styles.right_slider_selectors}>
+        </div>
+      </div>
+      <div className={styles.right_slider_selectors}>
         <button
           onClick={() => {
             setHeroProjectId(0);
@@ -137,7 +137,7 @@ const HomeHero = ({image_source}) => {
             console.log(heroProjectId);
           }}
         ></button>
-      </selector_container>
+      </div>
     </section>
   );
 };

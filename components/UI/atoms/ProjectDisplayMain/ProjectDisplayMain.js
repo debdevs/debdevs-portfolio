@@ -4,7 +4,7 @@ import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
 const ProjectDisplayMain = ({projectId = 0}) => {
   return (
-    <left_items_image_container className={styles.left_items_image_container}>
+    <div_image_container className={styles.left_items_image_container}>
               <Image
       src={data.projects[projectId].image_source[0]}
       alt = {"Project Image"}
@@ -13,7 +13,7 @@ const ProjectDisplayMain = ({projectId = 0}) => {
           
     />
    
-    </left_items_image_container>
+    </div_image_container>
   );
 };
 
