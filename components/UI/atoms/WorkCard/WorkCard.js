@@ -26,7 +26,7 @@ export const WorkCard = ({
       className={gradient_container_values[gradient_container_value]}
       onClick={set_id}
     >
-      <grad_bg className={styles.grad_bg}>
+      <div className={styles.grad_bg}>
         <div className={styles.grad_content_container}>
           <image-container className={styles.work_image_container}>
 
@@ -43,7 +43,7 @@ export const WorkCard = ({
             <p className={styles.sub_text_color}>{description}</p>
           </div>
         </div>
-      </grad_bg>
+      </div>
     </div>
   );
 };

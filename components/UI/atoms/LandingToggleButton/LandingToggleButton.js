@@ -5,7 +5,7 @@ import styles from './LandingToggleButton.module.css';
 const LandingToggleButton = ({ title }) => {
   return (
     <div>
-      <max_container className={styles.max_container}>
+      <div className={styles.max_container}>
         <div className={styles.blue_bg}></div>
         <div className={styles.white_bg}></div>
         <div className={styles.button_parent}>
@@ -15,7 +15,7 @@ const LandingToggleButton = ({ title }) => {
             </div>
           </div>
         </div>
-      </max_container>
+      </div>
     </div>
   );
 };

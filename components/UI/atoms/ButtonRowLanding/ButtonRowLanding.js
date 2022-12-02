@@ -3,7 +3,7 @@ import styles from './ButtonRowLanding.module.css';
 export const ButtonRowLanding = () => {
   return (
     <div className={styles.tabs}>
-      <max_container className={styles.max_container}>
+      <div className={styles.max_container}>
         <div className={styles.blue_bg}></div>
         <div className={styles.white_bg}></div>
         <div className={styles.button_parent}>
@@ -13,9 +13,9 @@ export const ButtonRowLanding = () => {
             </div>
           </div>
         </div>
-      </max_container>
+      </div>
 
-      <max_container className={styles.max_container}>
+      <div className={styles.max_container}>
         <div className={styles.blue_bg}></div>
         <div className={styles.white_bg}></div>
         <div className={styles.button_parent}>
@@ -25,9 +25,9 @@ export const ButtonRowLanding = () => {
             </div>
           </div>
         </div>
-      </max_container>
+      </div>
 
-      <max_container className={styles.max_container}>
+      <div className={styles.max_container}>
         <div className={styles.blue_bg}></div>
         <div className={styles.white_bg}></div>
         <div className={styles.button_parent}>
@@ -37,9 +37,9 @@ export const ButtonRowLanding = () => {
             </div>
           </div>
         </div>
-      </max_container>
+      </div>
 
-      <max_container className={styles.max_container}>
+      <div className={styles.max_container}>
         <div className={styles.blue_bg}></div>
         <div className={styles.white_bg}></div>
         <div className={styles.button_parent}>
@@ -49,7 +49,7 @@ export const ButtonRowLanding = () => {
             </div>
           </div>
         </div>
-      </max_container>
+      </div>
     </div>
   );
 };

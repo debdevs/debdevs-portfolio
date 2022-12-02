@@ -16,7 +16,7 @@ const LandingTabs = () => {
   return (
     <div className={styles.tabs}>
       {options.map((option, i) => (
-        <max_container
+        <div
           className={styles.max_container}
           onClick={() => setClickedId(i)}
           key={i}
@@ -41,7 +41,7 @@ const LandingTabs = () => {
               </div>
             </div>
           </div>
-        </max_container>
+        </div>
       ))}
     </div>
   );

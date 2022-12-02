@@ -43,9 +43,9 @@ useEffect(() => {
   
   return (
     <section className={styles.subheading_container}>
-      <subheading_left className={styles.subheading_left}>
+      <div className={styles.subheading_left}>
         <div className={styles.subheading_left_bg}>
-          <subheading_left_items className={styles.subheading_left_items}>
+          <div className={styles.subheading_left_items}>
             <h1 className={styles.subheading_left_items_header}>
               Projects List
             </h1>
@@ -72,9 +72,9 @@ useEffect(() => {
                 }
               />
             ))}
-          </subheading_left_items>
+          </div>
         </div>
-      </subheading_left>
+      </div>
       {isMobile == false ? 
       
       <div className={styles.subheading_right}>

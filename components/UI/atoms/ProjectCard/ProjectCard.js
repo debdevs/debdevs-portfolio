@@ -30,7 +30,7 @@ export const ProjectCard = ({
 
       onClick={set_id}
     >
-      <grad_bg className={styles.grad_bg}>
+      <div className={styles.grad_bg}>
         <div className={styles.grad_content_container}>
           <image-container className={styles.image_container}>
 
@@ -47,7 +47,7 @@ export const ProjectCard = ({
             <p className={styles.sub_text_color}>{description}</p>
           </div>
         </div>
-      </grad_bg>
+      </div>
     </div>
     </Link>
   );

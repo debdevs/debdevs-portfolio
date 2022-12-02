@@ -27,7 +27,7 @@ const ProjectsHero = ({projectId = 0}) => {
           </div>
           <div className={styles.right_items}>
          
-            <text_layout className={styles.text_layout}>
+            <div className={styles.text_layout}>
             
               <h1>{data.projects[projectId].name}</h1>
            
@@ -69,7 +69,7 @@ const ProjectsHero = ({projectId = 0}) => {
               <h5>React • Django • AWS • Blender</h5>
               <tech_array></tech_array>
               <LandingTabs />
-            </text_layout>
+            </div>
           </div>
         </div>
       </section>
