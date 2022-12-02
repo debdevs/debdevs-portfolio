@@ -12,14 +12,14 @@ const AboutHero = () => {
       
         
      
-          <about_header_info_box
+          <div
             className={styles.about_header_info_box}
           >
-            <top_texts className={styles.top_texts}>
+            <div className={styles.top_texts}>
             <h1 className={styles.h1}>About Me:</h1>
             <h2 className={styles.h2}>
               I'm a <span className={styles.span}>developer</span>
-            </h2></top_texts>
+            </h2></div>
             <p className={styles.p_header}>
             With a passion for visuals and a drive to get it done
 
@@ -41,7 +41,7 @@ Take a look at my previous work below
             </p>
    
   
-          </about_header_info_box>
+          </div>
      
     
     </section>

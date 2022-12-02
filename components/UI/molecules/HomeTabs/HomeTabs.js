@@ -18,7 +18,7 @@ const HomeTabs = ({ tabClick }) => {
     HomeProjectDetailsContext
   );
   return (
-    <tabs className={styles.tabs}>
+    <div className={styles.tabs}>
       {options.map((option, i) => (
         <button
         key = {i}
@@ -30,8 +30,8 @@ const HomeTabs = ({ tabClick }) => {
           }}
         >
           <div className={styles.blue_bg}></div>
-          <white_bg className={styles.white_bg}></white_bg>
-          <button_parent className={styles.button_parent}>
+          <div className={styles.white_bg}></div>
+          <div className={styles.button_parent}>
             <div
               className={
                 i === clickedId
@@ -48,10 +48,10 @@ const HomeTabs = ({ tabClick }) => {
                 <h1>{option}</h1>
               </div>
             </div>
-          </button_parent>
+          </div>
         </button>
       ))}
-    </tabs>
+    </div>
   );
 };
 

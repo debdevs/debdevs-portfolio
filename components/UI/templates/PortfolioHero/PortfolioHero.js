@@ -30,9 +30,9 @@ const PortfolioHero = () => {
             <ThemeButton3 button_link='/about'/>
 
             </div>
-            <tabs_array className={styles.tabs_array}>
+            <div className={styles.tabs_array}>
               <PortfolioTabs />
-            </tabs_array>
+            </div>
           </div>
         </div>
       </div>

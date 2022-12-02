@@ -14,7 +14,7 @@ const LandingTabs = () => {
     RainbowGradient_transform: 'translateY(5px)',
   };
   return (
-    <tabs className={styles.tabs}>
+    <div className={styles.tabs}>
       {options.map((option, i) => (
         <max_container
           className={styles.max_container}
@@ -22,8 +22,8 @@ const LandingTabs = () => {
           key={i}
         >
           <div className={styles.blue_bg}></div>
-          <white_bg className={styles.white_bg}></white_bg>
-          <button_parent className={styles.button_parent}>
+          <div className={styles.white_bg}></div>
+          <div className={styles.button_parent}>
             <div
               className={
                 i === clickedId
@@ -40,10 +40,10 @@ const LandingTabs = () => {
                 <h1>{option}</h1>
               </div>
             </div>
-          </button_parent>
+          </div>
         </max_container>
       ))}
-    </tabs>
+    </div>
   );
 };
 

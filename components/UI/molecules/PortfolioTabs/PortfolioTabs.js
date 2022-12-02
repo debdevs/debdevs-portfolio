@@ -27,8 +27,8 @@ const PortfolioTabs = () => {
             }}
           >
             <div className={styles.blue_bg}></div>
-            <white_bg className={styles.white_bg}></white_bg>
-            <button_parent className={styles.button_parent}>
+            <div className={styles.white_bg}></div>
+            <div className={styles.button_parent}>
               <div
                 className={
                   i === clickedId
@@ -45,7 +45,7 @@ const PortfolioTabs = () => {
                   <h1>{option}</h1>
                 </div>
               </div>
-            </button_parent>
+            </div>
           </button>
         </Link>
       ))}

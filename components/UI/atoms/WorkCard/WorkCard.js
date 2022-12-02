@@ -27,7 +27,7 @@ export const WorkCard = ({
       onClick={set_id}
     >
       <grad_bg className={styles.grad_bg}>
-        <grad_content_container className={styles.grad_content_container}>
+        <div className={styles.grad_content_container}>
           <image-container className={styles.work_image_container}>
 
         <Image
@@ -38,11 +38,11 @@ export const WorkCard = ({
               alt = "Work Sample Image"
     />
           </image-container>
-          <text_items className={styles.text_main}>
+          <div className={styles.text_main}>
             <h1 className={styles.text_color}>{title}</h1>
             <p className={styles.sub_text_color}>{description}</p>
-          </text_items>
-        </grad_content_container>
+          </div>
+        </div>
       </grad_bg>
     </div>
   );

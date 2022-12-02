@@ -7,14 +7,14 @@ const LandingToggleButton = ({ title }) => {
     <div>
       <max_container className={styles.max_container}>
         <div className={styles.blue_bg}></div>
-        <white_bg className={styles.white_bg}></white_bg>
-        <button_parent className={styles.button_parent}>
+        <div className={styles.white_bg}></div>
+        <div className={styles.button_parent}>
           <div className={styles.rainbowGradient}>
             <div className={styles.innerSquare}>
               <h1 className={styles.h1}>{title}</h1>
             </div>
           </div>
-        </button_parent>
+        </div>
       </max_container>
     </div>
   );
