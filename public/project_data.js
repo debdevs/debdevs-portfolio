@@ -3,7 +3,7 @@ import rocketeer_image from '../public/images/rocketeer_image.png'
 import vision_html_image from '../public/images/vision_html_email.png'
 import vision_html_image_1 from '../public/images/vision_html_email_1.png'
 const categories = ['Web-Development','Visual Design', 'Animation', 'Email Development', 'Software Development']
-const tech_stack_list = ['HTML','CSS', 'JS', 'Figma', 'Blender']
+const tech_stack_list = ['HTML','CSS', 'JS', 'Figma', 'Blender','Python']
 const data = {
   projects: [
     {
@@ -60,7 +60,7 @@ const data = {
       challenges: `Creating the animation offset function proved to be the biggest challenge. The way Blender's system works, I have to access certain properties recursively -
       so I had to have one function access multiple different values in a variety of ways in order to offset them by a constant integer value`,
       category: [categories[4],],
-      tech_stack: [tech_stack_list[0],'CSS', 'JS', 'Figma', 'Blender'],
+      tech_stack: [tech_stack_list[4],tech_stack_list[5]],
       landing_paragraph_info: "Everybody needs a right-hand man, and that's what Rocketeer is. It is a workflow tool that aids in the production and generation of professional quality graphics",
     },
 

@@ -130,8 +130,8 @@ table {
 --light-text-color:white;
 --light-accent-text-color: black;
 
-
-
+--light-templates-background: white;
+--templates-background: linear-gradient(180deg, #000000 0%, #0A232E 100%), linear-gradient(180deg, #FFFFFF 41.67%, #FCFFFF 100%);
 
 --main-transition: all .4s ease;
 
