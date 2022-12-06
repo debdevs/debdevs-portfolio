@@ -3,6 +3,7 @@ import styles from './PortfolioProjectDisplayCard.module.css';
 import Image from 'next/future/image';
 import skyway_web_image from '../../../../public/images/SkywayWebsite.png';
 import PortfolioProjectButton from '../PortfolioProjectButton/PortfolioProjectButton';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image = skyway_web_image}) => {

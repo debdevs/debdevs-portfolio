@@ -78,7 +78,7 @@ height: 421.75px;
 .text_layout{
     margin-top:35px;
 }
-.text_layout h1 {
+.text_layout_header {
 
 
 
@@ -211,7 +211,69 @@ color: #000000;
     
     
 }
+@media only screen and (max-width: 480px){
 
+    .projects_hero{
+        height:700px;
+    }
+
+   .hero_content {
+        flex-direction: column;
+        margin-left: 0%;
+        padding-top: 0px;
+        gap: 15%;
+    }
+
+
+
+
+.text_layout_header {
+
+
+
+
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9vw;
+
+    
+    color: #000000;
+        
+    }
+    
+.text_row{
+
+    gap:4%;
+ 
+}
+
+    .text_row>*{
+        font-size: 6vw !important;
+        line-height: 125% !important;
+        height: 125% !important;
+    }
+
+
+
+
+    .text_layout p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 98%;
+        height: 51px;
+        font-family: 'Libre Baskerville';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .9rem;
+        line-height: 1.5rem;
+        color: #000000;
+        height: 85px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
 
 @media only screen and (max-width: 1024px){
     .projects_hero{
@@ -268,4 +330,22 @@ color: #000000;
         gap:5%;
      
     }
+
+    .text_layout_header {
+
+
+
+
+        font-family: 'Libre Baskerville';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 41px;
+  
+        
+        color: #000000;
+            
+        }
+        
 }
+
+

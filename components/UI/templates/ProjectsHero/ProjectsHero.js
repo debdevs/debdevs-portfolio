@@ -29,18 +29,18 @@ const ProjectsHero = ({projectId = 0}) => {
          
             <div className={styles.text_layout}>
             
-              <h1>{data.projects[projectId].name}</h1>
+              <h1 className={styles.text_layout_header}>{data.projects[projectId].name}</h1>
            
                 
               {tagline.split(" ").length > 2 ? 
               <div className={styles.text_row}>
-                <h1>{tagline.split(" ")[0]}</h1>
+                <h1  className={styles.text_layout_header}>{tagline.split(" ")[0]}</h1>
                 <span><AnimatedTextWord text={tagline.split(" ").splice(-2).join(" ")}/></span>
                 
                 </div>
               : 
               <div className={styles.text_row}>
-              <h1>{tagline.split(" ")[0]}</h1>
+              <h1  className={styles.text_layout_header}>{tagline.split(" ")[0]}</h1>
               <span><AnimatedTextWord text={tagline.split(" ").splice(-1).join(" ")}/></span>
           
               </div>
@@ -66,8 +66,7 @@ const ProjectsHero = ({projectId = 0}) => {
                </div>
 
             ))}</div>
-              <h5>React • Django • AWS • Blender</h5>
-              <tech_array></tech_array>
+
               <LandingTabs />
             </div>
           </div>

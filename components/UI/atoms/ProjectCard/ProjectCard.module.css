@@ -42,22 +42,21 @@ transition:all .8s ease;
     align-items: center;
 }
 
+
+
 .grad_content_container {
-    transition:all .8s ease;
-    width:100%;
-    max-width: 364.4px;
-height: 118.39px;
-
-background: #FFFFFF;
-box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
-border-radius: 13.8402px;
-display:flex;
-justify-content: center;
-align-items: center;
-color:black;
-gap:6%;
-
-
+    transition: all .8s ease;
+    width: 96%;
+    /* max-width: 364.4px; */
+    height: 90%;
+    background: #FFFFFF;
+    box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
+    border-radius: 13.8402px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 6%;
 }
 .image_container{
     transition:all .8s ease;
@@ -96,41 +95,34 @@ letter-spacing: .03rem;
     font-family: 'Libre Baskerville';
     color: #67778E;
     font-style: normal;
-font-weight: 700;
-
-width: 214.06px;
-height: 63px;
-
-font-family: 'Literata';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-
-color: #67778E;
+    font-weight: 700;
+    width: 214.06px;
+    height: 63px;
+    font-family: 'Literata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #67778E;
 
 }
 
 
 .gradient_container:hover{
 
-box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
-padding:0px;
---x: 100%; 
---percent:200%;
-
-scale: 99%;
+    box-shadow: -1px 2px 14px 0px rgba(24,130,255,0.47);
+    padding:0px;
+    --x: 100%; 
+    --percent:200%;
+    scale: 99%;
 }
 
 
 
 .gradient_container:hover .grad_content_container {
     width:100%;
-    max-width: 364.4px;
-height: 118.39px;
-
-background: black;
-box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
+    background: black;
+    box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
 
 
 }
@@ -184,10 +176,9 @@ scale:110%;
     
     
     .gradient_container_clicked .grad_content_container {
-        width:100%;
-        max-width: 364.4px;
-    height: 118.39px;
-    
+        width: 96%;
+        /* max-width: 364.4px; */
+        height: 90%;
     background: black;
     box-shadow: 0px 3.69072px 3.69072px rgba(0, 0, 0, 0.25);
     

@@ -27,7 +27,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 53.52px;
-    line-height: 0px;
+   
     margin:0;
     color: #000000;  
     text-align: center;
@@ -43,7 +43,7 @@
     font-weight: 400;
     margin-top:20px;
   
-    line-height: 0px;
+
     height:32px;
     
     color: #000000;  
@@ -105,9 +105,9 @@
   
   .line_div {
     width: 270px;
-  height: .2px;
+ padding: .2px;
   
-  margin-top: 15px;
+  margin:5vh;
   background-color:#000000;
   }
   
@@ -250,6 +250,29 @@
       display:flex;
       justify-content:center;
       align-items: center;
+    }
+  
+  }
+
+
+  @media only screen and (max-width: 480px){
+
+    .portfolio_header{
+      height:650px;
+    }
+
+    .h2 {
+
+      margin-top:10px;
+ 
+    }
+    .left_items {
+      height:100%;
+    }
+    .portfolio_header_info_box{
+
+  
+
     }
   
   }

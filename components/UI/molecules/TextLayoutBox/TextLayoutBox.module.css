@@ -78,3 +78,15 @@
     white-space: pre-line;
     color: #4B4B4B; 
 }
+
+@media only screen and (max-width:480px){
+
+  .text_layout_box{
+    overflow-Y: scroll;
+
+    width: 100%;
+
+    padding: 0 35px 0 35px;
+
+}
+}

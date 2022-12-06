@@ -37,7 +37,7 @@ const LandingTabs = () => {
                   i === clickedId ? styles.active_text : styles.innerSquare
                 }
               >
-                <h1>{option}</h1>
+                <h1  className={styles.tab_text}>{option}</h1>
               </div>
             </div>
           </div>

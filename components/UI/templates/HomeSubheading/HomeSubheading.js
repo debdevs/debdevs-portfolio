@@ -13,6 +13,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 const HomeSubheading = () => {
   const [isMobile, setIsMobile] = useState(false)
 
+
+
+  React.useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsMobile(true)
+  } else {
+      setIsMobile(false)
+  }
+  }, []);
+
   //choose the screen size 
 const handleResize = () => {
   if (window.innerWidth < 1024) {

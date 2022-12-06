@@ -1,7 +1,7 @@
-import showman_image from '../../debdevs-portfolio/public/images/showman_image.png'
-import rocketeer_image from '../../debdevs-portfolio/public/images/rocketeer_image.png'
-import vision_html_image from '../../debdevs-portfolio/public/images/vision_html_email.png'
-import vision_html_image_1 from '../../debdevs-portfolio/public/images/vision_html_email_1.png'
+import showman_image from '../public/images/showman_image.png'
+import rocketeer_image from '../public/images/rocketeer_image.png'
+import vision_html_image from '../public/images/vision_html_email.png'
+import vision_html_image_1 from '../public/images/vision_html_email_1.png'
 const categories = ['Web-Development','Visual Design', 'Animation', 'Email Development', 'Software Development']
 const tech_stack_list = ['HTML','CSS', 'JS', 'Figma', 'Blender']
 const data = {

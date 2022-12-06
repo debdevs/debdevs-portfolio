@@ -16,7 +16,7 @@ const AboutSubheading = () => {
           <motion.div
             key={workId}
             initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
-            animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+            animate={{ opacity: 1, traslateX: 0, translateY: 0}}
             className={styles.about_subheading_cards}
             exit={{
               opacity: 0,

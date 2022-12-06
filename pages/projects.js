@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProjectsHero from '../components/UI/templates/ProjectsHero/ProjectsHero';
-import styles from '../styles/Home.module.css';
+
 import NavBar from '../components/UI/templates/NavBar/NavBar';
 import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
 import { ProjectLandingContext } from '../contexts/ProjectLandingContext';

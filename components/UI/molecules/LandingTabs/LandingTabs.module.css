@@ -1,18 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-@font-face {
-  font-family: 'Libre Baskerville';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Libre Baskerville'), url(/fonts/LibreBaskerville-Regular.ttf) format('ttf');
-}
-
-
 .tabs {
   margin-top:35px;
   display: flex;
@@ -110,6 +96,7 @@ transition: all .4s ease;
   height:auto;
   padding-bottom:7px;
   transition:all .4s ease-in-out;
+  color:black;
 
 }
     

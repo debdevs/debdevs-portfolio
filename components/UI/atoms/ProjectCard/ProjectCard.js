@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { Context } from 'react';
 
 import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
+
 import Link from 'next/link';
 export const ProjectCard = ({
   title,
