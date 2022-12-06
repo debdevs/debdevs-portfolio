@@ -34,7 +34,7 @@ const data = {
       link: '',
       image_source: [showman_image,showman_image],
       challenges: `My main challenge? the backend. I learned nodejs just to make this project and now I can say that I'm at the very least comfortable with it.`,
-      category: [categories[0],],
+      category: [categories[0],categories[1]],
       tech_stack: [tech_stack_list[0],'CSS', 'JS', 'Figma', 'Blender'],
       landing_paragraph_info: "My personal favorite project. A fullstack application to deliver videos to individuals and businesses. It uses custom technology from end to end.",
 

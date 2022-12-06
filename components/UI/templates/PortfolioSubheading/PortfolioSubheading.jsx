@@ -20,18 +20,32 @@ data.projects.forEach(function (work) {
 
 let visual_design_projects = [];
 data.projects.forEach(function (work) {
-    if ( work.category.includes("Web-Development")){
+    if ( work.category.includes("Visual Design")){
       visual_design_projects.push(work);
     }
   });
 
+let animation_projects = [];
+data.projects.forEach(function (work) {
+    if ( work.category.includes("Web-Development")){
+      animation_projects.push(work);
+    }
+  });
+  let email_projects = [];
+  data.projects.forEach(function (work) {
+      if ( work.category.includes("Email Development")){
+        email_projects.push(work);
+      }
+    });
+  
 
   return (
     <div className={styles.portfolio_subheading_parent}>
       <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.group(web_dev_projects)}>
   
         <AnimatePresence>
-          <motion.div
+        {workId == 0? 
+        <motion.div
             key={workId}
             initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
             animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
@@ -56,6 +70,68 @@ data.projects.forEach(function (work) {
               />
             ))}
           </motion.div>
+          
+          : workId == 1 ?         
+          
+          <motion.div
+          key={workId}
+          initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+          animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+          className={styles.portfolio_subheading_cards}
+          exit={{
+            opacity: 0,
+            translateY: 150,
+            transition: { duration: 0.25, delay: 0 },
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0,
+          }}
+        >
+          {visual_design_projects.map((project, key) => (
+            <PortfolioProjectDisplayCard
+              key={key}
+              key_value={key}
+              button_text={project.name}
+              project_image = {project.image_source}
+              
+            />
+          ))}
+        </motion.div> 
+         : workId == 2 ? null
+        
+        
+         : workId == 3 ? 
+
+         <motion.div
+         key={workId}
+         initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+         animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+         className={styles.portfolio_subheading_cards}
+         exit={{
+           opacity: 0,
+           translateY: 150,
+           transition: { duration: 0.25, delay: 0 },
+         }}
+         transition={{
+           duration: 0.5,
+           delay: 0,
+         }}
+       >
+         {email_projects.map((project, key) => (
+           <PortfolioProjectDisplayCard
+             key={key}
+             key_value={key}
+             button_text={project.name}
+             project_image = {project.image_source}
+             
+           />
+         ))}
+       </motion.div> 
+
+         :null
+        }
+
         </AnimatePresence>
       </div>
     </div>
