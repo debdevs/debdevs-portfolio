@@ -8,9 +8,28 @@ import { PortfolioPageContext } from '../../../../contexts/PortfolioPageContext'
 import { useContext } from 'react';
 const PortfolioSubheading = () => {
   const { workId, setWorkId } = useContext(PortfolioPageContext);
+
+
+
+let web_dev_projects = [];
+data.projects.forEach(function (work) {
+    if ( work.category.includes("Web-Development")){
+    web_dev_projects.push(work);
+    }
+  });
+
+let visual_design_projects = [];
+data.projects.forEach(function (work) {
+    if ( work.category.includes("Web-Development")){
+      visual_design_projects.push(work);
+    }
+  });
+
+
   return (
     <div className={styles.portfolio_subheading_parent}>
-      <div className={styles.portfolio_subheading_cards_bg}>
+      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.group(web_dev_projects)}>
+  
         <AnimatePresence>
           <motion.div
             key={workId}
