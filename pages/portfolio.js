@@ -15,6 +15,11 @@ const portfolio = () => {
     transition: { ease: 'easeInOut', duration: 120 },
   };
   const [workId, setWorkId] = useState(0);
+
+
+ 
+ 
+
   return (
     <div className='body'>
       <PortfolioPageContext.Provider
