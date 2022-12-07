@@ -6,10 +6,16 @@ import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PortfolioPageContext } from '../../../../contexts/PortfolioPageContext';
 import { useContext } from 'react';
+import { urlFor, client } from 'client';
 const PortfolioSubheading = () => {
   const { workId, setWorkId } = useContext(PortfolioPageContext);
 
+  const [projects, setProjects] = useState([])
+useEffect(() => {
+  const query = '*[_type == "projects"]'
+  client.fetch(query).then((data => setAbouts(data)))
 
+}, [])
 
 let web_dev_projects = [];
 data.projects.forEach(function (work) {
@@ -60,7 +66,7 @@ data.projects.forEach(function (work) {
               delay: 0,
             }}
           >
-            {data.projects.map((project, key) => (
+            {projects.map((project, key) => (
               <PortfolioProjectDisplayCard
                 key={key}
                 key_value={key}
