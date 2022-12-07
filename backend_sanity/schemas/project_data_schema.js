@@ -77,6 +77,18 @@ type: 'document',
             type:'string',
 
         },
+        {
+            name: 'tech_stack',
+            title: 'tech_stack',
+            type:'string',
+
+        },
+        {
+            name: 'landing_paragraph_info',
+            title: 'landing_paragraph_info',
+            type:'string',
+
+        },
     ],
 
 
