@@ -15,15 +15,17 @@ const options = [
 const PortfolioTabs = () => {
   const [clickedId, setClickedId] = useState(-1);
   const { workId, setWorkId } = useContext(PortfolioPageContext);
+  let work_type = '/portfolio/?work-type='
   return (
     <div className={styles.portfolio_tabs}>
       {options.map((option, i) => (
-        <Link key = {i} href={'/portfolio/?work-type=' + i}>
+        <Link key = {i} href={work_type + i}>
           <button
             className={styles.max_container}
             onClick={() => {
               setClickedId(i);
               setWorkId(i);
+          
             }}
           >
             <div className={styles.blue_bg}></div>
