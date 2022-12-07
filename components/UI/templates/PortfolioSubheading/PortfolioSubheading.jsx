@@ -48,7 +48,7 @@ data.projects.forEach(function (work) {
 
   return (
     <div className={styles.portfolio_subheading_parent}>
-      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.log(projects[0].imgUrl.asset._ref)}>
+      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.log(projects[0].imgUrl.asset._ref.url())}>
   
         <AnimatePresence>
         {workId == 0? 
