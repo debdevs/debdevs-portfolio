@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState,useEffect } from 'react';
 import ProjectsDisplayCard from '../../molecules/ProjectDisplayCard/ProjectDisplayCard';
 import styles from './PortfolioSubheading.module.css';
 import PortfolioProjectDisplayCard from '../../atoms/PortfolioProjectDisplayCard/PortfolioProjectDisplayCard';
@@ -6,14 +7,14 @@ import data from '../../../../public/project_data.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PortfolioPageContext } from '../../../../contexts/PortfolioPageContext';
 import { useContext } from 'react';
-import { urlFor, client } from 'client';
+import { urlFor, client } from '../../../../client';
 const PortfolioSubheading = () => {
   const { workId, setWorkId } = useContext(PortfolioPageContext);
 
   const [projects, setProjects] = useState([])
 useEffect(() => {
   const query = '*[_type == "projects"]'
-  client.fetch(query).then((data => setAbouts(data)))
+  client.fetch(query).then((data => setProjects(data)))
 
 }, [])
 
@@ -47,7 +48,7 @@ data.projects.forEach(function (work) {
 
   return (
     <div className={styles.portfolio_subheading_parent}>
-      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.group(web_dev_projects)}>
+      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.log(projects[0].imgUrl.asset._ref)}>
   
         <AnimatePresence>
         {workId == 0? 
@@ -71,7 +72,7 @@ data.projects.forEach(function (work) {
                 key={key}
                 key_value={key}
                 button_text={project.name}
-                project_image = {project.image_source}
+                project_image = {urlFor(project.imgUrl.asset._ref).url()}
                 
               />
             ))}

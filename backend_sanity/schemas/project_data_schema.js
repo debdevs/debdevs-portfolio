@@ -58,8 +58,8 @@ type: 'document',
 
         },
         {
-            name: 'imageurl',
-            title: 'ImgURL',
+            name:'imgUrl',
+            title:'ImgUrl',
             type:'image',
             options: {
                 hotspot:true,

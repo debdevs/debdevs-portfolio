@@ -6,7 +6,7 @@ import PortfolioProjectButton from '../PortfolioProjectButton/PortfolioProjectBu
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image = skyway_web_image}) => {
+const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image = skyway_web_image,}) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -20,9 +20,10 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image
         <div className={styles.portfolio_image_container}>
           <Image
             className={styles.image_display_base_image}
-            src={project_image[0]}
+            src={project_image}
             alt=""
-    
+            width="300" 
+            height="500" 
             quality={100}
           />
         </div></Link>
