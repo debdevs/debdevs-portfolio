@@ -66,13 +66,21 @@ useEffect(() => {
               Projects List
             </h1>
             <h5 onClick={console.log(projects)}>{projects == undefined ? null :projectListId}</h5>
+            <h6>
+            {projects.slice(projectListId, projectListId+1).map((project, i) => (
+              project.name
+
+
+            ))}
+            
+            </h6>
             {projects.map((project, i) => (
               <ProjectCard
            
                 title={project.name}
                 description={project.description}
                 set_id={() => {
-                  setProjectListId(project.id);
+                  setProjectListId(i);
                   setDetailsIndex(0);
                   setSelected(i);
 
