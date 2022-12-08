@@ -58,28 +58,31 @@ useEffect(() => {
   const [selected, setSelected] = useState(0);
   
   return (
-    <section className={styles.subheading_container}>
+    <section className={styles.subheading_container } >
       <div className={styles.subheading_left}>
         <div className={styles.subheading_left_bg}>
           <div className={styles.subheading_left_items}>
             <h1 className={styles.subheading_left_items_header}>
               Projects List
             </h1>
+            <h5 onClick={console.log(projects)}>{projects == undefined ? null :projectListId}</h5>
             {projects.map((project, i) => (
               <ProjectCard
            
                 title={project.name}
                 description={project.description}
                 set_id={() => {
-                  setProjectListId(i);
+                  setProjectListId(project.id);
                   setDetailsIndex(0);
                   setSelected(i);
 
-                  console.log(i);
+                  console.log(project.name);
+                  console.log(project.id);
+    
                 }}
     
                 key={project.id}
-                key_value={parseInt(project.id)}
+                key_value={project.id}
            
                 img_src = {urlFor(project.imgUrl.asset._ref).url()}
                
@@ -93,11 +96,26 @@ useEffect(() => {
           </div>
         </div>
       </div>
+     
       {isMobile == false ? 
       
       <div className={styles.subheading_right}>
       <div className={styles.box_border_gradient}>
+
         <div className={styles.project_container}>
+
+
+
+        {projects.slice(projectListId, projectListId+1).map((project, i) => (
+              <ProjectDisplayCard
+           
+              index_value={ project.id}
+              details_index_value={detailsIndex}
+              title={project.name}
+              image_source = {urlFor(project.imgUrl.asset._ref).url()}
+              click_prop = {parseInt(projectListId)}
+              />
+            ))}
           <AnimatePresence>
             <motion.div
               key={projectListId}
@@ -115,11 +133,11 @@ useEffect(() => {
               className={styles.project_motion_div}
             >
               <ProjectDisplayCard
-                index_value={projectListId}
+                index_value={ data.projects[0].id}
                 details_index_value={detailsIndex}
                 title={data.projects[projectListId].name}
-                image_source={data.projects[projectListId].image_source}
-                click_prop = {projectListId}
+                image_source={data.projects[0].image_source}
+                click_prop = {parseInt(projectListId)}
                 
                 
               />

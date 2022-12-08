@@ -35,9 +35,10 @@ const ProjectDisplayCard = ({
       <div className={styles.image_fx_container}>
         <div className={styles.left_image_container}>
         <Image
-          src={image_source[0]}
+          src={image_source}
           layout = "fill"
-    
+          width = "400"
+          height = "400"
           className={styles.left_image}
           alt = ""
     />
@@ -46,10 +47,11 @@ const ProjectDisplayCard = ({
 
 
 <Image
-      src={image_source[0]}
+      src={image_source}
       alt = {"Project Image"}
       layout = "fill"
-    
+      width = "400"
+      height = "400"
               className={styles.right_image}
     />
         </div>
