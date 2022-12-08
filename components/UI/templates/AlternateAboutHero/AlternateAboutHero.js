@@ -18,13 +18,16 @@ const AlternateAboutHero = ({image_source}) => {
   return (
     <section className={styles.alternate_about_header}>
       <div className={styles.content_box}>
-        <div className={styles.left_items}>
+
           <div className={styles.header_info_box}>
             <h1 className={styles.h1}>About Me:</h1>
             <h2 className={styles.h2}>
               I'm a <span className={styles.span}>developer</span>
             </h2>
-            <p className={styles.p}>
+
+
+          </div>
+          <p className={styles.p}>
               With a passion for visuals and a drive to get it done
             </p>
             <div className={styles.line_div}></div>
@@ -43,9 +46,6 @@ I’m currently looking to get practical experience while working towards a comp
 
 Take a look at my previous work below
             </p>
-
-          </div>
-        </div>
   
       </div>
 

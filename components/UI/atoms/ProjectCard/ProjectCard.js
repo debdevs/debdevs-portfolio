@@ -3,7 +3,7 @@ import styles from './ProjectCard.module.css';
 import Image from 'next/future/image';
 import { useContext } from 'react';
 import { Context } from 'react';
-
+import placeholder from '../../../../public/images/showman_image.png'
 import { HomeProjectDetailsContext } from '../../../../contexts/HomeProjectDetailsContext';
 
 import Link from 'next/link';
@@ -11,9 +11,9 @@ export const ProjectCard = ({
   title,
   description,
   set_id,
-  link_project = "#",
+  link_project = "javascript: void(0)",
   gradient_container_value,
-  img_src = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
+  img_src = placeholder,
 }) => {
 
   const { projectListId, setProjectListId } = useContext(
@@ -40,6 +40,8 @@ export const ProjectCard = ({
           layout = "fill"
           className={styles.image_item}
           alt = "Image"
+          width="300" 
+          height="500" 
           
     />
           </image-container>

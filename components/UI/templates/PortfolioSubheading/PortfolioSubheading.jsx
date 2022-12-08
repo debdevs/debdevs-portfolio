@@ -127,10 +127,10 @@ projects.forEach(function (work) {
        >
          {email_projects.map((project, key) => (
            <PortfolioProjectDisplayCard
-             key={key}
-             key_value={key}
-             button_text={project.name}
-             project_image = {project.image_source}
+           key={key}
+           key_value={key}
+           button_text={project.name}
+           project_image = {urlFor(project.imgUrl.asset._ref).url()}
              
            />
          ))}

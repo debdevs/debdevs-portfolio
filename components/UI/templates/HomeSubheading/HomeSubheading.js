@@ -8,12 +8,18 @@ import styles from './HomeSubheading.module.css';
 import data from '../../../../public/project_data';
 import Image from 'next/future/image';
 import { useState,useEffect } from 'react';
+import { urlFor, client } from '../../../../client';
 
 import { motion, AnimatePresence } from 'framer-motion';
 const HomeSubheading = () => {
   const [isMobile, setIsMobile] = useState(false)
 
+  const [projects, setProjects] = useState([])
+useEffect(() => {
+  const query = '*[_type == "projects"]'
+  client.fetch(query).then((data => setProjects(data)))
 
+}, [])
 
   React.useEffect(() => {
     if (window.innerWidth < 1024) {
@@ -59,9 +65,9 @@ useEffect(() => {
             <h1 className={styles.subheading_left_items_header}>
               Projects List
             </h1>
-            {data.projects.map((project, i) => (
+            {projects.map((project, i) => (
               <ProjectCard
-                key={i}
+           
                 title={project.name}
                 description={project.description}
                 set_id={() => {
@@ -72,8 +78,10 @@ useEffect(() => {
                   console.log(i);
                 }}
     
-                img_src = {project.image_source[0]}
-                link_project = {isMobile == false? "javascript:void(0)": '/' + (i+1)}
+                key={project.id}
+                key_value={parseInt(project.id)}
+           
+                img_src = {urlFor(project.imgUrl.asset._ref).url()}
                
                 gradient_container_value ={
                   i === projectListId
