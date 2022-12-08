@@ -19,27 +19,27 @@ useEffect(() => {
 }, [])
 
 let web_dev_projects = [];
-data.projects.forEach(function (work) {
-    if ( work.category.includes("Web-Development")){
+projects.forEach(function (work) {
+    if ( work.category.split(',').includes("Web-Development")){
     web_dev_projects.push(work);
     }
   });
 
 let visual_design_projects = [];
-data.projects.forEach(function (work) {
+projects.forEach(function (work) {
     if ( work.category.includes("Visual Design")){
       visual_design_projects.push(work);
     }
   });
 
 let animation_projects = [];
-data.projects.forEach(function (work) {
+projects.forEach(function (work) {
     if ( work.category.includes("Web-Development")){
       animation_projects.push(work);
     }
   });
   let email_projects = [];
-  data.projects.forEach(function (work) {
+projects.forEach(function (work) {
       if ( work.category.includes("Email Development")){
         email_projects.push(work);
       }
@@ -48,7 +48,7 @@ data.projects.forEach(function (work) {
 
   return (
     <div className={styles.portfolio_subheading_parent}>
-      <div className={styles.portfolio_subheading_cards_bg} onClick = {()=>console.log(projects[0].imgUrl.asset._ref.url())}>
+      <div className={styles.portfolio_subheading_cards_bg} >
   
         <AnimatePresence>
         {workId == 0? 
@@ -69,8 +69,8 @@ data.projects.forEach(function (work) {
           >
             {projects.map((project, key) => (
               <PortfolioProjectDisplayCard
-                key={key}
-                key_value={key}
+                key={project.id}
+                key_value={parseInt(project.id)}
                 button_text={project.name}
                 project_image = {urlFor(project.imgUrl.asset._ref).url()}
                 
@@ -97,10 +97,10 @@ data.projects.forEach(function (work) {
         >
           {visual_design_projects.map((project, key) => (
             <PortfolioProjectDisplayCard
-              key={key}
-              key_value={key}
-              button_text={project.name}
-              project_image = {project.image_source}
+            key={key}
+            key_value={key}
+            button_text={project.name}
+            project_image = {urlFor(project.imgUrl.asset._ref).url()}
               
             />
           ))}

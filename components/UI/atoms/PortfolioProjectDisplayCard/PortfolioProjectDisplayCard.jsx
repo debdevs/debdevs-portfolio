@@ -16,7 +16,7 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image
         transition={{ duration: 0.7, delay: 0 + key_value * 0.25 }}
         className={styles.portfolio_card_container}
       >
-        <Link href={ '/' + (key_value+1)}>
+        <Link href={ '/' + (key_value)}>
         <div className={styles.portfolio_image_container}>
           <Image
             className={styles.image_display_base_image}
@@ -27,7 +27,7 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image
             quality={100}
           />
         </div></Link>
-        <PortfolioProjectButton button_text={button_text} button_link={ '/' + (key_value+1)}/>
+        <PortfolioProjectButton button_text={button_text} button_link={ '/' + (key_value)}/>
       </motion.div>
     </AnimatePresence>
   );
