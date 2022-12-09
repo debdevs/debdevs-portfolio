@@ -20,35 +20,11 @@ const variants = {
   };
 
 
-const ptComponents = {
-  types: {
-    image: ({ value }) => {
-      if (!value?.asset?._ref) {
-        return null
-      }
-      return (
-        <img
-          alt={value.alt || ' '}
-          loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-        />
-      )
-    }
-  }
-}
-
-const Post = ({projects}) => {
-  const {
-
-    name = 'Missing name',
-    id = projects[1].id,
-    categories,
-    authorImage,
-    body = []
-  } = projects
+const Post = ({project,projects}) => {
+    const {  name,id,link } = project;
   return (
     <div>
-
+<h1>{id},{name},{link.current}</h1>
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden
@@ -65,31 +41,40 @@ const Post = ({projects}) => {
   )
 }
 
-const query = groq`*[_type == "projects"]`
-export async function getStaticPaths() {
-   
-  const paths = await client?.fetch(query).then(
-    groq`*[_type == "projects"]`
-  )
-
-
-
-
-  return {
-    paths: paths?.map((link) => ({params: {link}}, {params: { id: "rocketeer"}})),
-    fallback: true,
-    
-  }
-}
-
-export async function getStaticProps(context) {
-  // It's important to default the link so that it doesn't return "undefined"
-  const { link = "" } = context.params
-  const projects = await client?.fetch(query, { link })
-  return {
-    props: {
-      projects
+export const getStaticPaths = async () => {
+  const query = `*[_type == "projects"] {
+    link {
+      current
     }
   }
+  `;
+
+  const projects = await client.fetch(query);
+
+  const paths = projects.map((project) => ({
+    params: { 
+      link: project.link.current
+    }
+  }));
+
+  return {
+    paths,
+    fallback: 'blocking'
+  }
 }
+
+export const getStaticProps = async ({ params: { link }}) => {
+  const query = `*[_type == "projects" && link.current == '${link}'][0]`;
+  const projectsQuery = '*[_type == "projects"]'
+  
+  const project = await client.fetch(query);
+  const projects = await client.fetch(projectsQuery);
+
+  console.log(project);
+
+  return {
+    props: { projects, project }
+  }
+}
+  
 export default Post

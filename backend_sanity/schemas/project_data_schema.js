@@ -54,7 +54,7 @@ type: 'document',
         {
             name: 'link',
             title: 'link',
-            type:'string',
+            type:'slug',
 
         },
         {
