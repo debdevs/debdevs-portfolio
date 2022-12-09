@@ -9,8 +9,10 @@ import data from '../../../../public/project_data';
 import Image from 'next/future/image';
 import { useState,useEffect } from 'react';
 import { urlFor, client } from '../../../../client';
-
 import { motion, AnimatePresence } from 'framer-motion';
+
+
+
 const HomeSubheading = () => {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -20,6 +22,8 @@ useEffect(() => {
   client.fetch(query).then((data => setProjects(data)))
 
 }, [])
+
+// projects.defaultOrdering([{field: 'id', direction: 'asc'}])
 
   React.useEffect(() => {
     if (window.innerWidth < 1024) {

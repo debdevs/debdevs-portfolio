@@ -1,113 +1,86 @@
+import groq from 'groq'
+import imageUrlBuilder from '@sanity/image-url'
 
-import data from '../public/project_data'
-import NextLink from 'next/link';
-import ProjectsHero from '../components/UI/templates/ProjectsHero/ProjectsHero';
-import NavBar from '../components/UI/templates/NavBar/NavBar';
-import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { urlFor, client } from 'client';
+import { client } from 'client'
 
+function urlFor (source) {
+  return imageUrlBuilder(client).image(source)
+}
 
+const ptComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null
+      }
+      return (
+        <img
+          alt={value.alt || ' '}
+          loading="lazy"
+          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+        />
+      )
+    }
+  }
+}
 
+const Post = ({projects}) => {
+  const {
 
-
-const variants = {
-    hidden: { opacity: 0, x: 0, y: 0 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: 0 },
-    duration: { opacity: 0, x: 0, y: 0 },
-    transition: { ease: 'easeInOut', duration: 20 },
-  };
-export const getStaticProps = async ({ params }) => {
-
-
-  const playlistList = data.projects.filter((p) => p.id.toString() === params.id);
-  return {
-    props: {
-      song: playlistList[0],
-    },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const paths = data.projects.map((song) => ({
-    params: { id: song.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
-
-// export default ({ song }) => (
-//   <div>
-
-//     <motion.main
-//       variants={variants} // Pass the variant object into Framer Motion
-//       initial="hidden" // Set the initial state to variants.hidden
-//       animate="enter" // Animated state to variants.enter
-//       exit="exit" // Exit state (used later) to variants.exit
-//       transition={{ type: 'linear' }} // Set the transition to linear
-//       className=""
-//     >
-//       <NavBar />
-//       <ProjectsHero projectId={song.id-1}/>
-//       <ProjectsSubheading projectId={song.id-1}/>
-//     </motion.main>
-//   </div>
-// );
-
-
-
-// const song = ({ song }) => {
-//   return (
-//     <div>
-
-//     <motion.main
-//       variants={variants} // Pass the variant object into Framer Motion
-//       initial="hidden" // Set the initial state to variants.hidden
-//       animate="enter" // Animated state to variants.enter
-//       exit="exit" // Exit state (used later) to variants.exit
-//       transition={{ type: 'linear' }} // Set the transition to linear
-//       className=""
-//     >
-//       <NavBar />
-//       <ProjectsHero projectId={song.id-1}/>
-//       <ProjectsSubheading projectId={song.id-1}/>
-//     </motion.main>
-//   </div>
-//   )
-// }
-
-// export default [song]
-
-
-
-export default ({ song }) => {
-
-  const [projects, setProjects] = useState([])
- useEffect(() => {
-    const query = '*[_type == "projects"]'
-    client.fetch(query).then((data => setProjects(data)))
-  
-  }, []);
-
-
-  
+    name = 'Missing name',
+    categories,
+    authorImage,
+    body = []
+  } = projects
   return (
-    <div>
+    <article>
+      <h1>{name}</h1>
+      <span>By {name}</span>
+      {categories && (
+        <ul>
+          Posted in
+          {categories?.map(category => <li key={category}>{category}</li>)}
+        </ul>
+      )}
+      {authorImage && (
+        <div>
+          <img
+            src={urlFor(authorImage)
+              .width(50)
+              .url()}
+            alt={`${name}'s picture`}
+          />
+        </div>
+      )}
 
-    <motion.main
-      variants={variants} // Pass the variant object into Framer Motion
-      initial="hidden" // Set the initial state to variants.hidden
-      animate="enter" // Animated state to variants.enter
-      exit="exit" // Exit state (used later) to variants.exit
-      transition={{ type: 'linear' }} // Set the transition to linear
-      className=""
-    >
-      <NavBar />
-      <ProjectsHero projectId={song.id-1}/>
-      <ProjectsSubheading projectId={song.id-1}/>
-    </motion.main>
-  </div>
+    </article>
   )
 }
+
+const query = groq`*[_type == "projects"]`
+export async function getStaticPaths() {
+  const paths = await client?.fetch(query).then(
+    groq`*[_type == "projects"]`
+  )
+
+
+
+
+  return {
+    paths: paths?.map((link) => ({params: {link}}, {params: { id: "showman-video" }})),
+    fallback: true,
+    
+  }
+}
+
+export async function getStaticProps(context) {
+  // It's important to default the link so that it doesn't return "undefined"
+  const { link = "" } = context.params
+  const projects = await client?.fetch(query, { link })
+  return {
+    props: {
+      projects
+    }
+  }
+}
+export default Post
