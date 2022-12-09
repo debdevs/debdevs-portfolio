@@ -69,7 +69,7 @@ projects.forEach(function (work) {
           >
             {projects.map((project, key) => (
               <PortfolioProjectDisplayCard
-                key={project.id}
+                key={parseInt(project.id+1)}
                 key_value={parseInt(project.id)}
                 button_text={project.name}
                 project_image = {urlFor(project.imgUrl.asset._ref).url()}
