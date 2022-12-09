@@ -7,7 +7,7 @@ import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 
 import { urlFor, client } from '../../../../client';
-const ProjectsHero = ({projectId = 0}) => {
+const ProjectsHero = ({projectId = 0, project_data}) => {
 
 
   const [projects, setProjects] = useState([])
@@ -50,7 +50,7 @@ const ProjectsHero = ({projectId = 0}) => {
   
   return (
     <div >
-      {projects.slice(projectId, projectId+1).map((project, i) => (
+  
 
         <section className={styles.projects_hero}>
         <div className={styles.hero_content}>
@@ -59,7 +59,7 @@ const ProjectsHero = ({projectId = 0}) => {
               className={styles.left_items_image_container}
             >
               <Image
-                  src={urlFor(project.imgUrl.asset._ref).url()}
+                  src={urlFor(project_data.imgUrl.asset._ref).url()}
                   alt = {"Project Image"}
                   layout = "fill"
 
@@ -73,19 +73,19 @@ const ProjectsHero = ({projectId = 0}) => {
         
             <div className={styles.text_layout}>
             <div className={styles.text_top_items}>
-              <h1 className={styles.text_layout_header}>{project.name}</h1>
+              <h1 className={styles.text_layout_header}>{project_data.name}</h1>
           
                 
-              {project.tagline.split(" ").length > 2 ? 
+              {project_data.tagline.split(" ").length > 2 ? 
               <div className={styles.text_row}>
-                <h1  className={styles.text_layout_header}>{project.tagline.split(" ")[0]}</h1>
-                <span><AnimatedTextWord text={project.tagline.split(" ").splice(-2).join(" ")}/></span>
+                <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
+                <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-2).join(" ")}/></span>
                 
                 </div>
               : 
               <div className={styles.text_row}>
-              <h1  className={styles.text_layout_header}>{project.tagline.split(" ")[0]}</h1>
-              <span><AnimatedTextWord text={project.tagline.split(" ").splice(-1).join(" ")}/></span>
+              <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
+              <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-1).join(" ")}/></span>
           
               </div>
               
@@ -95,7 +95,7 @@ const ProjectsHero = ({projectId = 0}) => {
         
               <div className={styles.line_div} />
               <p>
-                {project.landing_paragraph_info}
+                {project_data.landing_paragraph_info}
               </p>
               <h3>Tech Stack:</h3>
 
@@ -119,7 +119,7 @@ const ProjectsHero = ({projectId = 0}) => {
 
 
 
-            ))}
+      
  
     </div>
   );

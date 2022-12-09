@@ -34,7 +34,7 @@ const Post = ({project,projects}) => {
       className=""
     >
       <NavBar />
-      <ProjectsHero projectId={id}/>
+      <ProjectsHero projectId={id} project_data= {project}/>
       <ProjectsSubheading projectId={id}/>
     </motion.main>
   </div>
