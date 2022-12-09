@@ -65,7 +65,7 @@ useEffect(() => {
             <h1 className={styles.subheading_left_items_header}>
               Projects List
             </h1>
-            <h5 onClick={console.log(projects)}>{projects == undefined ? null :projectListId}</h5>
+            {/* <h5 onClick={console.log(projects)}>{projects == undefined ? null :projectListId}</h5>
             <h6>
             {projects.slice(projectListId, projectListId+1).map((project, i) => (
               project.name
@@ -73,7 +73,7 @@ useEffect(() => {
 
             ))}
             
-            </h6>
+            </h6> */}
             {projects.map((project, i) => (
               <ProjectCard
            
@@ -93,7 +93,7 @@ useEffect(() => {
                 key_value={project.id}
            
                 img_src = {urlFor(project.imgUrl.asset._ref).url()}
-               
+                project_array_length = {projects.length}
                 gradient_container_value ={
                   i === projectListId
                   ? 1
@@ -114,16 +114,7 @@ useEffect(() => {
 
 
 
-        {projects.slice(projectListId, projectListId+1).map((project, i) => (
-              <ProjectDisplayCard
-           
-              index_value={ project.id}
-              details_index_value={detailsIndex}
-              title={project.name}
-              image_source = {urlFor(project.imgUrl.asset._ref).url()}
-              click_prop = {parseInt(projectListId)}
-              />
-            ))}
+
           <AnimatePresence>
             <motion.div
               key={projectListId}
@@ -140,15 +131,16 @@ useEffect(() => {
               }}
               className={styles.project_motion_div}
             >
+        {projects.slice(projectListId, projectListId+1).map((project, i) => (
               <ProjectDisplayCard
-                index_value={ data.projects[0].id}
-                details_index_value={detailsIndex}
-                title={data.projects[projectListId].name}
-                image_source={data.projects[0].image_source}
-                click_prop = {parseInt(projectListId)}
-                
-                
+           
+              index_value={parseInt(project.id)}
+              details_index_value={detailsIndex}
+              title={project.name}
+              image_source = {urlFor(project.imgUrl.asset._ref).url()}
+              click_prop = {parseInt(projectListId)}
               />
+            ))}
             </motion.div>
           </AnimatePresence>
         </div>

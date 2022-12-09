@@ -4,66 +4,110 @@ import LandingTabs from '../../molecules/LandingTabs/LandingTabs';
 import Image from 'next/future/image';
 import data from '../../../../public/project_data.js';
 import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
+import { useEffect, useState } from 'react';
+
+import { urlFor, client } from '../../../../client';
 const ProjectsHero = ({projectId = 0}) => {
-  const tagline = data.projects[projectId].tagline
-  const page_project = data.projects[projectId]
+
+
+  const [projects, setProjects] = useState([])
+ useEffect(() => {
+    const query = '*[_type == "projects"]'
+    client.fetch(query).then((data => setProjects(data)))
+  
+  }, []);
+
+
+
+
+
+
+
+
+  const page_project_val = projects.slice(projectId, projectId+1).map(project => (
+    {
+      project: project,
+
+    } 
+  ));
+
+  const tagline_main = projects.slice(projectId, projectId+1).map(project => (
+    {
+      tagline: project.tagline,
+
+    } 
+  ));
+
+
+// const tagline = (tagline_main[0]? 0: tagline_main);
+// const page_project = (page_project_val[0]? 1: 0);
+
+// const tagline =  projects[0].tagline;
+// const page_project = (page_project_val[0]? 1: 0);
+
+
+  
+  
   return (
-    <div>
-      <section className={styles.projects_hero}>
+    <div >
+      {projects.slice(projectId, projectId+1).map((project, i) => (
+
+        <section className={styles.projects_hero}>
         <div className={styles.hero_content}>
           <div className={styles.left_items}>
             <div
               className={styles.left_items_image_container}
             >
               <Image
-      src={data.projects[projectId].image_source[0]}
-      alt = {"Project Image"}
-      layout = "fill"
-    
+                  src={urlFor(project.imgUrl.asset._ref).url()}
+                  alt = {"Project Image"}
+                  layout = "fill"
+
+                  width = "800"
+                  height = "800"
+                />
           
-    />
-           
             </div>
           </div>
           <div className={styles.right_items}>
-         
+        
             <div className={styles.text_layout}>
-            
-              <h1 className={styles.text_layout_header}>{data.projects[projectId].name}</h1>
-           
+            <div className={styles.text_top_items}>
+              <h1 className={styles.text_layout_header}>{project.name}</h1>
+          
                 
-              {tagline.split(" ").length > 2 ? 
+              {project.tagline.split(" ").length > 2 ? 
               <div className={styles.text_row}>
-                <h1  className={styles.text_layout_header}>{tagline.split(" ")[0]}</h1>
-                <span><AnimatedTextWord text={tagline.split(" ").splice(-2).join(" ")}/></span>
+                <h1  className={styles.text_layout_header}>{project.tagline.split(" ")[0]}</h1>
+                <span><AnimatedTextWord text={project.tagline.split(" ").splice(-2).join(" ")}/></span>
                 
                 </div>
               : 
               <div className={styles.text_row}>
-              <h1  className={styles.text_layout_header}>{tagline.split(" ")[0]}</h1>
-              <span><AnimatedTextWord text={tagline.split(" ").splice(-1).join(" ")}/></span>
+              <h1  className={styles.text_layout_header}>{project.tagline.split(" ")[0]}</h1>
+              <span><AnimatedTextWord text={project.tagline.split(" ").splice(-1).join(" ")}/></span>
           
               </div>
               
-              }
-       
+              }</div>
+
                 {/* The <span>{tagline.split(" ").splice(-2).join(" ")}</span> */}
-         
+        
               <div className={styles.line_div} />
               <p>
-                {page_project.landing_paragraph_info}
+                {project.landing_paragraph_info}
               </p>
               <h3>Tech Stack:</h3>
 
-           <div className={styles.stack_row}>
+          <div className={styles.stack_row}>
               {data.projects[projectId].tech_stack.map((stack, i) => (
                 <div key = {0+i} className={styles.stack_row}>
-               <h4 className={styles.stack_text}>{stack}</h4>
-               {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
+              <h4 className={styles.stack_text}>{stack}</h4>
+              {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
               
-               
-               
-               </div>
+              
+              
+              </div>
 
             ))}</div>
 
@@ -71,7 +115,12 @@ const ProjectsHero = ({projectId = 0}) => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+
+
+
+            ))}
+ 
     </div>
   );
 };

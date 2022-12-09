@@ -91,6 +91,37 @@ type: 'document',
         },
     ],
 
+    orderings: [
+        {
+          title: 'id, descending',
+          name: 'idDesc',
+          by: [
+            {field: 'id', direction: 'desc'}
+          ]
+        },
+        {
+            title: 'id, ascending',
+            name: 'idAsc',
+            by: [
+              {field: 'id', direction: 'asc'}
+            ]
+          },
+
+      ],
+
+      preview: {
+        select: {
+          title: 'idDesc',
+          name: 'rating'
+        },
+        prepare(movie, viewOptions = {}) {
+          const title = viewOptions.ordering === 'id'
+          ? `${movie.id} (${movie.name})`
+          : movie.title
+    
+          return {title: title}
+        }
+      }
 
 
 

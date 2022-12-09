@@ -12,11 +12,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Context } from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
-
+import { useEffect, useState } from 'react';
+import { client } from 'client';
 const HomeHero = ({image_source}) => {
   const { heroProjectId, setHeroProjectId } = useContext(
     HomeProjectDetailsContext
   );
+
+  const [projects, setProjects] = useState([])
+  useEffect(() => {
+    const query = '*[_type == "projects"]'
+    client.fetch(query).then((data => setProjects(data)))
+  
+  }, []);
   return (
     <section className={styles.home_header}>
       <div className={styles.content_box}>
