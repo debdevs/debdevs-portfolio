@@ -4,13 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { PortfolioPageContext } from '../../../../contexts/PortfolioPageContext';
-
-const options = [
-  'Frontend-Development',
-  'Visual Design',
-  'Animation',
-  'Email Development',
-];
+import options from '../../../../project_types.js'
 
 const PortfolioTabs = () => {
   const [clickedId, setClickedId] = useState(-1);

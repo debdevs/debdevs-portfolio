@@ -6,7 +6,7 @@ import { PortfolioPageContext } from '../contexts/PortfolioPageContext';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router'
-
+import options from '../project_types'
 
 
 const portfolio = () => {
@@ -22,13 +22,13 @@ const portfolio = () => {
   const [count, setCount] = useState(0)
 
   React.useEffect(() => {
-    if (router.asPath?.includes( "portfolio?work-type=0") ) {
+    if (router.asPath?.includes( options[0].replace(new RegExp(' ','g'),'-')) ) {
       setWorkId(0)
-  } else if (router.asPath?.includes( "portfolio?work-type=1") ) {
+  } else if (router.asPath?.includes( options[1].replace(new RegExp(' ','g'),'-')) ) {
       setWorkId(1)
-  } else if (router.asPath?.includes( "portfolio?work-type=2") ) {
+  } else if (router.asPath?.includes(  options[2].replace(new RegExp(' ','g'),'-')) ) {
     setWorkId(2)
-}else if (router.asPath?.includes( "portfolio?work-type=3") ) {
+}else if (router.asPath?.includes( options[3].replace(new RegExp(' ','g'),'-')) ) {
   setWorkId(3)
 }else  {
   setWorkId(null)
