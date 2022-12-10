@@ -157,6 +157,7 @@ projects.forEach(function (work) {
            key_value={key}
            button_text={project.name}
            project_image = {urlFor(project.imgUrl.asset._ref).url()}
+           project = {project}
              
            />
          ))}
@@ -185,6 +186,7 @@ projects.forEach(function (work) {
            key_value={key}
            button_text={project.name}
            project_image = {urlFor(project.imgUrl.asset._ref).url()}
+           project = {project}
              
            />
          ))}
