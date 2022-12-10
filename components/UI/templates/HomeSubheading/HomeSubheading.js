@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
-const HomeSubheading = () => {
+const HomeSubheading = ({project_data}) => {
   const [isMobile, setIsMobile] = useState(false)
 
   const [projects, setProjects] = useState([])
@@ -89,13 +89,13 @@ useEffect(() => {
                   setProjectListId(i);
                   setDetailsIndex(0);
                   setSelected(i);
-                  setProjectData(project)
-
+                  setProjectData(project);
+                  
                   console.log(project.name);
                   console.log(project.id);
     
                 }}
-    
+                link_project = {project.link.current}
                 key={project.id}
                 key_value={project.id}
            

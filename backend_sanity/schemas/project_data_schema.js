@@ -89,6 +89,19 @@ type: 'document',
             type:'string',
 
         },
+
+        {
+            name: 'github_link',
+            title: 'github_link',
+            type:'string',
+
+        },
+        {
+            name: 'live_project_link',
+            title: 'live_project_link',
+            type:'string',
+
+        },
     ],
 
     orderings: [

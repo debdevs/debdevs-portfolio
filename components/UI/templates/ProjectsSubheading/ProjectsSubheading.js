@@ -25,7 +25,7 @@ const ProjectsSubheading = ({projectId = 0, project_data}) => {
   return (
     
     <div className={styles.subheading_parent}>
-      {projects.slice(projectId, projectId+1).map((project, i) => (
+
       <subheading_content className={styles.subheading_content}>
       <div className={styles.left_items}>
         <ProjectDisplayMain projectId={projectId} image_source = {urlFor(project_data.imgUrl.asset._ref).url()}/>
@@ -39,7 +39,7 @@ const ProjectsSubheading = ({projectId = 0, project_data}) => {
         />
       </div>
     </subheading_content>
-            ))}
+
 
 
 

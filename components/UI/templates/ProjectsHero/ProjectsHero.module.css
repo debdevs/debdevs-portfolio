@@ -296,9 +296,10 @@ color: #000000;
     .left_items_image_container {
         display:flex;
         overflow:hidden;
-
+        max-height:200px;
         
         height: auto;
+        
         
         
         

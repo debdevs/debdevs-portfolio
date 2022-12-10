@@ -70,7 +70,7 @@ export const getStaticProps = async ({ params: { link }}) => {
   const project = await client.fetch(query);
   const projects = await client.fetch(projectsQuery);
 
-  console.log(project);
+  // console.log(project);
 
   return {
     props: { projects, project }
