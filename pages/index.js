@@ -60,7 +60,7 @@ export default function Home() {
           </Head>
           <NavBar />
           <HomeHero />
-          <HomeSubheading />
+          <HomeSubheading project_data = {}/>
         </div>
       </motion.main>
     </HomeProjectDetailsContext.Provider>
