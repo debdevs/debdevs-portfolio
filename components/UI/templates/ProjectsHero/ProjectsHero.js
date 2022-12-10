@@ -7,7 +7,7 @@ import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 
 import { urlFor, client } from '../../../../client';
-const ProjectsHero = ({projectId = 0, project_data}) => {
+const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
 
 
   const [projects, setProjects] = useState([])
