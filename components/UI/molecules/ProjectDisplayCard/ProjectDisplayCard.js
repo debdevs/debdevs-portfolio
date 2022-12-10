@@ -22,6 +22,7 @@ const ProjectDisplayCard = ({
   image_source = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
   click_prop,
   project_array_length,
+  click_link
 }) => {
 
   const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
@@ -32,7 +33,7 @@ const ProjectDisplayCard = ({
     <div className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>{title}</h1>
       <h2 className={styles.project_overview}>{tagline}</h2>
-      <Link href={ '/' + parseInt(click_prop+1)}>
+      <Link href={ '/' + click_link}>
       <div className={styles.image_fx_container}>
         <div className={styles.left_image_container}>
         <Image
@@ -98,7 +99,7 @@ const ProjectDisplayCard = ({
       </div>
 
       <div className={styles.project_buttons}>
-        <ThemeButton1 button_link={ '/' + (index_value+1)}/>
+        <ThemeButton1 button_link={ '/' + (click_link)}/>
         <ThemeButton2 button_link="javascript:void(0);" click_function={() => {
                   setProjectListId( parseInt(click_prop+1) < 3 ? parseInt(click_prop+1):0);
       

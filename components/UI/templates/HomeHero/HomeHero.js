@@ -13,7 +13,8 @@ import { Context } from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
-import { client } from 'client';
+import { urlFor, client } from 'client';
+
 const HomeHero = ({image_source}) => {
   const { heroProjectId, setHeroProjectId } = useContext(
     HomeProjectDetailsContext
@@ -27,7 +28,9 @@ const HomeHero = ({image_source}) => {
   }, []);
   return (
     <section className={styles.home_header}>
+
       <div className={styles.content_box}>
+
         <div className={styles.left_items}>
           <div className={styles.header_info_box}>
             <h1 className={styles.h1}>Hello There,</h1>
@@ -68,62 +71,68 @@ const HomeHero = ({image_source}) => {
           </div>
         </div>
         <div className={styles.right_items}>
-        
-        <Link href={ '/' + (heroProjectId+1)}>
+        {projects.slice(heroProjectId, heroProjectId+1).map((project, i) => (
+        <Link href={ '/' + (projects[heroProjectId].link.current)}>
           
-          <div className={styles.right_items_content_bg}>
-      
-            <AnimatePresence>
-              <motion.div
-                key={heroProjectId}
-                initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
-                animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
-                transition={{ duration: 0.7, delay: 0.15 }}
-                className={styles.right_items_content}
-                exit={{
-                  opacity: 0,
-                  translateY: 150,
-                  transition: { duration: 0.25, delay: 0 },
-                }}
+        <div className={styles.right_items_content_bg}>
+    
+          <AnimatePresence>
+            <motion.div
+              key={heroProjectId}
+              initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+              animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className={styles.right_items_content}
+              exit={{
+                opacity: 0,
+                translateY: 150,
+                transition: { duration: 0.25, delay: 0 },
+              }}
+            >
+              <div className={styles.texts_box}>
+                <h1>Featured Project:</h1>
+                <h2>{projects[heroProjectId].name}</h2>
+              </div>
+              <div
+                className={styles.image_styling_container}
               >
-                <div className={styles.texts_box}>
-                  <h1>Featured Project:</h1>
-                  <h2>{data.projects[heroProjectId].name}</h2>
-                </div>
                 <div
-                  className={styles.image_styling_container}
+                  className={styles.right_items_main_image_container}
                 >
-                  <div
-                    className={styles.right_items_main_image_container}
-                  >
-                    <Image
-                      src={data.projects[heroProjectId].image_source[0]}
-                      alt = {"Project Image"}
-                      layout = "fill"
-                    
-                    />
-                            
-                                  </div>
-                                  <div
-                                    className={styles.right_items_accent_image_container}
-                                  >
-                                    <Image
-                      src={data.projects[heroProjectId].image_source[0]}
-                      alt = {"Project Image"}
-                      layout = "contain"
-                    
-                    />
-               <FiExternalLink className={styles.cover_icon} />
-                  </div>
-                
+                  <Image
+                    src= {urlFor(projects[heroProjectId].imgUrl.asset._ref).url()}
+                    alt = {"Project Image"}
+                    layout = "fill"
+                    width = "800"
+                    height = "800"
+                  
+                  />
+                          
+                                </div>
+                                <div
+                                  className={styles.right_items_accent_image_container}
+                                >
+                  <Image
+                    src= {urlFor(projects[heroProjectId].imgUrl.asset._ref).url()}
+                    alt = {"Project Image"}
+                    layout = "fill"
+                    width = "800"
+                    height = "800"
+                  
+                  />
+             <FiExternalLink className={styles.cover_icon} />
                 </div>
-                <div className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></div>
-              </motion.div>
-            </AnimatePresence>
-           
-          </div>
-          </Link>
-        
+              
+              </div>
+              <div className={styles.cover_item}><FiExternalLink className={styles.cover_icon} /></div>
+            </motion.div>
+          </AnimatePresence>
+         
+        </div>
+        </Link>
+      
+            ))}
+
         </div>
       </div>
       <div className={styles.right_slider_selectors}>

@@ -10,6 +10,9 @@ import { HomeProjectDetailsContext } from '../contexts/HomeProjectDetailsContext
 import { motion } from 'framer-motion';
 import data from '../public/project_data'
 
+
+
+
 export default function Home() {
   const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
@@ -20,9 +23,10 @@ export default function Home() {
   };
   const [projectId, setProjectId] = useState(0);
   const [detailsIndex, setDetailsIndex] = useState(0);
-  const [projectListId, setProjectListId] = useState(0);
-  const [heroProjectId, setHeroProjectId] = useState(0);
+  const [projectListId, setProjectListId] = useState(1);
+  const [heroProjectId, setHeroProjectId] = useState(1);
   const [clickedItemId, setClickedItemId] = useState(0);
+  const [projectData, setProjectData] = useState("blank");
   return (
     <HomeProjectDetailsContext.Provider
       value={{
@@ -36,6 +40,8 @@ export default function Home() {
         setHeroProjectId,
         clickedItemId,
         setClickedItemId,
+        projectData, 
+        setProjectData
       }}
     >
       <motion.main

@@ -24,7 +24,7 @@ const Post = ({project,projects}) => {
     const {  name,id,link } = project;
   return (
     <div>
-<h1>{id},{name},{link.current}</h1>
+{/* <h1>{id},{name},{link.current}</h1> */}
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden

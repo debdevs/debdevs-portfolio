@@ -14,7 +14,7 @@ const portfolio = () => {
     duration: { opacity: 0, x: 0, y: 0 },
     transition: { ease: 'easeInOut', duration: 120 },
   };
-  const [workId, setWorkId] = useState(0);
+  const [workId, setWorkId] = useState(null);
 
 
  

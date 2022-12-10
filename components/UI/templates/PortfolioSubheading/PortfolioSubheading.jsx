@@ -20,7 +20,7 @@ useEffect(() => {
 
 let web_dev_projects = [];
 projects.forEach(function (work) {
-    if ( work.category.split(',').includes("Web-Development")){
+    if (work.category.split(',').includes("Web-Development")){
     web_dev_projects.push(work);
     }
   });
@@ -34,7 +34,7 @@ projects.forEach(function (work) {
 
 let animation_projects = [];
 projects.forEach(function (work) {
-    if ( work.category.includes("Web-Development")){
+    if (work.category.includes("Web-Development")){
       animation_projects.push(work);
     }
   });
@@ -51,7 +51,7 @@ projects.forEach(function (work) {
       <div className={styles.portfolio_subheading_cards_bg} >
   
         <AnimatePresence>
-        {workId == 0? 
+        {workId == null? 
         <motion.div
             key={workId}
             initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
@@ -73,11 +73,40 @@ projects.forEach(function (work) {
                 key_value={parseInt(project.id)}
                 button_text={project.name}
                 project_image = {urlFor(project.imgUrl.asset._ref).url()}
+                project = {project}
                 
               />
             ))}
           </motion.div>
-          
+          : workId == 0 ? 
+          <motion.div
+          key={workId}
+          initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+          animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+          className={styles.portfolio_subheading_cards}
+          exit={{
+            opacity: 0,
+            translateY: 150,
+            transition: { duration: 0.25, delay: 0 },
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0,
+          }}
+        >
+          {web_dev_projects.map((project, key) => (
+            <PortfolioProjectDisplayCard
+              key={parseInt(project.id+1)}
+              key_value={parseInt(project.id)}
+              button_text={project.name}
+              project_image = {urlFor(project.imgUrl.asset._ref).url()}
+              project = {project}
+              
+            />
+          ))}
+        </motion.div>
+
+
           : workId == 1 ?         
           
           <motion.div
@@ -105,8 +134,33 @@ projects.forEach(function (work) {
             />
           ))}
         </motion.div> 
-         : workId == 2 ? null
-        
+         : workId == 2 ?
+
+             <motion.div
+         key={workId}
+         initial={{ opacity: 0, traslateX: 0, translateY: 50 }}
+         animate={{ opacity: 1, traslateX: 0, translateY: 0 }}
+         className={styles.portfolio_subheading_cards}
+         exit={{
+           opacity: 0,
+           translateY: 150,
+           transition: { duration: 0.25, delay: 0 },
+         }}
+         transition={{
+           duration: 0.5,
+           delay: 0,
+         }}
+       >
+         {animation_projects.map((project, key) => (
+           <PortfolioProjectDisplayCard
+           key={key}
+           key_value={key}
+           button_text={project.name}
+           project_image = {urlFor(project.imgUrl.asset._ref).url()}
+             
+           />
+         ))}
+       </motion.div>  
         
          : workId == 3 ? 
 

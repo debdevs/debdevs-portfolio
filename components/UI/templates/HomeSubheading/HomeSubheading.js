@@ -59,6 +59,8 @@ useEffect(() => {
   );
 
   const { clickedId, setClickedId } = useContext(HomeProjectDetailsContext);
+  const {  projectData, 
+    setProjectData } = useContext(HomeProjectDetailsContext);
   const [selected, setSelected] = useState(0);
   
   return (
@@ -87,6 +89,7 @@ useEffect(() => {
                   setProjectListId(i);
                   setDetailsIndex(0);
                   setSelected(i);
+                  setProjectData(project)
 
                   console.log(project.name);
                   console.log(project.id);
@@ -143,6 +146,8 @@ useEffect(() => {
               title={project.name}
               image_source = {urlFor(project.imgUrl.asset._ref).url()}
               click_prop = {parseInt(projectListId)}
+              click_link = {project.link.current}
+              project_data = {projectData}
               />
             ))}
             </motion.div>
