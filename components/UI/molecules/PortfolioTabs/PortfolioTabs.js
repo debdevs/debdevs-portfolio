@@ -35,7 +35,13 @@ const PortfolioTabs = () => {
                 className={
                   i === clickedId
                     ? styles.active_rainbowGradient
-                    : styles.rainbowGradient
+                    : styles.rainbowGradient 
+                    
+                    &&
+                    i === workId 
+                    ?styles.active_rainbowGradient
+                    :styles.rainbowGradient 
+
                 }
               >
                 <div
