@@ -15,11 +15,11 @@ const options = [
 const PortfolioTabs = () => {
   const [clickedId, setClickedId] = useState(-1);
   const { workId, setWorkId } = useContext(PortfolioPageContext);
-  let work_type = '/portfolio/?work-type='
+  let work_type = '/portfolio/?/'
   return (
     <div className={styles.portfolio_tabs}>
       {options.map((option, i) => (
-        <Link key = {i} href={work_type + i}>
+        <Link key = {i} href={work_type + options[i].replace(new RegExp(' ','g'),'-')}>
           <button
             className={styles.max_container}
             onClick={() => {
