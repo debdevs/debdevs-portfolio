@@ -8,7 +8,7 @@ import { urlFor, client } from '../../../../client';
 
 
 
-const ProjectsSubheading = ({projectId = 0}) => {
+const ProjectsSubheading = ({projectId = 0, project_data}) => {
 
   const [projects, setProjects] = useState([])
   useEffect(() => {
@@ -28,14 +28,14 @@ const ProjectsSubheading = ({projectId = 0}) => {
       {projects.slice(projectId, projectId+1).map((project, i) => (
       <subheading_content className={styles.subheading_content}>
       <div className={styles.left_items}>
-        <ProjectDisplayMain projectId={projectId} image_source = {urlFor(project.imgUrl.asset._ref).url()}/>
+        <ProjectDisplayMain projectId={projectId} image_source = {urlFor(project_data.imgUrl.asset._ref).url()}/>
       </div>
       <div className={styles.right_items}>
         <TextLayoutBox
           header_text="Intro"
-          paragraph_text={projects[projectId].story}
-          second_header_text={projects[projectId].second_heading}
-          second_paragraph_text={projects[projectId].second_description}
+          paragraph_text={project_data.story}
+          second_header_text={project_data.second_heading}
+          second_paragraph_text={project_data.second_description}
         />
       </div>
     </subheading_content>
