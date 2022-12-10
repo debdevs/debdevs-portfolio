@@ -25,6 +25,7 @@ const Post = ({project,projects}) => {
   return (
     <div>
 {/* <h1>{id},{name},{link.current}</h1> */}
+
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden
@@ -35,6 +36,8 @@ const Post = ({project,projects}) => {
     >
       <NavBar />
       <ProjectsHero projectId={id} project_data= {project}/>
+{/* 
+      <h1 onClick={console.log("check token", process.env.REACT_APP_SANITY_PROJECT_ID)}>{process.env.REACT_APP_SANITY_PROJECT_ID}s</h1> */}
       <ProjectsSubheading projectId={id} project_data= {project}/>
     </motion.main>
   </div>
