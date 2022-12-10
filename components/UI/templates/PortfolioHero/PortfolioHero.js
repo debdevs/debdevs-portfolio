@@ -9,8 +9,12 @@ import { ThemeButton2 } from '../../atoms/ThemeButton2/ThemeButton2';
 
 
 const PortfolioHero = () => {
+
+  
   return (
     <section className={styles.portfolio_header}>
+ 
+      {/* {router.asPath?.includes( "portfolio?work-type=1") ? <h1 className={styles.h1}>hello</h1>:<h1 className={styles.h1}>error</h1>} */}
       <div className={styles.content_box}>
         
         <div className={styles.left_items}>
