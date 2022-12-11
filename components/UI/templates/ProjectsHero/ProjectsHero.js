@@ -11,7 +11,11 @@ const ProjectsHero = ({projectId = 0, project_data = "#", projects = []}) => {
 
 
 
-
+if (project_data == null){
+  project_data = data.projects[0]
+} else{
+  project_data = project_data
+}
 
 
 
