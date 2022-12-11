@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import ProjectsHero from '../components/UI/templates/ProjectsHero/ProjectsHero';
-
 import NavBar from '../components/UI/templates/NavBar/NavBar';
 import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
 import { ProjectLandingContext } from '../contexts/ProjectLandingContext';
 import { motion } from 'framer-motion';
+
+
+
 export const Projects = () => {
+
+  const [projects, setProjects] = useState([])
+  useEffect(() => {
+    const query = '*[_type == "projects"]'
+    client.fetch(query).then((data => setProjects(data)))
+  
+  }, []);
+
   const [projectLandingId, setProjectLandingId] = useState(0)
   const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
@@ -30,7 +40,7 @@ export const Projects = () => {
       className=""
     >
       <NavBar />
-      <ProjectsHero projectId={projectLandingId}/>
+      <ProjectsHero projectId={projectLandingId} project_data = {projects} projects = {projects}/>
       <ProjectsSubheading projectId={projectLandingId} projectKey ={projectLandingId} />
     </motion.main>
     </ProjectLandingContext.Provider>

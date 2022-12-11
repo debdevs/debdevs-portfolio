@@ -7,15 +7,8 @@ import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from '../../../../client';
 import showman_image from '../../../../public/images/showman_image.png'
-const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
+const ProjectsHero = ({projectId = 0, project_data = "#", projects = []}) => {
 
-
-  const [projects, setProjects] = useState([])
- useEffect(() => {
-    const query = '*[_type == "projects"]'
-    client.fetch(query).then((data => setProjects(data)))
-  
-  }, []);
 
 
 
@@ -58,7 +51,14 @@ const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
             <div
               className={styles.left_items_image_container}
             >
+              <Image
+                  src={ project_data != undefined? urlFor(project_data?.imgUrl?.asset?._ref).url(): showman_image}
+                  alt = {"Project Image"}
+                  layout = "fill"
 
+                  width = "800"
+                  height = "800"
+                />
           
             </div>
           </div>
