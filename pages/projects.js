@@ -5,7 +5,7 @@ import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/Pr
 import { ProjectLandingContext } from '../contexts/ProjectLandingContext';
 import { motion } from 'framer-motion';
 
-
+import { useEffect } from 'react';
 
 export const Projects = () => {
 
