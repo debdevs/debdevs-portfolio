@@ -20,7 +20,7 @@ const variants = {
   };
 
 
-const Post = () => {
+const Post = (project,projects) => {
     const {  name,id,link } = project;
   return (
     <div>
