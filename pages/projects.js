@@ -4,7 +4,7 @@ import NavBar from '../components/UI/templates/NavBar/NavBar';
 import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
 import { ProjectLandingContext } from '../contexts/ProjectLandingContext';
 import { motion } from 'framer-motion';
-
+import { client } from 'client';
 import { useEffect } from 'react';
 
 export const Projects = () => {
@@ -40,8 +40,7 @@ export const Projects = () => {
       className=""
     >
       <NavBar />
-      <ProjectsHero projectId={projectLandingId} project_data = {projects} projects = {projects}/>
-      <ProjectsSubheading projectId={projectLandingId} projectKey ={projectLandingId} />
+
     </motion.main>
     </ProjectLandingContext.Provider>
   );
