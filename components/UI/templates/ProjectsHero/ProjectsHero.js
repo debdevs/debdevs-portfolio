@@ -59,7 +59,7 @@ const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
               className={styles.left_items_image_container}
             >
               <Image
-                  src={urlFor(project_data.imgUrl.asset._ref).url()}
+                  src={urlFor(project_data.imgUrl.asset?._ref).url()}
                   alt = {"Project Image"}
                   layout = "fill"
 
