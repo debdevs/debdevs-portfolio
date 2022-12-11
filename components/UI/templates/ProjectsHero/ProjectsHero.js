@@ -6,7 +6,7 @@ import data from '../../../../public/project_data.js';
 import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from '../../../../client';
-
+import showman_image from '../../../../public/images/showman_image.png'
 const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
 
 
@@ -59,7 +59,7 @@ const ProjectsHero = ({projectId = 0, project_data = "#"}) => {
               className={styles.left_items_image_container}
             >
               <Image
-                  src={urlFor(project_data.imgUrl.asset?._ref).url()}
+                  src={ project_data ? urlFor(project_data?.imgUrl?.asset?._ref).url(): showman_image}
                   alt = {"Project Image"}
                   layout = "fill"
 
