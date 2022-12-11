@@ -48,11 +48,10 @@ if (project_data == undefined || {} ){
     { project_data == undefined ||project_data == {} ? 
     
     
+    console.log("retrieve data",project_data)
     
     
-    
-    null
-    
+
     
     
     
