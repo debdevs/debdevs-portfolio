@@ -34,11 +34,6 @@ if (project_data == undefined || {} ){
   ));
 
 
-// const tagline = (tagline_main[0]? 0: tagline_main);
-// const page_project = (page_project_val[0]? 1: 0);
-
-// const tagline =  projects[0].tagline;
-// const page_project = (page_project_val[0]? 1: 0);
 
 
   
