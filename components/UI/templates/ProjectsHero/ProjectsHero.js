@@ -11,9 +11,11 @@ const ProjectsHero = ({projectId = 0, project_data = "#", projects = []}) => {
 
 
 
-  const { project_data = undefined || {} } = props
-  const { title = "Undefined title" } = post
 
+if (project_data == undefined || {} ){
+  console.log(project_data)
+  project_data = project_data
+}
 
 
 
