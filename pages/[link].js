@@ -1,8 +1,4 @@
-import groq from 'groq'
-import imageUrlBuilder from '@sanity/image-url'
 
-import data from '../public/project_data'
-import NextLink from 'next/link';
 import ProjectsHero from '../components/UI/templates/ProjectsHero/ProjectsHero';
 import NavBar from '../components/UI/templates/NavBar/NavBar';
 import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
@@ -20,7 +16,7 @@ const variants = {
   };
 
 
-const Post = (project,projects) => {
+const Post = ({project,projects}) => {
     const {  name,id,link } = project;
   return (
     <div>
