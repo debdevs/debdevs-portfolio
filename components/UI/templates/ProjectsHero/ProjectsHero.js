@@ -45,74 +45,100 @@ if (project_data == undefined || {} ){
   
   return (
     <div >
-  
+    { project_data == undefined ||project_data == {} ? 
+    
+    
+    
+    
+    
+    null
+    
+    
+    
+    
+    :     
+    
+    
+    <section className={styles.projects_hero}>
+    <div className={styles.hero_content}>
+      <div className={styles.left_items}>
+        <div
+          className={styles.left_items_image_container}
+        >
+          <Image
+              src={ project_data != undefined? urlFor(project_data?.imgUrl?.asset?._ref).url(): showman_image}
+              alt = {"Project Image"}
+              layout = "fill"
 
-        <section className={styles.projects_hero}>
-        <div className={styles.hero_content}>
-          <div className={styles.left_items}>
-            <div
-              className={styles.left_items_image_container}
-            >
-              <Image
-                  src={ project_data != undefined? urlFor(project_data?.imgUrl?.asset?._ref).url(): showman_image}
-                  alt = {"Project Image"}
-                  layout = "fill"
-
-                  width = "800"
-                  height = "800"
-                />
-          
-            </div>
-          </div>
-          <div className={styles.right_items}>
-        
-            <div className={styles.text_layout}>
-            <div className={styles.text_top_items}>
-              <h1 className={styles.text_layout_header}>{project_data.name}</h1>
-          
-                
-              {project_data.tagline.split(" ").length > 2 ? 
-              <div className={styles.text_row}>
-                <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
-                <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-2).join(" ")}/></span>
-                
-                </div>
-              : 
-              <div className={styles.text_row}>
-              <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
-              <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-1).join(" ")}/></span>
-          
-              </div>
-              
-              }</div>
-
-                {/* The <span>{tagline.split(" ").splice(-2).join(" ")}</span> */}
-        
-              <div className={styles.line_div} />
-              <p>
-                {project_data.landing_paragraph_info}
-              </p>
-              <h3>Tech Stack:</h3>
-
-          <div className={styles.stack_row}>
-              {data.projects[projectId].tech_stack.map((stack, i) => (
-                <div key = {0+i} className={styles.stack_row}>
-              <h4 className={styles.stack_text}>{stack}</h4>
-              {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
-              
-              
-              
-              </div>
-
-            ))}</div>
-
-              <LandingTabs />
-            </div>
-          </div>
+              width = "800"
+              height = "800"
+            />
+      
         </div>
-        </section>
+      </div>
+      <div className={styles.right_items}>
+    
+        <div className={styles.text_layout}>
+        <div className={styles.text_top_items}>
+          <h1 className={styles.text_layout_header}>{project_data.name}</h1>
+      
+            
+          {project_data.tagline.split(" ").length > 2 ? 
+          <div className={styles.text_row}>
+            <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
+            <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-2).join(" ")}/></span>
+            
+            </div>
+          : 
+          <div className={styles.text_row}>
+          <h1  className={styles.text_layout_header}>{project_data.tagline.split(" ")[0]}</h1>
+          <span><AnimatedTextWord text={project_data.tagline.split(" ").splice(-1).join(" ")}/></span>
+      
+          </div>
+          
+          }</div>
+
+            {/* The <span>{tagline.split(" ").splice(-2).join(" ")}</span> */}
+    
+          <div className={styles.line_div} />
+          <p>
+            {project_data.landing_paragraph_info}
+          </p>
+          <h3>Tech Stack:</h3>
+
+      <div className={styles.stack_row}>
+          {data.projects[projectId].tech_stack.map((stack, i) => (
+            <div key = {0+i} className={styles.stack_row}>
+          <h4 className={styles.stack_text}>{stack}</h4>
+          {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
+          
+          
+          
+          </div>
+
+        ))}</div>
+
+          <LandingTabs />
+        </div>
+      </div>
+    </div>
+    </section>
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+
+ 
 
       
  
