@@ -26,6 +26,8 @@ const HomeHero = ({image_source}) => {
     client.fetch(query).then((data => setProjects(data)))
   
   }, []);
+
+  
   return (
     <section className={styles.home_header}>
 
