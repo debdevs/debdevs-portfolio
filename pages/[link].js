@@ -8,7 +8,7 @@ import NavBar from '../components/UI/templates/NavBar/NavBar';
 import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/ProjectsSubheading';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { urlFor, client } from 'client';
+import { urlFor, client } from 'client.js';
 
 
 const variants = {
