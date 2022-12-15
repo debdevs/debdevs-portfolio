@@ -27,7 +27,7 @@ const PortfolioProjectDisplayCard = ({ button_text, key_value = 0, project_image
             quality={100}
           />
         </div></Link>
-        <PortfolioProjectButton button_text={button_text} button_link={ '/' + (key_value)}/>
+        <PortfolioProjectButton button_text={button_text} button_link={'/' + (project?.link.current)}/>
       </motion.div>
     </AnimatePresence>
   );
