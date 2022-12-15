@@ -66,6 +66,12 @@ type: 'document',
             }
         },
         {
+            name: 'imagesGallery',
+            title: 'Images gallery',
+            type: 'array',
+            of: [{ type: 'image' }]
+           },
+        {
             name: 'challenges',
             title: 'challenges',
             type:'string',
