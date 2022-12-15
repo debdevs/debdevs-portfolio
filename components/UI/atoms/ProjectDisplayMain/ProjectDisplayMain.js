@@ -7,7 +7,7 @@ const ProjectDisplayMain = ({projectId = 0, image_source = base_image}) => {
 
 
   return (
-    <div_image_container className={styles.left_items_image_container}>
+    <div className={styles.left_items_image_container}>
               <Image
       src={image_source}
       alt = {"Project Image"}
@@ -18,7 +18,7 @@ const ProjectDisplayMain = ({projectId = 0, image_source = base_image}) => {
           
     />
    
-    </div_image_container>
+    </div>
   );
 };
 

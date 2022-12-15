@@ -19,7 +19,8 @@ const HomeSubheading = ({project_data}) => {
   const [projects, setProjects] = useState([])
 useEffect(() => {
   const query = '*[_type == "projects"]'
-  client.fetch(query).then((data => setProjects(data)))
+  const query1 = `*[_type == "projects" && id <'${3}']`;
+  client.fetch(query1).then((data => setProjects(data)))
 
 }, [])
 
