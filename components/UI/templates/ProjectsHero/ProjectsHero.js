@@ -19,21 +19,6 @@ if (project_data == undefined || {} ){
 
 
 
-  const page_project_val = projects.slice(projectId, projectId+1).map(project => (
-    {
-      project: project,
-
-    } 
-  ));
-
-  const tagline_main = projects.slice(projectId, projectId+1).map(project => (
-    {
-      tagline: project.tagline,
-
-    } 
-  ));
-
-
   if (project_data) {
     return (
       <div >
@@ -98,10 +83,10 @@ if (project_data == undefined || {} ){
             <h3>Tech Stack:</h3>
   
         <div className={styles.stack_row}>
-            {data.projects[projectId].tech_stack.map((stack, i) => (
+            {project_data.tech_stack.split(",").map((stack, i) => (
               <div key = {0+i} className={styles.stack_row}>
             <h4 className={styles.stack_text}>{stack}</h4>
-            {i == data.projects[projectId].tech_stack.length-1 ? null:  <h4>•</h4>}
+            {i == project_data.tech_stack.split(",").length-1 ? null:  <h4>•</h4>}
             
             
             

@@ -80,7 +80,7 @@ useEffect(() => {
             ))}
             
             </h6> */}
-            {projects.map((project, i) => (
+            {projects.slice(0, 3).map((project, i) => (
               <ProjectCard
            
                 title={project.name}
@@ -95,7 +95,7 @@ useEffect(() => {
                   console.log(project.id);
     
                 }}
-                link_project = {project.link.current}
+                link_project = {isMobile == true? project.link.current: "javascript: void(0)" }
                 key={project.id}
                 key_value={project.id}
            
@@ -140,14 +140,14 @@ useEffect(() => {
             >
         {projects.slice(projectListId, projectListId+1).map((project, i) => (
               <ProjectDisplayCard
-           
+              key = {i}
               index_value={parseInt(project.id)}
               details_index_value={detailsIndex}
               title={project.name}
               image_source = {urlFor(project.imgUrl.asset._ref).url()}
               click_prop = {parseInt(projectListId)}
               click_link = {project.link.current}
-              project_data = {projectData}
+              project_data = {project}
               />
             ))}
             </motion.div>

@@ -74,9 +74,9 @@ const HomeHero = ({image_source}) => {
         </div>
         <div className={styles.right_items}>
         {projects.slice(heroProjectId, heroProjectId+1).map((project, i) => (
-        <Link href={ '/' + (projects[heroProjectId].link.current)}>
+        <Link key = {i} href={ '/' + (projects[heroProjectId].link.current)}>
           
-        <div className={styles.right_items_content_bg}>
+        <div key = {i} className={styles.right_items_content_bg}>
     
           <AnimatePresence>
             <motion.div

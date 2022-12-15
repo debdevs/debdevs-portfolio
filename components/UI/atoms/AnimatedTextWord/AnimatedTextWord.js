@@ -48,7 +48,7 @@ const AnimatedTextWord = ({text}) => {
      variants = {child} 
         
      className = {styles.animated_text}
-     key = {word - index}
+     key = {index}
 
      >
         {word === " " ? "\u00A0" : word}

@@ -14,6 +14,12 @@ import github_image from '../../../../public/company_icons/GitHub-Mark-120px-plu
 import Link from 'next/link';
 import { icons } from 'react-icons';
 import { FiExternalLink } from 'react-icons/fi';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { client } from 'client';
+
+
+
 const ProjectDisplayCard = ({
   index_value = 0,
   details_index_value = 0,
@@ -22,13 +28,27 @@ const ProjectDisplayCard = ({
   image_source = "https://cdn-ecbjf.nitrocdn.com/trFSLbdBEIFWvubMBbeHotqYSOVJJYEv/assets/static/optimized/rev-f8cdbc8/blog/wp-content/uploads/2020/02/40-BEST-WEBSITE-DESIGNS-2022.jpg",
   click_prop,
   project_array_length,
-  click_link
+  click_link,
+  project_data
 }) => {
 
   const [projectId, setProjectId] = useContext(HomeProjectDetailsContext);
   const { projectListId, setProjectListId } = useContext(
     HomeProjectDetailsContext
   );
+
+
+  const [projects, setProjects] = useState([])
+  useEffect(() => {
+    const query = '*[_type == "projects"]'
+    const query1 = `*[_type == "projects" && id == '${index_value}'][0]`;
+    client.fetch(query).then((data => setProjects(data)))
+  
+  }, []);
+
+  
+
+
   return (
     <div className={styles.subheading_right_bg_overlay}>
       <h1 className={styles.project_header}>{title}</h1>
@@ -80,12 +100,12 @@ const ProjectDisplayCard = ({
           >
             {details_index_value === 0 && (
               <p className={styles.project_description}>
-                {data.projects[index_value].extra_info}
+                {project_data.extra_info}
               </p>
             )}
             {details_index_value === 1 && (
               <p className={styles.project_description}>
-                {data.projects[index_value].challenges}
+                {project_data.challenges}
               </p>
             )}
             {details_index_value === 2 && (

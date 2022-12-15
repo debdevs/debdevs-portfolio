@@ -34,7 +34,7 @@ projects.forEach(function (work) {
 
 let animation_projects = [];
 projects.forEach(function (work) {
-    if (work.category.includes("Web-Development")){
+    if (work.category.includes("Animation")){
       animation_projects.push(work);
     }
   });
