@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5%;
 }
 .mux_player  {
     display: flex;
@@ -17,6 +18,7 @@
     margin: 40px auto;
     border-radius: 1rem;
     overflow: hidden;
+    z-index: 25;
   } 
 
 .close_icon{
@@ -24,10 +26,24 @@
     font-size:4rem;
     cursor: pointer;
     transition: all .4s ease;
+    float: right;
 }
 
 .close_icon:hover{
     color: rgb(55, 105, 107);
     font-size:4rem;
     cursor: pointer;
+}
+
+
+.project_details_modal_01{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: rgba(32, 47, 51, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
 }
