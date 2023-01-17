@@ -1,6 +1,7 @@
 import React from 'react'
-
-const ProjectVideoModal = () => {
+import styles from './ProjectVideoModal.module.css'
+import MuxPlayer from "@mux/mux-player-react"; 
+const ProjectVideoModal = ({mux_data_import}) => {
   return (
     <div className={styles.project_details_modal}>
             <div className= {styles.mux_player}>
