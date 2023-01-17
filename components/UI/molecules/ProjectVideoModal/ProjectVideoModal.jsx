@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './ProjectVideoModal.module.css'
 import MuxPlayer from "@mux/mux-player-react"; 
 import { FiX } from 'react-icons/fi';
-const ProjectVideoModal = ({mux_data_import}) => {
+const ProjectVideoModal = ({mux_data_import, click_function}) => {
   return (
     <div className={styles.project_details_modal}>
         <div className={styles.project_details_modal_content}>
-        <div><FiX className= {styles.close_icon}/></div>
+        <div><FiX className= {styles.close_icon} onClick = {click_function}/></div>
             <div className= {styles.mux_player}>
                 
 

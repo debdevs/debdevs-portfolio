@@ -1,13 +1,20 @@
 import LandingToggleButton from '../../atoms/LandingToggleButton/LandingToggleButton';
 import styles from './LandingTabs.module.css';
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { DynamicProjectLandingContext } from 'contexts/DynamicProjectLandingContext';
+
 const options = ['Overview', 'Challenges', 'Github', 'Site'];
 
-const LandingTabs = () => {
+const LandingTabs = ({landing_context_value}) => {
   const [active, setActive] = useState(options[0]);
   const [count, setCount] = useState(0);
   const [clickedId, setClickedId] = useState(-1);
+
+  const { landingTabId, setLandingTabId } = useContext(
+    DynamicProjectLandingContext
+  );
+
   const clickStyles = {
     h1_color: 'rgba(191, 209, 217, 1)',
     RainbowGradient_background_color: 'white',
@@ -18,7 +25,7 @@ const LandingTabs = () => {
       {options.map((option, i) => (
         <div
           className={styles.max_container}
-          onClick={() => setClickedId(i)}
+          onClick={() => {setClickedId(i); setLandingTabId(i)}}
           key={i}
         >
           <div className={styles.blue_bg}></div>

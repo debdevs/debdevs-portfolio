@@ -5,8 +5,10 @@ import ProjectsSubheading from '../components/UI/templates/ProjectsSubheading/Pr
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from 'client.js';
-
 import ProjectVideoModal from '@components/UI/molecules/ProjectVideoModal/ProjectVideoModal';
+import { useContext } from 'react';
+import { DynamicProjectLandingContext } from 'contexts/DynamicProjectLandingContext';
+
 const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
@@ -17,8 +19,21 @@ const variants = {
 
 
 const Post = ({project,projects, mux}) => {
+
     const {  name,id,link } = project;
+    const [tabId, setTabId] = useState(0);
+    const [landingTabId, setLandingTabId] = useState(-1);
+
+
   return (
+    <DynamicProjectLandingContext.Provider
+      value={{
+        tabId, 
+        setTabId,
+        landingTabId, 
+        setLandingTabId
+      }}
+    >
     <div>
 
 
@@ -31,11 +46,20 @@ const Post = ({project,projects, mux}) => {
       className=""
     >
       <NavBar />
-      <ProjectVideoModal mux_data_import={mux}/>
+      {landingTabId == 0 ? 
+      <ProjectVideoModal mux_data_import={mux} click_function = {() =>{setLandingTabId(-1)}}/>
+      :
+      null
+      
+      
+      }
+      
       <ProjectsHero projectId={id} project_data= {project} mux_data_import = {mux} mux_video = {mux.data}/>
       <ProjectsSubheading projectId={id} project_data= {project}/>
     </motion.main>
   </div>
+
+</DynamicProjectLandingContext.Provider>
   )
 }
 
