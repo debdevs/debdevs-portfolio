@@ -65,7 +65,7 @@ type: 'document',
                 hotspot:true,
             }
         },
-        
+
         {
             name: 'imagesGallery',
             title: 'Images gallery',
@@ -74,13 +74,22 @@ type: 'document',
         },
 
         {
-        "title": "Video file",
-        "name": "video",
-        "type": "mux.video"
+            title: "Video file",
+            name: "video",
+            type: "mux.video"
         },
+
+        
         {
             name: 'challenges',
             title: 'challenges',
+            type:'string',
+
+        },
+
+        {
+            name: 'challenges1',
+            title: 'challenges1',
             type:'string',
 
         },
