@@ -1,7 +1,7 @@
 .project_details_modal{
-    position: absolute;
-    height: 50vw;
-    width: 100vw;
+    position: fixed;
+    height: 80vw;
+    width: 100%;
     z-index: 15;
     background-color: rgba(248, 252, 255, 0.829);
     display: flex;

@@ -1,0 +1,21 @@
+.project_details_modal{
+    position: fixed;
+    height: 80vw;
+    width: 100%;
+    z-index: 15;
+    background-color: rgba(248, 252, 255, 0.829);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mux_player  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 1rem;
+    overflow: hidden;
+  } 
+
