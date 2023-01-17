@@ -19,3 +19,15 @@
     overflow: hidden;
   } 
 
+.close_icon{
+    color: grey;
+    font-size:4rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.close_icon:hover{
+    color: rgb(55, 105, 107);
+    font-size:4rem;
+    cursor: pointer;
+}
