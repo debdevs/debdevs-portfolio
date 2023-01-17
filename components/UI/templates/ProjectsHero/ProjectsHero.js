@@ -7,7 +7,7 @@ import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from '../../../../client';
 import MuxPlayer from "@mux/mux-player-react"; 
-const ProjectsHero = ({projectId = 0, project_data = "#", projects = [], mux_data_import, mux_video}) => {
+const ProjectsHero = ({projectId = 0, project_data = "#", projects = [], mux_data_import = "#", mux_video}) => {
 
   // const vid_query = `*[_type == "projects" && link.current == '${link}'][0]`;
                 
@@ -106,9 +106,9 @@ if (project_data == undefined || {} ){
   
           ))}</div>
           {console.log("test", project_data?.video?.asset)}
-          {console.log("mux_test1", mux_data_import)}
+          {/* {console.log("mux_test1", mux_data_import)}
           {console.log("mux_test2", mux_data_import[0].data)}
-          
+           */}
 
           <div className={styles.project_details_modal}>
           <div className= {styles.mux_player}>
@@ -121,7 +121,7 @@ if (project_data == undefined || {} ){
           // playbackId= {project_data != undefined  ? project_data?.video?.asset?._ref : null}
           // playbackId='cQ02Qyn3vynkegSAvmdENtxN5BCD101dnEp9RE7RUjftM.m3u8'
           mux_data_import
-          playbackId = {mux_data_import[0].playbackId}
+          playbackId = {mux_data_import[0]?.playbackId ? mux_data_import[0].playbackId : null}
         />
 
           </div>
