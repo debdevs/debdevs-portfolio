@@ -16,11 +16,11 @@ const variants = {
   };
 
 
-const Post = ({project,projects}) => {
+const Post = ({project,projects, mux}) => {
     const {  name,id,link } = project;
   return (
     <div>
-{/* <h1>{id},{name},{link.current}</h1> */}
+
 
     <motion.main
       variants={variants} // Pass the variant object into Framer Motion
@@ -31,9 +31,7 @@ const Post = ({project,projects}) => {
       className=""
     >
       <NavBar />
-      <ProjectsHero projectId={id} project_data= {project}/>
-{/* 
-      <h1 onClick={console.log("check token", process.env.REACT_APP_SANITY_PROJECT_ID)}>{process.env.REACT_APP_SANITY_PROJECT_ID}s</h1> */}
+      <ProjectsHero projectId={id} project_data= {project} mux_data_import = {mux} mux_video = {mux.data}/>
       <ProjectsSubheading projectId={id} project_data= {project}/>
     </motion.main>
   </div>
@@ -49,6 +47,13 @@ export const getStaticPaths = async () => {
   `;
 
   const projects = await client.fetch(query);
+
+  const mux_query =`*[_type == "mux.videoAsset" ]`
+
+
+  const mux = await client.fetch(mux_query);
+
+
 
   const paths = projects.map((project) => ({
     params: { 
@@ -69,10 +74,16 @@ export const getStaticProps = async ({ params: { link }}) => {
   const project = await client.fetch(query);
   const projects = await client.fetch(projectsQuery);
 
+  const mux_query =`*[_type == "mux.videoAsset" && data != null && _id == '${project?.video?.asset._ref}' ]`
+  // const mux_query =`*[_type == "mux.videoAsset" && data != null && _id == "2ad59496-08f5-419b-9f42-1a9c7d6784ba" ]`
+  // const mux_query =`*[_type == "mux.videoAsset" && data != null && _id != null ]`
+  // const mux_query =`*[_type == "mux.videoAsset" && data._id == '${project?.video?.asset._ref}' ]`
+  const mux = await client.fetch(mux_query);
+
   // console.log(project);
 
   return {
-    props: { projects, project }
+    props: { projects, project, mux}
   }
 }
   

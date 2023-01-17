@@ -8,7 +8,9 @@
     "export": "next export"
   },
   "dependencies": {
+    "@mux/mux-node": "^7.0.0",
     "@mux/mux-player": "^1.5.1",
+    "@mux/mux-player-react": "^1.5.1",
     "@netlify/plugin-nextjs": "^4.29.2",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",

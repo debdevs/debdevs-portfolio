@@ -6,9 +6,12 @@ import data from '../../../../public/project_data.js';
 import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from '../../../../client';
-import showman_image from '../../../../public/images/showman_image.png'
-const ProjectsHero = ({projectId = 0, project_data = "#", projects = []}) => {
+import MuxPlayer from "@mux/mux-player-react"; 
+const ProjectsHero = ({projectId = 0, project_data = "#", projects = [], mux_data_import, mux_video}) => {
 
+  // const vid_query = `*[_type == "projects" && link.current == '${link}'][0]`;
+                
+  // const project = await client.fetch(vid_query);
 
 
 
@@ -17,15 +20,19 @@ if (project_data == undefined || {} ){
   project_data = project_data
 }
 
-
+// console.log(project_data?.video?.asset?._rev)
+// console.log("EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs")
 
   if (project_data) {
+    
     return (
       <div >
-      { project_data == undefined ||project_data == {} ? 
+
+      { project_data == undefined || project_data == {} ? 
       
       
       console.log("retrieve data",project_data)
+      
       
       
   
@@ -36,6 +43,11 @@ if (project_data == undefined || {} ){
       
       
       <section className={styles.projects_hero}>
+
+
+
+
+
       <div className={styles.hero_content}>
         <div className={styles.left_items}>
           <div
@@ -93,7 +105,30 @@ if (project_data == undefined || {} ){
             </div>
   
           ))}</div>
-  
+          {console.log("test", project_data?.video?.asset)}
+          {console.log("mux_test1", mux_data_import)}
+          {console.log("mux_test2", mux_data_import[0].data)}
+          
+
+          <div className={styles.project_details_modal}>
+          <div className= {styles.mux_player}>
+            
+
+            
+          <MuxPlayer
+          streamType="on-demand"
+          // playbackId= { project_data.video.asset._rev != undefined ?  project_data.video.asset._rev :  project_data.video.asset._rev.toString()}
+          // playbackId= {project_data != undefined  ? project_data?.video?.asset?._ref : null}
+          // playbackId='cQ02Qyn3vynkegSAvmdENtxN5BCD101dnEp9RE7RUjftM.m3u8'
+          mux_data_import
+          playbackId = {mux_data_import[0].playbackId}
+        />
+
+          </div>
+
+        </div>
+
+
             <LandingTabs />
           </div>
         </div>
