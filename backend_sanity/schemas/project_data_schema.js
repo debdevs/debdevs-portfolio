@@ -65,12 +65,19 @@ type: 'document',
                 hotspot:true,
             }
         },
+        
         {
             name: 'imagesGallery',
             title: 'Images gallery',
             type: 'array',
             of: [{ type: 'image' }]
-           },
+        },
+
+        {
+        "title": "Video file",
+        "name": "video",
+        "type": "mux.video"
+        },
         {
             name: 'challenges',
             title: 'challenges',

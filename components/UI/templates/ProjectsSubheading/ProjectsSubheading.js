@@ -26,7 +26,7 @@ const ProjectsSubheading = ({projectId = 0, project_data}) => {
     
     <div className={styles.subheading_parent}>
 
-      <subheading_content className={styles.subheading_content}>
+      <div className={styles.subheading_content}>
       <div className={styles.left_items}>
         <ProjectDisplayMain projectId={projectId} image_source = {urlFor(project_data.imgUrl.asset._ref).url()}/>
       </div>
@@ -38,7 +38,7 @@ const ProjectsSubheading = ({projectId = 0, project_data}) => {
           second_paragraph_text={project_data.second_description}
         />
       </div>
-    </subheading_content>
+    </div>
 
 
 

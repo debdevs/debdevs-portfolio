@@ -5,7 +5,7 @@ const IconWithToolTip = ({ cover_image, title }) => {
   return (
     <div className={styles.tooltip}>
       <div className={styles.image_wrapper}>
-        <Image src={cover_image} className={styles.cover_image} />
+        <Image src={cover_image} className={styles.cover_image} alt = "project image" />
       </div>
       <span className={styles.tooltiptext}>{title}</span>
     </div>
