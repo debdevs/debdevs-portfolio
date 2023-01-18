@@ -97,7 +97,7 @@ if (project_data == undefined || {} ){
   
         <div className={styles.stack_row}>
             {project_data.tech_stack.split(",").map((stack, i) => (
-              <div key = {0+i} className={styles.stack_row}>
+              <div key = {0+i} className={styles.stack_row_child}>
             <h4 className={styles.stack_text}>{stack}</h4>
             {i == project_data.tech_stack.split(",").length-1 ? null:  <h4>•</h4>}
             
