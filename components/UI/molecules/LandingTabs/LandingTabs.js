@@ -36,7 +36,7 @@ const option_data = [
 
 
 ]
-const LandingTabs = ({landing_context_value}) => {
+const LandingTabs = ({project_site_data, landing_context_value = -1, project_github_data}) => {
   const [active, setActive] = useState(options[0]);
   const [count, setCount] = useState(0);
   const [clickedId, setClickedId] = useState(-1);
@@ -58,13 +58,18 @@ const LandingTabs = ({landing_context_value}) => {
           onClick={() => {
             setClickedId(i); 
             setLandingTabId(i);
-
-          
+            console.log(project_site_data);
           }}
           key={i}
         >
           <div className={styles.blue_bg}></div>
           <div className={styles.white_bg}></div>
+          <Link href = { landing_context_value == 2 ? project_github_data: 
+          
+          landing_context_value == 3 ? project_site_data :
+
+          "javascript: void(0)" 
+         }>
           <div className={styles.button_parent}>
             <div
               className={
@@ -85,6 +90,7 @@ const LandingTabs = ({landing_context_value}) => {
              
             </div>       
           </div>
+          </Link>
          
         </div>
       ))}

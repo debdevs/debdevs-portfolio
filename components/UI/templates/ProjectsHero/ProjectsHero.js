@@ -113,7 +113,7 @@ if (project_data == undefined || {} ){
 
 
 
-            <LandingTabs landing_context_value={landing_tab_id}/>
+            <LandingTabs landing_context_value={landing_tab_id} project_github_data = {project_data?.github_link} project_site_data = {project_data?.live_project_link}/>
           </div>
         </div>
       </div>
