@@ -56,13 +56,13 @@ const Post = ({project,projects, mux}) => {
       
       
       null
-     
+      
     
      
       
       }
       
-      <ProjectsHero projectId={id} project_data= {project} mux_data_import = {mux} mux_video = {mux.data}/>
+      <ProjectsHero projectId={id} project_data= {project} mux_data_import = {mux} mux_video = {mux.data} landing_tab_id = {landingTabId}/>
       <ProjectsSubheading projectId={id} project_data= {project}/>
     </motion.main>
   </div>
