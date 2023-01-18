@@ -59,12 +59,13 @@ const LandingTabs = ({project_site_data, landing_context_value = -1, project_git
             setClickedId(i); 
             setLandingTabId(i);
             console.log(project_site_data);
+            setLandingTabId(i);
           }}
           key={i}
         >
           <div className={styles.blue_bg}></div>
           <div className={styles.white_bg}></div>
-          <Link href = { landing_context_value == 2 ? project_github_data: 
+          <Link href = { landing_context_value < 2 ? "javascript: void(0)" :landing_context_value == 2 ? project_github_data: 
           
           landing_context_value == 3 ? project_site_data :
 
