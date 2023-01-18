@@ -4,7 +4,7 @@ import MuxPlayer from "@mux/mux-player-react";
 import { FiX } from 'react-icons/fi';
 
 import { motion, AnimatePresence } from 'framer-motion';
-const ProjectChallengesModal = ({mux_data_import, click_function}) => {
+const ProjectChallengesModal = ({mux_data_import, click_function, project_import}) => {
   return (
     <AnimatePresence>
         <motion.div
@@ -20,19 +20,19 @@ const ProjectChallengesModal = ({mux_data_import, click_function}) => {
               duration: 0.8,
               delay: 0,
             }}
-            className={styles.project_details_modal}
+            className={styles.project_challenges_modal}
           >
    
       
-        <div className={styles.project_details_modal_content }>
+        <div className={styles.project_challenges_modal_content }>
         
         <div><FiX className= {styles.close_icon} onClick = {click_function}/></div>
-            <div className= {styles.mux_player}>
+            <div className= {styles.challenges_text_container}>
+                
+              <h1>{project_import.challenges}</h1>
                 
 
-                
-
-               <div className={styles.project_details_modal_01} onClick = {click_function} ></div>
+               <div className={styles.project_challenges_modal_01} onClick = {click_function} ></div>
             </div>
          
             

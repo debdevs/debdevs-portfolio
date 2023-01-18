@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from 'client.js';
 import ProjectVideoModal from '@components/UI/molecules/ProjectVideoModal/ProjectVideoModal';
+import ProjectChallengesModal from '@components/UI/molecules/ProjectChallengesModal/ProjectChallengesModal';
 import { useContext } from 'react';
 import { DynamicProjectLandingContext } from 'contexts/DynamicProjectLandingContext';
 
@@ -48,9 +49,16 @@ const Post = ({project,projects, mux}) => {
       <NavBar />
       {landingTabId == 0 ? 
       <ProjectVideoModal mux_data_import={mux} click_function = {() =>{setLandingTabId(-1)}}/>
-      :
-      null
+      : landingTabId == 1 ?
       
+      <ProjectChallengesModal click_function = {() =>{setLandingTabId(-1)}} project_import = {project}/>
+      :
+      
+      
+      null
+     
+    
+     
       
       }
       
