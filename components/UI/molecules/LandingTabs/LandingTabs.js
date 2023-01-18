@@ -50,24 +50,65 @@ const LandingTabs = ({project_site_data, landing_context_value = -1, project_git
     RainbowGradient_background_color: 'white',
     RainbowGradient_transform: 'translateY(5px)',
   };
+
+  const goTo= (input) => {
+    input < 2 ? "javascript: void(0)" : input == 2 ? location.assign(project_github_data): 
+          
+    input == 3 ? project_site_data :
+
+    "javascript: void(0)" 
+   
+}
+
+const setId = (input) =>{
+  setLandingTabId(input)
+}
+
+const promise1 = new Promise((resolve, reject) => {
+
+  landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? location.assign(project_github_data): 
+          
+  landingTabId == 3 ? location.assign(project_site_data) :
+
+  "javascript: void(0)" 
+
+  resolve('Success!');
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+
+
+
+
   return (
     <div className={styles.tabs}>
       {option_data.slice(0, 4).map((option, i) => (
+   
         <div
           className={styles.max_container}
           onClick={() => {
             setClickedId(i); 
             setLandingTabId(i);
             console.log(project_site_data);
-            setLandingTabId(i);
+            promise1.then((value) => {
+              console.log(value);
+              // Expected output: "Success!"
+            });
+            
+
+
+
           }}
           key={i}
         >
           <div className={styles.blue_bg}></div>
           <div className={styles.white_bg}></div>
-          <Link href = { landing_context_value < 2 ? "javascript: void(0)" :landing_context_value == 2 ? project_github_data: 
+          <Link href = { landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? project_github_data: 
           
-          landing_context_value == 3 ? project_site_data :
+          landingTabId == 3 ? project_site_data :
 
           "javascript: void(0)" 
          }>
