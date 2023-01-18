@@ -9,6 +9,10 @@
     justify-content: center;
     padding: 5%;
 }
+
+.project_details_modal_content{
+    width: 800px;
+}
 .mux_player  {
     display: flex;
     align-items: center;
@@ -20,7 +24,7 @@
     overflow: hidden;
     z-index: 25;
   } 
-
+ 
 .close_icon{
     color: grey;
     font-size:4rem;
