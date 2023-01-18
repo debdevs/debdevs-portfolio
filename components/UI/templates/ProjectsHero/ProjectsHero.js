@@ -7,7 +7,7 @@ import AnimatedTextWord from '../../atoms/AnimatedTextWord/AnimatedTextWord';
 import { useEffect, useState } from 'react';
 import { urlFor, client } from '../../../../client';
 import MuxPlayer from "@mux/mux-player-react"; 
-const ProjectsHero = ({projectId = 0, project_data = "#", projects = [], mux_data_import = "#", mux_video}) => {
+const ProjectsHero = ({projectId = 0, project_data = "#", projects = [], mux_data_import = "#", mux_video, landing_tab_id = "#"}) => {
 
   // const vid_query = `*[_type == "projects" && link.current == '${link}'][0]`;
                 
@@ -113,7 +113,7 @@ if (project_data == undefined || {} ){
 
 
 
-            <LandingTabs />
+            <LandingTabs landing_context_value={landing_tab_id}/>
           </div>
         </div>
       </div>

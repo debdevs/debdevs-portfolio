@@ -4,7 +4,7 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { DynamicProjectLandingContext } from 'contexts/DynamicProjectLandingContext';
 import { FiVideo, FiBookOpen, FiGithub, FiGlobe } from 'react-icons/fi';
-
+import Link from 'next/link';
 
 
 
@@ -55,7 +55,12 @@ const LandingTabs = ({landing_context_value}) => {
       {option_data.slice(0, 4).map((option, i) => (
         <div
           className={styles.max_container}
-          onClick={() => {setClickedId(i); setLandingTabId(i)}}
+          onClick={() => {
+            setClickedId(i); 
+            setLandingTabId(i);
+
+          
+          }}
           key={i}
         >
           <div className={styles.blue_bg}></div>
