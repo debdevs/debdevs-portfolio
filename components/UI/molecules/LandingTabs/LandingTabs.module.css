@@ -208,7 +208,15 @@ color: rgba(191, 209, 217, 1);
             
             
           }
-
+          .tab_icon{
+            color: rgb(180, 210, 219);
+            font-size: 95%;
+            z-index: 5;
+           
+            margin-bottom: 5%;
+            position: absolute;
+            right: 10%;
+          }
           @media only screen and (max-width: 1024px){
             .tabs {
               width:95%;

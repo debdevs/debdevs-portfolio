@@ -3,9 +3,39 @@ import styles from './LandingTabs.module.css';
 import React from 'react';
 import { useState, useContext } from 'react';
 import { DynamicProjectLandingContext } from 'contexts/DynamicProjectLandingContext';
+import { FiVideo, FiBookOpen, FiGithub, FiGlobe } from 'react-icons/fi';
+
+
+
 
 const options = ['Overview', 'Challenges', 'Github', 'Site'];
+const options1 = ['Overview', 'Challenges', 'Github', 'Site'];
 
+const option_data = [
+  {
+    id: 1,
+    title: 'Overview',
+    icon: <FiVideo className={styles.tab_icon}/>,
+  },
+  {
+    id: 2,
+    title: 'Challenges',
+    icon: <FiBookOpen className={styles.tab_icon}/>,
+  },
+  {
+    id: 3,
+    title: 'Github',
+    icon: <FiGithub className={styles.tab_icon}/>,
+  },
+  {
+    id: 4,
+    title: 'Site',
+    icon: <FiGlobe className={styles.tab_icon}/>,
+  }
+
+
+
+]
 const LandingTabs = ({landing_context_value}) => {
   const [active, setActive] = useState(options[0]);
   const [count, setCount] = useState(0);
@@ -22,7 +52,7 @@ const LandingTabs = ({landing_context_value}) => {
   };
   return (
     <div className={styles.tabs}>
-      {options.map((option, i) => (
+      {option_data.slice(0, 4).map((option, i) => (
         <div
           className={styles.max_container}
           onClick={() => {setClickedId(i); setLandingTabId(i)}}
@@ -44,10 +74,13 @@ const LandingTabs = ({landing_context_value}) => {
                   i === clickedId ? styles.active_text : styles.innerSquare
                 }
               >
-                <h1  className={styles.tab_text}>{option}</h1>
+                <h1  className={styles.tab_text}>{option.title}</h1>
               </div>
-            </div>
+              {option.icon}
+             
+            </div>       
           </div>
+         
         </div>
       ))}
     </div>
