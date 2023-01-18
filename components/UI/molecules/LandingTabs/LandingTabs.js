@@ -64,9 +64,14 @@ const setId = (input) =>{
   setLandingTabId(input)
 }
 
+const checkData = (input) =>{
+ const value =  input != null ? input  : null
+ return value
+}
+
 const promise1 = new Promise((resolve, reject) => {
 
-  landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? location.assign(project_github_data): 
+  landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? location.assign(checkData(project_github_data)): 
           
   landingTabId == 3 ? location.assign(project_site_data) :
 
@@ -106,12 +111,7 @@ promise1.then((value) => {
         >
           <div className={styles.blue_bg}></div>
           <div className={styles.white_bg}></div>
-          <Link href = { landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? project_github_data: 
-          
-          landingTabId == 3 ? project_site_data :
 
-          "javascript: void(0)" 
-         }>
           <div className={styles.button_parent}>
             <div
               className={
@@ -132,7 +132,7 @@ promise1.then((value) => {
              
             </div>       
           </div>
-          </Link>
+    
          
         </div>
       ))}
