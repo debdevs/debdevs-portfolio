@@ -1,0 +1,53 @@
+.project_details_modal{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    background-color: rgba(248, 252, 255, 0.829);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.project_details_modal_content{
+    width: 800px;
+}
+.mux_player  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 25;
+  } 
+ 
+.close_icon{
+    color: grey;
+    font-size:4rem;
+    cursor: pointer;
+    transition: all .4s ease;
+    float: right;
+}
+
+.close_icon:hover{
+    color: rgb(55, 105, 107);
+    font-size:4rem;
+    cursor: pointer;
+}
+
+
+.project_details_modal_01{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: rgba(32, 47, 51, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
