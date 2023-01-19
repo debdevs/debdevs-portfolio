@@ -66,14 +66,25 @@ const setId = (input) =>{
 
 const checkData = (input) =>{
  const value =  input != null ? input  : null
+
+ if (input == null || input == "" || input == undefined){
+    console.log(input)
+ } else {
+  location.assign(input)
+
+ }
+
+
+
+
  return value
 }
 
 const promise1 = new Promise((resolve, reject) => {
 
-  landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? location.assign(checkData(project_github_data)): 
+  landingTabId < 2 ? "javascript: void(0)" : landingTabId == 2 ? checkData(project_github_data): 
           
-  landingTabId == 3 ? location.assign(project_site_data) :
+  landingTabId == 3 ? checkData(project_site_data):
 
   "javascript: void(0)" 
 
